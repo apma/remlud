@@ -1,0 +1,8 @@
+2012-06-22 22:29:11,903 [MaDesignPrime][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-22 22:29:12,059 [MaDesignPrime][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)

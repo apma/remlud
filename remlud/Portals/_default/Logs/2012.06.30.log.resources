@@ -1,0 +1,300 @@
+2012-06-30 12:53:14,994 [MaDesignPrime][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 12:53:15,055 [MaDesignPrime][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 14:36:46,864 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 14:36:47,092 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 14:38:18,425 [MaDesignPrime][Thread:13][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 14:38:18,503 [MaDesignPrime][Thread:13][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 14:46:43,144 [MaDesignPrime][Thread:13][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 14:46:43,221 [MaDesignPrime][Thread:13][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 14:58:04,499 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 14:58:04,566 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 14:58:04,624 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Entities.Modules.EventMessageProcessor - Value cannot be null.
+Parameter name: type
+System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Entities.Modules.EventMessageProcessor.UpgradeModule(EventMessage message)
+2012-06-30 14:58:20,654 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 14:58:20,657 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 14:58:20,667 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 14:58:20,671 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 14:58:20,678 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 14:58:20,681 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 15:00:21,871 [MaDesignPrime][Thread:21][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 15:00:21,929 [MaDesignPrime][Thread:21][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 15:00:21,963 [MaDesignPrime][Thread:21][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 15:00:21,966 [MaDesignPrime][Thread:21][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 15:00:21,983 [MaDesignPrime][Thread:21][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 15:00:21,986 [MaDesignPrime][Thread:21][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 15:08:04,953 [MaDesignPrime][Thread:10][ERROR] DotNetNuke.UI.Skins.Skin - Unhandled error loading page.
+DotNetNuke.Services.Exceptions.PageLoadException: Unhandled error loading page. ---> System.Web.HttpCompileException: c:\inetpub\wwwroot-Remlud\Portals\_default\Skins\RemboltLawFirm_MD\ContentWithSidenav.ascx(79): error CS1955: Non-invocable member 'DotNetNuke.Entities.Tabs.TabInfo.BreadCrumbs' cannot be used like a method.
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Skins.Skin.LoadSkin(PageBase page, String skinPath)
+   --- End of inner exception stack trace ---
+2012-06-30 15:08:25,864 [MaDesignPrime][Thread:10][ERROR] DotNetNuke.UI.Skins.Skin - Unhandled error loading page.
+DotNetNuke.Services.Exceptions.PageLoadException: Unhandled error loading page. ---> System.Web.HttpCompileException: c:\inetpub\wwwroot-Remlud\Portals\_default\Skins\RemboltLawFirm_MD\ContentWithSidenav.ascx(79): error CS1061: 'object' does not contain a definition for 'TabId' and no extension method 'TabId' accepting a first argument of type 'object' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Skins.Skin.LoadSkin(PageBase page, String skinPath)
+   --- End of inner exception stack trace ---
+2012-06-30 15:41:46,793 [MaDesignPrime][Thread:24][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: At least one object must implement IComparable.
+   at System.Collections.Comparer.Compare(Object a, Object b)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Object value)
+   at ASP.portals__default_skins_remboltlawfirm_md_contentwithsidenav_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlForm.Render(HtmlTextWriter output)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at DotNetNuke.Framework.PageBase.Render(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-30 15:41:46,882 [MaDesignPrime][Thread:24][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=118&error=Failed+to+compare+two+elements+in+the+array.&content=0
+System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: At least one object must implement IComparable.
+   at System.Collections.Comparer.Compare(Object a, Object b)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Object value)
+   at ASP.portals__default_skins_remboltlawfirm_md_contentwithsidenav_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlForm.Render(HtmlTextWriter output)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at DotNetNuke.Framework.PageBase.Render(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-30 15:41:47,266 [MaDesignPrime][Thread:25][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: At least one object must implement IComparable.
+   at System.Collections.Comparer.Compare(Object a, Object b)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Object value)
+   at ASP.portals__default_skins_remboltlawfirm_md_contentwithsidenav_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlForm.Render(HtmlTextWriter output)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at DotNetNuke.Framework.PageBase.Render(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-30 15:41:47,273 [MaDesignPrime][Thread:25][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=118&error=terminate
+System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: At least one object must implement IComparable.
+   at System.Collections.Comparer.Compare(Object a, Object b)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Object value)
+   at ASP.portals__default_skins_remboltlawfirm_md_contentwithsidenav_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlForm.Render(HtmlTextWriter output)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at DotNetNuke.Framework.PageBase.Render(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-30 15:41:47,327 [MaDesignPrime][Thread:25][ERROR] DotNetNuke.Services.Exceptions.ErrorPage - Failed to compare two elements in the array.
+DotNetNuke.Services.Exceptions.PageLoadException: Failed to compare two elements in the array. ---> System.InvalidOperationException: Failed to compare two elements in the array. ---> System.ArgumentException: At least one object must implement IComparable.
+   at System.Collections.Comparer.Compare(Object a, Object b)
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   --- End of inner exception stack trace ---
+   at System.Array.BinarySearch(Array array, Int32 index, Int32 length, Object value, IComparer comparer)
+   at System.Collections.ArrayList.BinarySearch(Object value)
+   at ASP.portals__default_skins_remboltlawfirm_md_contentwithsidenav_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlForm.Render(HtmlTextWriter output)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at DotNetNuke.Framework.PageBase.Render(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- End of inner exception stack trace ---
+2012-06-30 16:09:26,496 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 16:09:26,572 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 16:09:26,614 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 16:09:26,616 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 16:09:26,624 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 16:09:26,627 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 16:35:15,370 [MaDesignPrime][Thread:6][ERROR] DotNetNuke.UI.WebControls.CaptchaControl - Font 'MS Sans Serif' cannot be found.
+System.ArgumentException: Font 'MS Sans Serif' cannot be found.
+   at System.Drawing.FontFamily.CreateFontFamily(String name, FontCollection fontCollection)
+   at DotNetNuke.UI.WebControls.CaptchaControl.GetFont()
+2012-06-30 16:40:44,589 [MaDesignPrime][Thread:18][ERROR] DotNetNuke.UI.WebControls.CaptchaControl - Font 'MS Sans Serif' cannot be found.
+System.ArgumentException: Font 'MS Sans Serif' cannot be found.
+   at System.Drawing.FontFamily.CreateFontFamily(String name, FontCollection fontCollection)
+   at DotNetNuke.UI.WebControls.CaptchaControl.GetFont()
+2012-06-30 16:40:51,840 [MaDesignPrime][Thread:18][ERROR] DotNetNuke.UI.WebControls.CaptchaControl - Font 'MS Sans Serif' cannot be found.
+System.ArgumentException: Font 'MS Sans Serif' cannot be found.
+   at System.Drawing.FontFamily.CreateFontFamily(String name, FontCollection fontCollection)
+   at DotNetNuke.UI.WebControls.CaptchaControl.GetFont()
+2012-06-30 16:41:21,476 [MaDesignPrime][Thread:18][ERROR] DotNetNuke.UI.WebControls.CaptchaControl - Font 'MS Sans Serif' cannot be found.
+System.ArgumentException: Font 'MS Sans Serif' cannot be found.
+   at System.Drawing.FontFamily.CreateFontFamily(String name, FontCollection fontCollection)
+   at DotNetNuke.UI.WebControls.CaptchaControl.GetFont()
+2012-06-30 16:49:46,837 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 16:49:46,896 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 16:49:46,925 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 16:49:46,928 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 16:49:46,935 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 16:49:46,938 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-30 17:00:33,718 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.UI.WebControls.CaptchaControl - Font 'MS Sans Serif' cannot be found.
+System.ArgumentException: Font 'MS Sans Serif' cannot be found.
+   at System.Drawing.FontFamily.CreateFontFamily(String name, FontCollection fontCollection)
+   at DotNetNuke.UI.WebControls.CaptchaControl.GetFont()
+2012-06-30 17:09:23,541 [MaDesignPrime][Thread:VsCBMThreadPool][ERROR] DotNetNuke.Services.Localization.LocalizationProvider - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Common.Globals.get_Status()
+   at DotNetNuke.Services.Localization.LocaleController.GetLocales(Int32 portalID)
+   at DotNetNuke.Services.Localization.LocaleController.GetLocale(Int32 portalID, String code)
+   at DotNetNuke.Services.Localization.LocaleController.GetLocale(String code)
+   at DotNetNuke.Services.Localization.LocalizationProvider.TryGetStringInternal(String key, String userLanguage, String resourceFile, PortalSettings portalSettings, String& resourceValue)
+2012-06-30 17:09:24,040 [MaDesignPrime][Thread:VsCBMThreadPool][ERROR] DotNetNuke.Common.Utilities.DataCache - Failed to map the path '/app_globalresources/sharedresources.portal--1.resx'.
+System.InvalidOperationException: Failed to map the path '/app_globalresources/sharedresources.portal--1.resx'.
+   at System.Web.Hosting.HostingEnvironment.MapPathActual(VirtualPath virtualPath, Boolean permitNull)
+   at System.Web.Hosting.HostingEnvironment.MapPathInternal(VirtualPath virtualPath)
+   at System.Web.Hosting.HostingEnvironment.MapPath(VirtualPath virtualPath)
+   at System.Web.Hosting.HostingEnvironment.MapPath(String virtualPath)
+   at DotNetNuke.Services.Localization.LocalizationProvider.GetResourceFileCallBack(CacheItemArgs cacheItemArgs)
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromDictionary(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired)

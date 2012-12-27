@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Richardson;Mark;R.
+FN:Mark R. Richardson
+ORG:Rembolt Ludtke LLP
+TITLE:Associate
+TEL;WORK;VOICE:(402) 475-5100
+ADR;WORK:;;1201 Lincoln Mall, Ste. 102;Lincoln;NE;68508
+LABEL;WORK;ENCODING=QUOTED-PRINTABLE:1201 Lincoln Mall, Ste. 102=0D=0ALincoln, NE 68508
+URL;WORK:http://www.remboltlawfirm.com/OurTeam/Attorneys/MarkRRichardson.aspx
+EMAIL;PREF;INTERNET:mrichardson@remboltlawfirm.com
+END:VCARD

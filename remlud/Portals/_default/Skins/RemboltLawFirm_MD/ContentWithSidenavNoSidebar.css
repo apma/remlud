@@ -1,0 +1,63 @@
+﻿@import url("editor.css");
+/* --- Content Page with SideNav No Sidebar--- */
+#page_wrapper{position:relative; margin-left: 13px; margin-right:13px;}
+#page_wrapper .left_shadow{z-index:1400;margin-left: -13px;}
+#page_wrapper .right_shadow{z-index:1400;margin-right: -13px;}
+
+#breadcrumb { height: 18px; width:960px; padding: 6px 0;font-size:11px;color: #807f83;font-weight: normal;border-bottom: #c7c7c8 1px solid;}
+#breadcrumb div.skinobject {font-weight:normal;}
+
+#side_nav { float:left;width: 259px;margin:1px 0 10px 0;}
+#pc_main_content {width: 100%;background: url('/Portals/_default/Skins/RemboltLawFirm_MD/Images/secondary-page-header-bkgrd.jpg') repeat-x;}
+#pc_main_content h1 { display:inline-block; font-size:30px;color: #fff;margin: 10px 0 0 30px;
+                text-shadow:0px 1px 0px  #888;text-transform: capitalize;}
+#content_holder{margin-top:30px;min-height: 200px;}
+#dynamic_area_nosidebar {float:left;width:635px;margin: 0px 29px 0 30px;font-size:15px;line-height:22px;color: #2d2d2d;}
+#dynamic_area_nosidebar  p {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: normal;
+    color: #2d2d2d;
+    margin-bottom:18px;
+}
+#dynamic_area_nosidebar  h2{
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 18px;
+    line-height: normal;
+    font-weight: normal;
+    color: #1c3f93;
+    margin-bottom: 15px;
+}
+#side_bar{ float: right;width:176px;margin: 0px 20px 0 0;}            
+
+/* --- Clients Listing --- */
+#clientstable{ margin: 0 0 30px 0;}
+.lightName {border-bottom:1px solid #c7c7c8; padding: 11px 0px 11px 15px; font-family: Tahoma, Arial, sans serif; font-size: 15px; line-height: normal; color: #2dd2d2d; text-align: left; }
+.lightWebsite {border-bottom:1px solid #c7c7c8; padding: 11px 15px 11px 0px; font-family: Tahoma, Arial, sans serif; font-size: 13px; line-height: normal; color: #1c3f93; text-align: right; }
+.lightWebsite a {color: #1c3f93; text-decoration: underline; }
+.darkName {border-bottom:1px solid #c7c7c8; padding: 11px 0px 11px 15px; font-family: Tahoma, Arial, sans serif; font-size: 15px; line-height: normal; color: #2dd2d2d; text-align: left; background-color: #f0f0f2; }
+.darkWebsite {border-bottom:1px solid #c7c7c8; padding: 11px 15px 11px 0px; font-family: Tahoma, Arial, sans serif; font-size: 13px; line-height: normal; color: #1c3f93; text-align: right; background-color: #f0f0f2; }
+.darkWebsite a {color: #1c3f93; text-decoration: underline; }
+.clientLink a {vertical-align: 4px; }    
+
+.other {font-family: Tahoma, Arial, sans serif; font-size: 19px; line-height: normal; color: #1c3f93; text-align: left; margin-bottom: 10px; font-weight: normal; }
+
+
+
+#dynamic_area_nosidebar  p.disclaimer {font-family: Arial, Helvetica, sans-serif; font-size:11px; color: #898989; font-style:italic; margin-top:15px;line-height: normal; }
+
+/* -- videos -- */
+a.video {display:block;width: 295px;height:215px;text-align:center;
+    margin:8px 20px 15px 0;float:left;border:1px solid #999;}
+a.video img {margin-top:0px;border:0px;width:295px;height:215px;}
+a.video:hover {border:1px solid #000;}
+ul.vidlist li {float:left;list-style: none;display:block;margin-top:25px;}
+#dynamic_area_nosidebar div.vidtitle p{width:280px;font-size:14px;line-height:18px;color: #2d2d2d;font-weight:bold;text-align: center;
+    margin: 5px 0 2px 0;}
+    
+#dynamic_area_nosidebar div.vidtitle p span {font-weight:normal; color:#333;}
+
+#dynamic_area_nosidebar h2 {padding-top:15px;}
+#dynamic_area_nosidebar ul.bullets li {font-size: 12px;line-height: normal;list-style: disc outside url("Images/dynamic_area_bullet.gif");margin-bottom: 4px;margin-left: 14px;font-size:14px;}
+#dynamic_area_nosidebar p {font-size:15px;}

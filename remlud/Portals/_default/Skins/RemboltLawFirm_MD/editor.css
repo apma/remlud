@@ -1,0 +1,84 @@
+﻿#dynamic_area_nosidebar > p,
+#dynamic_area p {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: normal;
+    color: #2d2d2d;
+}
+#pc_main_content #dynamic_area h1.contentheading {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 20px;
+    line-height: normal;
+    font-weight: normal;
+    color: #1c3f93;
+    margin:0 0 0px 0;
+}
+#dynamic_area_nosidebar > h2,
+#dynamic_area h2 {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 18px;
+    line-height: normal;
+    font-weight: normal;
+    color: #1c3f93;
+    margin-bottom: 15px;
+}
+#dynamic_area_nosidebar hr,
+#dynamic_area hr {
+    border: 0px;
+    color: #cacaca;
+    background-color: #cacaca;
+    height: 1px;
+    margin-bottom: 20px;
+}
+#dynamic_area_nosidebar a,
+#dynamic_area a {
+    font-family: Tahoma, Arial, sans-serif;
+    font-weight: normal;
+    color: #1c3f93;
+    text-decoration: underline;
+}
+#dynamic_area ul.bullets li {
+    font-size: 14px;
+    line-height: normal;
+    margin-bottom: 6px;
+    margin-left: 14px;
+    list-style: disc;
+    list-style-image: url('Images/dynamic_area_bullet.gif');
+}
+
+
+/* --- Edits to Bio --- */
+#dynamic_area h2.subheads {font-size:19px;line-height: normal;color: #2d2d2d; }
+.biolist {font-size:14px;color: #2d2d2d;}
+.namedisplay {margin: 24px 0 10px 0; font-size:11px; line-height:16px; font-weight:bold;color: #545454;}
+.namedisplay a { color: #1c3f93;text-decoration: underline;font-size:11px;line-height:16px;}
+.biopic { border: 1px solid #cacaca;}
+
+.medialink {margin-top:10px;}
+.medialink img{ margin: 0px 6px 8px 0;}
+.medialink a {color: #1c3f93;text-decoration: underline;font-size:11px;line-height:16px;vertical-align:14px;}
+
+#rladmin{ background: #eee;margin: 5px;padding: 5px;}
+#rladmin_input label{float:left;}
+#rladmin_input input {float:right;}
+#rladmin table td{ width: 380px;text-align:right;}
+
+#dynamic_area .super{margin: -2px 0px 0 0px;padding: 0;font-size: 10px;}
+.paralegaldisplay {color: #545454;font-size: 11px;font-weight: bold;line-height: 16px;margin: 0 0 -10px;}
+.paralegaldisplay a {color: #1c3f93;text-decoration: underline;font-size:11px;line-height:16px;vertical-align:14px;}
+
+#side_bar ul.bullets li {font-size: 12px;line-height: normal;list-style: disc outside url("Images/dynamic_area_bullet.gif");margin-bottom: 4px;margin-left: 14px; }
+#side_bar ul.bullets li a {color: #1C3F93; text-decoration: underline; }
+#side_bar h3 {font-size: 14px; line-height: normal; margin: 6px 0 6px 0; color: #545454; }
+
+.attorneypic {padding: 0px 4px 0px 4px; }
+.attorneypic img {border:1px solid #cacaca; width:114px; }
+.attorneyName {padding: 0px 0px 20px 0px; font-family: Tahoma, Arial, sans serif; font-size: 12px; line-height: normal; color: #2d2d2d; text-align: center; }
+.attorneyName a {font-family: Tahoma, Arial, sans serif; font-size: 12px; line-height: normal; color: #1c3f93; text-decoration:underline; }
+
+.videopic {padding: 0px; width: 158px; height: 117px; }
+.blank {height: 24px;}
+.videoText {padding: 0px 10px 0px 0px; font-family: Tahoma, Arial, sans serif; font-size: 14px; line-height: normal; color: #1c3f93; text-align: left; vertical-align: middle; height: 69px; background-color: #fdecb4; border-right: 1px solid #d8d8d8; border-top: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8; }
+.videoText a {font-family: Tahoma, Arial, sans serif; font-size: 14px; line-height: normal; color: #1c3f93; text-decoration:underline; text-align: left; vertical-align: middle; }
+.videoIcon {padding: 0px 2px 0px 16px; font-family: Tahoma, Arial, sans serif; font-size: 14px; line-height: normal; color: #1c3f93; text-align: left; vertical-align: middle; height: 69px; background-color: #fdecb4; border-top: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8; }

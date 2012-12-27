@@ -1,0 +1,43 @@
+
+#page_wrapper{ margin: 0 13px 0 13px;}
+#newsleft{float:left;width:710px;}
+#newsleft .dnnForm { width: 100%;margin-left:-13px;}
+#newsright{float:right;width: 240px;}
+.RLPost 
+{
+    float:left;
+    min-height: 300px;
+    width:680px;
+    background:#fff url('/Portals/_default/Skins/RemboltLawFirm_MD/Images/news-post-date-bar.jpg') no-repeat;
+    z-index:100;
+    border-top: 1px #c7c7c8 solid;
+}
+
+.viewPost{ margin:6px 30px 20px 30px;}
+.vbEntry{
+    width:630px;
+    margin: 6px 30px 20px 30px;
+    
+}
+ul.qaSocialActions{ margin: 10px 0 10px 0;}
+.BlogHead { margin: 30px 0 0 0; }
+.BlogFooter{border-bottom: 0;}
+#pc_main_content {width: 100%;background: url('/Portals/_default/Skins/RemboltLawFirm_MD/Images/secondary-page-header-bkgrd.jpg') repeat-x;}
+#pc_main_content h1 { display:inline-block; font-size:30px;color: #fff;margin: 10px 0 0 30px;text-shadow:0px 1px 0px  #888;text-transform: capitalize;border-bottom: 0 none;}
+#content_holder{margin-top:20px;min-height: 200px;}
+.newstable{margin-left:-13px;}
+
+.RLTimeStamp{ font-family: Tahoma, Sans-Serif; font-size:18px;color: #545454;}
+.RLAuthor{float:right;margin-top:8px;display:inline; font-size:11px;color: #676767;}
+.BlogTitle{font-family: Tahoma, Sans-Serif;font-size:22px;color: #1c3f93;margin:10px 0;}
+.vbBody{ color: #2d2d2d;font-size:15px; line-height:22px; margin-bottom:6px;}
+.vbBody a { color: #1c3f93;font-size:15px; line-height:22px; margin-bottom:6px;}
+.vbAuthor{width: 600px;margin-left: 13px;}
+.BlogReadMore{margin-top:20px;}
+#newsright h2.newsheadersidebar { color: #1c3f93; font-size:16px; margin-bottom:15px;}
+#newsright #Table1 {width: 210px; margin: 0 25px 15px 0; border-bottom: 1px solid #c7c7c8;}
+#newsright #Table1 input.NormalTextBox {width:140px;}
+.dnnBlogList {margin-bottom:12px;}
+.dnnBlogList td .CommandButton {font-size:12px;margin: 4px 0;}
+.newsportalList { padding: 5px 0;}
+.clearbottom{ padding-bottom: 50px;}

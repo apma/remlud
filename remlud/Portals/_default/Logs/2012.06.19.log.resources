@@ -1,0 +1,1189 @@
+2012-06-19 20:43:27,161 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 20:43:27,255 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 20:43:27,423 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Value cannot be null.
+Parameter name: type
+System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-19 20:43:27,446 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(534) in tab(120) and portal(0) 
+System.Exception: Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(534) in tab(120) and portal(0)  ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+   --- End of inner exception stack trace ---
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-19 20:43:46,490 [MaDesignPrime][Thread:10][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 20:43:46,493 [MaDesignPrime][Thread:10][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 20:44:33,526 [MaDesignPrime][Thread:19][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session)
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session)
+   at NHibernate.Action.CollectionRecreateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 78
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 71
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:44:33,619 [MaDesignPrime][Thread:19][ERROR] System.Web.UI.Page - ~/Default.aspx?tabid=120&error=object+references+an+unsaved+transient+instance+-+save+the+transient+instance+before+flushing+or+set+cascade+action+for+the+property+to+something+that+would+make+it+autosave.+Type%3a+NHibernate_Module.Domain.Practice%2c+Entity%3a+NHibernate_Module.Domain.Practice&content=0
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session)
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session)
+   at NHibernate.Action.CollectionRecreateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 78
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 71
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:44:51,378 [MaDesignPrime][Thread:8][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session)
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session)
+   at NHibernate.Action.CollectionRecreateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 78
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 71
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:44:51,382 [MaDesignPrime][Thread:8][ERROR] System.Web.UI.Page - ~/Default.aspx?tabid=120&error=object+references+an+unsaved+transient+instance+-+save+the+transient+instance+before+flushing+or+set+cascade+action+for+the+property+to+something+that+would+make+it+autosave.+Type%3a+NHibernate_Module.Domain.Practice%2c+Entity%3a+NHibernate_Module.Domain.Practice&content=0
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session)
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session)
+   at NHibernate.Action.CollectionRecreateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 78
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 71
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:44:56,825 [MaDesignPrime][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session)
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session)
+   at NHibernate.Action.CollectionRecreateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 78
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 71
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:44:56,829 [MaDesignPrime][Thread:6][ERROR] System.Web.UI.Page - ~/Default.aspx?tabid=120&error=object+references+an+unsaved+transient+instance+-+save+the+transient+instance+before+flushing+or+set+cascade+action+for+the+property+to+something+that+would+make+it+autosave.+Type%3a+NHibernate_Module.Domain.Practice%2c+Entity%3a+NHibernate_Module.Domain.Practice&content=0
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session)
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session)
+   at NHibernate.Action.CollectionRecreateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 78
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 71
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:44:58,805 [MaDesignPrime][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session)
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session)
+   at NHibernate.Action.CollectionRecreateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 78
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 71
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:44:58,809 [MaDesignPrime][Thread:6][ERROR] System.Web.UI.Page - ~/Default.aspx?tabid=120&error=object+references+an+unsaved+transient+instance+-+save+the+transient+instance+before+flushing+or+set+cascade+action+for+the+property+to+something+that+would+make+it+autosave.+Type%3a+NHibernate_Module.Domain.Practice%2c+Entity%3a+NHibernate_Module.Domain.Practice&content=0
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session)
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session)
+   at NHibernate.Action.CollectionRecreateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 78
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 71
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:45:09,326 [MaDesignPrime][Thread:19][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session)
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session)
+   at NHibernate.Action.CollectionRecreateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 78
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 71
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:45:09,330 [MaDesignPrime][Thread:19][ERROR] System.Web.UI.Page - ~/Default.aspx?tabid=120&error=object+references+an+unsaved+transient+instance+-+save+the+transient+instance+before+flushing+or+set+cascade+action+for+the+property+to+something+that+would+make+it+autosave.+Type%3a+NHibernate_Module.Domain.Practice%2c+Entity%3a+NHibernate_Module.Domain.Practice&content=0
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session)
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session)
+   at NHibernate.Action.CollectionRecreateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 78
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 71
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:46:11,030 [MaDesignPrime][Thread:8][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session)
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session)
+   at NHibernate.Action.CollectionRecreateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 78
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 71
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:46:11,033 [MaDesignPrime][Thread:8][ERROR] System.Web.UI.Page - ~/Default.aspx?tabid=120&error=object+references+an+unsaved+transient+instance+-+save+the+transient+instance+before+flushing+or+set+cascade+action+for+the+property+to+something+that+would+make+it+autosave.+Type%3a+NHibernate_Module.Domain.Practice%2c+Entity%3a+NHibernate_Module.Domain.Practice&content=0
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session)
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session)
+   at NHibernate.Action.CollectionRecreateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 78
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 71
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:53:54,901 [MaDesignPrime][Thread:19][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 20:53:54,954 [MaDesignPrime][Thread:19][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 20:54:02,522 [MaDesignPrime][Thread:25][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session)
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session)
+   at NHibernate.Action.CollectionRecreateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 78
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 71
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:54:02,532 [MaDesignPrime][Thread:25][ERROR] System.Web.UI.Page - ~/Default.aspx?tabid=120&error=object+references+an+unsaved+transient+instance+-+save+the+transient+instance+before+flushing+or+set+cascade+action+for+the+property+to+something+that+would+make+it+autosave.+Type%3a+NHibernate_Module.Domain.Practice%2c+Entity%3a+NHibernate_Module.Domain.Practice&content=0
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session)
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session)
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session)
+   at NHibernate.Action.CollectionRecreateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 78
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 71
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:56:35,471 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 20:56:35,525 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 20:59:06,932 [MaDesignPrime][Thread:8][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Engine\ForeignKeys.cs:line 264
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Type\ManyToOneType.cs:line 48
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 749
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 2013
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 1109
+   at NHibernate.Action.CollectionRecreateAction.Execute() in p:\nhibernate-core\src\NHibernate\Action\CollectionRecreateAction.cs:line 35
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 125
+   at NHibernate.Engine.ActionQueue.ExecuteActions() in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 174
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in p:\nhibernate-core\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 253
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in p:\nhibernate-core\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 20
+   at NHibernate.Impl.SessionImpl.Flush() in p:\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1497
+   at NHibernate.Transaction.AdoTransaction.Commit() in p:\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 193
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 62
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 55
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:59:07,052 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=120&error=object+references+an+unsaved+transient+instance+-+save+the+transient+instance+before+flushing+or+set+cascade+action+for+the+property+to+something+that+would+make+it+autosave.+Type%3a+NHibernate_Module.Domain.Practice%2c+Entity%3a+NHibernate_Module.Domain.Practice&content=0
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Engine\ForeignKeys.cs:line 264
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Type\ManyToOneType.cs:line 48
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 749
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 2013
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 1109
+   at NHibernate.Action.CollectionRecreateAction.Execute() in p:\nhibernate-core\src\NHibernate\Action\CollectionRecreateAction.cs:line 35
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 125
+   at NHibernate.Engine.ActionQueue.ExecuteActions() in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 174
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in p:\nhibernate-core\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 253
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in p:\nhibernate-core\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 20
+   at NHibernate.Impl.SessionImpl.Flush() in p:\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1497
+   at NHibernate.Transaction.AdoTransaction.Commit() in p:\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 193
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 62
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 55
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:59:07,343 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 20:59:07,347 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 20:59:42,675 [MaDesignPrime][Thread:23][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Engine\ForeignKeys.cs:line 264
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Type\ManyToOneType.cs:line 48
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 749
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 2013
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 1109
+   at NHibernate.Action.CollectionRecreateAction.Execute() in p:\nhibernate-core\src\NHibernate\Action\CollectionRecreateAction.cs:line 35
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 125
+   at NHibernate.Engine.ActionQueue.ExecuteActions() in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 174
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in p:\nhibernate-core\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 253
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in p:\nhibernate-core\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 20
+   at NHibernate.Impl.SessionImpl.Flush() in p:\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1497
+   at NHibernate.Transaction.AdoTransaction.Commit() in p:\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 193
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 62
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 55
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:59:42,764 [MaDesignPrime][Thread:23][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=120&error=object+references+an+unsaved+transient+instance+-+save+the+transient+instance+before+flushing+or+set+cascade+action+for+the+property+to+something+that+would+make+it+autosave.+Type%3a+NHibernate_Module.Domain.Practice%2c+Entity%3a+NHibernate_Module.Domain.Practice&content=0
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Engine\ForeignKeys.cs:line 264
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Type\ManyToOneType.cs:line 48
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 749
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 2013
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 1109
+   at NHibernate.Action.CollectionRecreateAction.Execute() in p:\nhibernate-core\src\NHibernate\Action\CollectionRecreateAction.cs:line 35
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 125
+   at NHibernate.Engine.ActionQueue.ExecuteActions() in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 174
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in p:\nhibernate-core\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 253
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in p:\nhibernate-core\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 20
+   at NHibernate.Impl.SessionImpl.Flush() in p:\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1497
+   at NHibernate.Transaction.AdoTransaction.Commit() in p:\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 193
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 62
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 55
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 20:59:43,045 [MaDesignPrime][Thread:12][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 20:59:43,049 [MaDesignPrime][Thread:12][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 21:00:11,258 [MaDesignPrime][Thread:23][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Engine\ForeignKeys.cs:line 264
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Type\ManyToOneType.cs:line 48
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 749
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 2013
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 1109
+   at NHibernate.Action.CollectionRecreateAction.Execute() in p:\nhibernate-core\src\NHibernate\Action\CollectionRecreateAction.cs:line 35
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 125
+   at NHibernate.Engine.ActionQueue.ExecuteActions() in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 174
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in p:\nhibernate-core\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 253
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in p:\nhibernate-core\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 20
+   at NHibernate.Impl.SessionImpl.Flush() in p:\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1497
+   at NHibernate.Transaction.AdoTransaction.Commit() in p:\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 193
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 62
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 55
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 21:00:11,262 [MaDesignPrime][Thread:23][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=120&error=object+references+an+unsaved+transient+instance+-+save+the+transient+instance+before+flushing+or+set+cascade+action+for+the+property+to+something+that+would+make+it+autosave.+Type%3a+NHibernate_Module.Domain.Practice%2c+Entity%3a+NHibernate_Module.Domain.Practice&content=0
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Engine\ForeignKeys.cs:line 264
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Type\ManyToOneType.cs:line 48
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 749
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 2013
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 1109
+   at NHibernate.Action.CollectionRecreateAction.Execute() in p:\nhibernate-core\src\NHibernate\Action\CollectionRecreateAction.cs:line 35
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 125
+   at NHibernate.Engine.ActionQueue.ExecuteActions() in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 174
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in p:\nhibernate-core\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 253
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in p:\nhibernate-core\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 20
+   at NHibernate.Impl.SessionImpl.Flush() in p:\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1497
+   at NHibernate.Transaction.AdoTransaction.Commit() in p:\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 193
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 62
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 55
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 21:01:10,719 [MaDesignPrime][Thread:13][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 21:01:10,774 [MaDesignPrime][Thread:13][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 21:02:35,815 [MaDesignPrime][Thread:13][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Engine\ForeignKeys.cs:line 264
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Type\ManyToOneType.cs:line 48
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 749
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 2013
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 1109
+   at NHibernate.Action.CollectionRecreateAction.Execute() in p:\nhibernate-core\src\NHibernate\Action\CollectionRecreateAction.cs:line 35
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 125
+   at NHibernate.Engine.ActionQueue.ExecuteActions() in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 174
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in p:\nhibernate-core\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 253
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in p:\nhibernate-core\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 20
+   at NHibernate.Impl.SessionImpl.Flush() in p:\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1497
+   at NHibernate.Transaction.AdoTransaction.Commit() in p:\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 193
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 62
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 55
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 21:02:35,902 [MaDesignPrime][Thread:13][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=120&error=object+references+an+unsaved+transient+instance+-+save+the+transient+instance+before+flushing+or+set+cascade+action+for+the+property+to+something+that+would+make+it+autosave.+Type%3a+NHibernate_Module.Domain.Practice%2c+Entity%3a+NHibernate_Module.Domain.Practice&content=0
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Engine\ForeignKeys.cs:line 264
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Type\ManyToOneType.cs:line 48
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 749
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 2013
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 1109
+   at NHibernate.Action.CollectionRecreateAction.Execute() in p:\nhibernate-core\src\NHibernate\Action\CollectionRecreateAction.cs:line 35
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 125
+   at NHibernate.Engine.ActionQueue.ExecuteActions() in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 174
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in p:\nhibernate-core\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 253
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in p:\nhibernate-core\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 20
+   at NHibernate.Impl.SessionImpl.Flush() in p:\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1497
+   at NHibernate.Transaction.AdoTransaction.Commit() in p:\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 193
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 62
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 55
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 21:02:36,162 [MaDesignPrime][Thread:13][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 21:02:36,166 [MaDesignPrime][Thread:13][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 21:03:07,856 [MaDesignPrime][Thread:10][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Engine\ForeignKeys.cs:line 264
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Type\ManyToOneType.cs:line 48
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 749
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 2013
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 1109
+   at NHibernate.Action.CollectionRecreateAction.Execute() in p:\nhibernate-core\src\NHibernate\Action\CollectionRecreateAction.cs:line 35
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 125
+   at NHibernate.Engine.ActionQueue.ExecuteActions() in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 174
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in p:\nhibernate-core\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 253
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in p:\nhibernate-core\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 20
+   at NHibernate.Impl.SessionImpl.Flush() in p:\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1497
+   at NHibernate.Transaction.AdoTransaction.Commit() in p:\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 193
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 62
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 55
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 21:03:07,860 [MaDesignPrime][Thread:10][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=120&error=object+references+an+unsaved+transient+instance+-+save+the+transient+instance+before+flushing+or+set+cascade+action+for+the+property+to+something+that+would+make+it+autosave.+Type%3a+NHibernate_Module.Domain.Practice%2c+Entity%3a+NHibernate_Module.Domain.Practice&content=0
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Engine\ForeignKeys.cs:line 264
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Type\ManyToOneType.cs:line 48
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 749
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 2013
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 1109
+   at NHibernate.Action.CollectionRecreateAction.Execute() in p:\nhibernate-core\src\NHibernate\Action\CollectionRecreateAction.cs:line 35
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 125
+   at NHibernate.Engine.ActionQueue.ExecuteActions() in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 174
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in p:\nhibernate-core\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 253
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in p:\nhibernate-core\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 20
+   at NHibernate.Impl.SessionImpl.Flush() in p:\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1497
+   at NHibernate.Transaction.AdoTransaction.Commit() in p:\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 193
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 62
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 55
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 21:04:09,211 [MaDesignPrime][Thread:8][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Engine\ForeignKeys.cs:line 264
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Type\ManyToOneType.cs:line 48
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 749
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 2013
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 1109
+   at NHibernate.Action.CollectionRecreateAction.Execute() in p:\nhibernate-core\src\NHibernate\Action\CollectionRecreateAction.cs:line 35
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 125
+   at NHibernate.Engine.ActionQueue.ExecuteActions() in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 174
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in p:\nhibernate-core\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 253
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in p:\nhibernate-core\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 20
+   at NHibernate.Impl.SessionImpl.Flush() in p:\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1497
+   at NHibernate.Transaction.AdoTransaction.Commit() in p:\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 193
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 62
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 55
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 21:04:09,215 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=120&error=object+references+an+unsaved+transient+instance+-+save+the+transient+instance+before+flushing+or+set+cascade+action+for+the+property+to+something+that+would+make+it+autosave.+Type%3a+NHibernate_Module.Domain.Practice%2c+Entity%3a+NHibernate_Module.Domain.Practice&content=0
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Engine\ForeignKeys.cs:line 264
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Type\ManyToOneType.cs:line 48
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 749
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 2013
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 1109
+   at NHibernate.Action.CollectionRecreateAction.Execute() in p:\nhibernate-core\src\NHibernate\Action\CollectionRecreateAction.cs:line 35
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 125
+   at NHibernate.Engine.ActionQueue.ExecuteActions() in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 174
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in p:\nhibernate-core\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 253
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in p:\nhibernate-core\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 20
+   at NHibernate.Impl.SessionImpl.Flush() in p:\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1497
+   at NHibernate.Transaction.AdoTransaction.Commit() in p:\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 193
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 62
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 55
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 21:08:54,489 [MaDesignPrime][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 21:08:54,542 [MaDesignPrime][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 21:09:12,845 [MaDesignPrime][Thread:9][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Engine\ForeignKeys.cs:line 264
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Type\ManyToOneType.cs:line 48
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 749
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 2013
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 1109
+   at NHibernate.Action.CollectionRecreateAction.Execute() in p:\nhibernate-core\src\NHibernate\Action\CollectionRecreateAction.cs:line 35
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 125
+   at NHibernate.Engine.ActionQueue.ExecuteActions() in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 174
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in p:\nhibernate-core\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 253
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in p:\nhibernate-core\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 20
+   at NHibernate.Impl.SessionImpl.Flush() in p:\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1497
+   at NHibernate.Transaction.AdoTransaction.Commit() in p:\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 193
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 64
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 57
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 21:09:12,886 [MaDesignPrime][Thread:9][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=120&error=object+references+an+unsaved+transient+instance+-+save+the+transient+instance+before+flushing+or+set+cascade+action+for+the+property+to+something+that+would+make+it+autosave.+Type%3a+NHibernate_Module.Domain.Practice%2c+Entity%3a+NHibernate_Module.Domain.Practice&content=0
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Engine\ForeignKeys.cs:line 264
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Type\ManyToOneType.cs:line 48
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 749
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 2013
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 1109
+   at NHibernate.Action.CollectionRecreateAction.Execute() in p:\nhibernate-core\src\NHibernate\Action\CollectionRecreateAction.cs:line 35
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 125
+   at NHibernate.Engine.ActionQueue.ExecuteActions() in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 174
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in p:\nhibernate-core\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 253
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in p:\nhibernate-core\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 20
+   at NHibernate.Impl.SessionImpl.Flush() in p:\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1497
+   at NHibernate.Transaction.AdoTransaction.Commit() in p:\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 193
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 64
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 57
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 21:09:23,423 [MaDesignPrime][Thread:9][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Engine\ForeignKeys.cs:line 264
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Type\ManyToOneType.cs:line 48
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 749
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 2013
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 1109
+   at NHibernate.Action.CollectionRecreateAction.Execute() in p:\nhibernate-core\src\NHibernate\Action\CollectionRecreateAction.cs:line 35
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 125
+   at NHibernate.Engine.ActionQueue.ExecuteActions() in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 174
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in p:\nhibernate-core\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 253
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in p:\nhibernate-core\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 20
+   at NHibernate.Impl.SessionImpl.Flush() in p:\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1497
+   at NHibernate.Transaction.AdoTransaction.Commit() in p:\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 193
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 64
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 57
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 21:09:23,427 [MaDesignPrime][Thread:9][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=120&error=object+references+an+unsaved+transient+instance+-+save+the+transient+instance+before+flushing+or+set+cascade+action+for+the+property+to+something+that+would+make+it+autosave.+Type%3a+NHibernate_Module.Domain.Practice%2c+Entity%3a+NHibernate_Module.Domain.Practice&content=0
+NHibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing or set cascade action for the property to something that would make it autosave. Type: NHibernate_Module.Domain.Practice, Entity: NHibernate_Module.Domain.Practice
+   at NHibernate.Engine.ForeignKeys.GetEntityIdentifierIfNotUnsaved(String entityName, Object entity, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Engine\ForeignKeys.cs:line 264
+   at NHibernate.Type.ManyToOneType.NullSafeSet(IDbCommand st, Object value, Int32 index, Boolean[] settable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Type\ManyToOneType.cs:line 48
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.WriteElement(IDbCommand st, Object elt, Int32 i, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 749
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.PerformInsert(Object ownerId, IPersistentCollection collection, IExpectation expectation, Object entry, Int32 index, Boolean useBatch, Boolean callable, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 2013
+   at NHibernate.Persister.Collection.AbstractCollectionPersister.Recreate(IPersistentCollection collection, Object id, ISessionImplementor session) in p:\nhibernate-core\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 1109
+   at NHibernate.Action.CollectionRecreateAction.Execute() in p:\nhibernate-core\src\NHibernate\Action\CollectionRecreateAction.cs:line 35
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 136
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 125
+   at NHibernate.Engine.ActionQueue.ExecuteActions() in p:\nhibernate-core\src\NHibernate\Engine\ActionQueue.cs:line 174
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in p:\nhibernate-core\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 253
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in p:\nhibernate-core\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 20
+   at NHibernate.Impl.SessionImpl.Flush() in p:\nhibernate-core\src\NHibernate\Impl\SessionImpl.cs:line 1497
+   at NHibernate.Transaction.AdoTransaction.Commit() in p:\nhibernate-core\src\NHibernate\Transaction\AdoTransaction.cs:line 193
+   at NHibernate_Module.Repositories.EmployeeRepository.Add(Employee employee) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 20
+   at RemboltLawFirm_Mod.EditEmployees.LoadData(IEnumerable`1 employees) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 64
+   at RemboltLawFirm_Mod.EditEmployees.Page_Load(Object sender, EventArgs e) in c:\users\ma\documents\visual studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\EditEmployees.ascx.cs:line 57
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-19 22:37:39,822 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:37:39,874 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:42:32,151 [MaDesignPrime][Thread:18][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:42:32,206 [MaDesignPrime][Thread:18][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:44:54,564 [MaDesignPrime][Thread:18][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:44:54,617 [MaDesignPrime][Thread:18][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:49:10,447 [MaDesignPrime][Thread:14][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:49:10,499 [MaDesignPrime][Thread:14][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:49:54,200 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:49:54,252 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:50:47,159 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:50:47,213 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:51:17,279 [MaDesignPrime][Thread:19][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:51:17,341 [MaDesignPrime][Thread:19][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:53:26,659 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:53:26,721 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:53:51,358 [MaDesignPrime][Thread:17][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:53:51,412 [MaDesignPrime][Thread:17][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:54:39,044 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:54:39,100 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:56:32,559 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:56:32,623 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:57:06,978 [MaDesignPrime][Thread:17][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:57:07,031 [MaDesignPrime][Thread:17][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:57:53,518 [MaDesignPrime][Thread:17][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:57:53,586 [MaDesignPrime][Thread:17][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:58:58,041 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-19 22:58:58,094 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)

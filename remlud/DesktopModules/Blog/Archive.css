@@ -1,0 +1,15 @@
+.socialEvent-calendar-wrapper{border:1px solid #b4b3b4;display:inline-block;padding:6px;}
+.socialEvent-calendar{background:#fff;}
+.socialEvent-calendar tr td{margin:0;padding:0;}
+.socialEvent-calendarTitle{border-bottom:1px solid #b4b3b4;}
+.socialEvent-calendarTitle tr td{font-size:18px;line-height:24px;font-weight:700;padding:6px;}
+.socialEvent-calendarNextPrev a,.socialEvent-calendarNextPrev a:link,.socialEvent-calendarNextPrev a:visited{font-size:16px;font-weight:400;text-decoration:none;}
+.socialEvent-calendarNextPrev a:hover,.socialEvent-calendarNextPrev a:focus,.socialEvent-calendarNextPrev a:active{color:#cd0000!important;text-decoration:none;}
+.socialEvent-calendar th.socialEvent-calendarDayHeader{text-align:center;text-transform:uppercase;color:#939393;font-weight:400;padding:4px 4px 0;}
+.socialEvent-calendar td.socialEvent-calendarDay{background:#e2e2e2;color:#353535;padding:6px;}
+.socialEvent-calendar td.socialEvent-calendarOtherMonth,.socialEvent-calendar td.socialEvent-calendarWeekend{background:#e2e2e2;color:#959595;padding:6px;}
+.socialEvent-calendar td.socialEvent-calendarToday{background:#b4b3b4;color:#353535;padding:6px;}
+.socialEvent-calendar td.socialEvent-calendarDay,.socialEvent-calendar td.socialEvent-calendarWeekend,.socialEvent-calendar td.socialEvent-calendarOtherMonth,.socialEvent-calendar td.socialEvent-calendarToday{border:2px solid #fff;}
+.socialEvent-calendar td.socialEvent-calendarDay a,.socialEvent-calendar td.socialEvent-calendarDay a:link,.socialEvent-calendar td.socialEvent-calendarDay a:visited,.socialEvent-calendar td.socialEvent-calendarWeekend a,.socialEvent-calendar td.socialEvent-calendarWeekend a:link,.socialEvent-calendar td.socialEvent-calendarWeekend a:visited,.socialEvent-calendar td.socialEvent-calendarToday a,.socialEvent-calendar td.socialEvent-calendarToday a:link,.socialEvent-calendar td.socialEvent-calendarToday a:visited{color:#000;font-weight:700;text-decoration:none;}
+.socialEvent-calendar td.socialEvent-calendarSelectedDay{background:#5c5c5c!important;color:#fff;padding:6px;}
+.socialEvent-calendar td.socialEvent-calendarSelectedDay a,.socialEvent-calendar td.socialEvent-calendarSelectedDay a:link,.socialEvent-calendar td.socialEvent-calendarSelectedDay a:visited{color:#fff;font-weight:700;text-decoration:none;}

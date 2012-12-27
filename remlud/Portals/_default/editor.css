@@ -1,0 +1,38 @@
+﻿#dynamic_area p {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: normal;
+    color: #2d2d2d;
+}
+#dynamic_area h2 {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 18px;
+    line-height: normal;
+    font-weight: normal;
+    color: #1c3f93;
+    margin-bottom: 15px;
+}
+#dynamic_area hr {
+    border: 0px;
+    color: #cacaca;
+    background-color: #cacaca;
+    height: 1px;
+    margin-bottom: 20px;
+}
+#dynamic_area a {
+    font-family: Tahoma, Arial, sans-serif;
+    font-weight: normal;
+    color: #1c3f93;
+    text-decoration: underline;
+}
+#dynamic_area ul.bullets li {
+    font-size: 14px;
+    line-height: normal;
+    margin-bottom: 6px;
+    margin-left: 14px;
+    list-style: disc;
+    list-style-image: url('Images/dynamic_area_bullet.gif');
+}
+
+

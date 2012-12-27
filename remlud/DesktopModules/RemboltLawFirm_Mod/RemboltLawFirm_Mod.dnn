@@ -1,0 +1,46 @@
+<dotnetnuke version="3.0" type="Module">
+  <folders>
+    <folder>
+      <name>RemboltLawFirm_Mod</name>
+      <friendlyname>RemboltLawFirm_Mod</friendlyname>
+      <foldername>RemboltLawFirm_Mod</foldername>
+      <modulename>RemboltLawFirm_Mod</modulename>
+      <description>A RemboltLawFirm_Mod module</description>
+      <version>01.00.00</version>
+      <businesscontrollerclass>RemboltLawFirm_Mod.RemboltLawFirm_ModController</businesscontrollerclass>
+      <modules>
+        <module>
+          <friendlyname>RemboltLawFirm_Mod</friendlyname>
+          <cachetime>0</cachetime>
+          <controls>
+            <control>
+              <src>DesktopModules/RemboltLawFirm_Mod/ViewRemboltLawFirm_Mod.ascx</src>
+              <type>View</type>
+              <helpurl></helpurl>
+            </control>
+          </controls>
+        </module>
+      </modules>
+      <files>
+        <file>
+	        <name>RemboltLawFirm_Mod.dll</name>
+	      </file>
+        <file>
+          <name>ViewRemboltLawFirm_Mod.ascx</name>
+        </file>
+        <file>
+          <name>EditEmployees.ascx</name>
+        </file>
+        <file>
+          <name>ViewRemboltLawFirm_Mod_SideBar.ascx</name>
+        </file>
+        <file>
+          <name>01.00.00.SqlDataProvider</name>
+        </file>
+        <file>
+          <name>Uninstall.SqlDataProvider</name>
+        </file>
+      </files>
+    </folder>
+  </folders>
+</dotnetnuke>

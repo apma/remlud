@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_RemboltLawFirm_Mod] DROP CONSTRAINT [FK_{objectQualifier}RemboltLawFirm_Mod_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_RemboltLawFirm_Mod] DROP CONSTRAINT [PK_{objectQualifier}YourCompany_RemboltLawFirm_Mod]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}YourCompany_RemboltLawFirm_Mod].[IX_{objectQualifier}YourCompany_RemboltLawFirm_Mod]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}YourCompany_RemboltLawFirm_Mod]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetRemboltLawFirm_Mods]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetRemboltLawFirm_Mod]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_AddRemboltLawFirm_Mod]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_UpdateRemboltLawFirm_Mod]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_DeleteRemboltLawFirm_Mod]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

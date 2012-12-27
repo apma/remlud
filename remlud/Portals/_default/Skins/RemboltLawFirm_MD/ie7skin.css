@@ -1,0 +1,19 @@
+
+/*IE7 Shadow causes major weirdness*/
+.left_shadow{display: none;}
+/*Exclusionary*/
+#wrapper #page #top_center div.left_shadow{ display: block;}
+#wrapper #page #middle_center div.left_shadow{ display: block;}
+
+
+#megamenu{margin-top:-47px;}
+#main_nav {z-index:999999;top:87px;}
+
+#searcharea{ position: relative;}
+#dnn_MENU1{float:left;}
+
+.blue-arrow{ margin-top: -12px;}
+.buttonholder{margin-top:-10px;}
+.rlbutton{ margin: 0 0 20px 0;}
+#dynamic_area_nosidebar div.vidtitle{float:left;clear:left;}
+/*#dynamic_area_nosidebar div.vidtitle p{width:280px;font-size:14px;line-height:18px;color: #2d2d2d;font-weight:bold;text-align: center;}*/

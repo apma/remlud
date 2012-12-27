@@ -1,0 +1,484 @@
+2012-06-25 10:59:24,986 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 10:59:25,063 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 10:59:25,140 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Value cannot be null.
+Parameter name: type
+System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 10:59:25,145 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(543) in tab(120) and portal(0) 
+System.Exception: Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(543) in tab(120) and portal(0)  ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+   --- End of inner exception stack trace ---
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 10:59:25,154 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 10:59:25,157 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 10:59:25,198 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Value cannot be null.
+Parameter name: type
+System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 10:59:25,200 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(585) in tab(170) and portal(0) 
+System.Exception: Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(585) in tab(170) and portal(0)  ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+   --- End of inner exception stack trace ---
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 10:59:29,121 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 10:59:29,123 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 18:11:06,055 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 18:11:06,119 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 18:11:06,185 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Value cannot be null.
+Parameter name: type
+System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 18:11:06,189 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(543) in tab(120) and portal(0) 
+System.Exception: Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(543) in tab(120) and portal(0)  ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+   --- End of inner exception stack trace ---
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 18:11:06,202 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 18:11:06,205 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 18:11:06,214 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Value cannot be null.
+Parameter name: type
+System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 18:11:06,216 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(585) in tab(170) and portal(0) 
+System.Exception: Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(585) in tab(170) and portal(0)  ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+   --- End of inner exception stack trace ---
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 18:11:14,845 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 18:11:14,849 [MaDesignPrime][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 18:13:51,251 [MaDesignPrime][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.HibernateException: Could not find named connection string default
+   at NHibernate.Connection.ConnectionProvider.GetNamedConnectionString(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProvider.cs:line 82
+   at NHibernate.Connection.ConnectionProvider.Configure(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProvider.cs:line 53
+   at NHibernate.Connection.ConnectionProviderFactory.NewConnectionProvider(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProviderFactory.cs:line 51
+   at NHibernate.Cfg.SettingsFactory.BuildSettings(IDictionary`2 properties) in p:\nhibernate-core\src\NHibernate\Cfg\SettingsFactory.cs:line 83
+   at NHibernate.Cfg.Configuration.BuildSettings() in p:\nhibernate-core\src\NHibernate\Cfg\Configuration.cs:line 1722
+   at NHibernate.Cfg.Configuration.BuildSessionFactory() in p:\nhibernate-core\src\NHibernate\Cfg\Configuration.cs:line 1253
+   at NHibernate_Module.Repositories.NHibernateHelper.get_SessionFactory() in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\NHibernateHelper.cs:line 23
+   at NHibernate_Module.Repositories.NHibernateHelper.OpenSession() in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\NHibernateHelper.cs:line 31
+   at NHibernate_Module.Repositories.EmployeeRepository.GetByPage(Int32 dnnpage) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 98
+   at RemboltLawFirm_Mod.ViewRemboltLawFirm_Mod.Page_Load(Object sender, EventArgs e) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\ViewRemboltLawFirm_Mod.ascx.cs:line 31
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-25 18:13:51,576 [MaDesignPrime][Thread:6][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=170&error=An unexpected error has occurred&content=0
+NHibernate.HibernateException: Could not find named connection string default
+   at NHibernate.Connection.ConnectionProvider.GetNamedConnectionString(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProvider.cs:line 82
+   at NHibernate.Connection.ConnectionProvider.Configure(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProvider.cs:line 53
+   at NHibernate.Connection.ConnectionProviderFactory.NewConnectionProvider(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProviderFactory.cs:line 51
+   at NHibernate.Cfg.SettingsFactory.BuildSettings(IDictionary`2 properties) in p:\nhibernate-core\src\NHibernate\Cfg\SettingsFactory.cs:line 83
+   at NHibernate.Cfg.Configuration.BuildSettings() in p:\nhibernate-core\src\NHibernate\Cfg\Configuration.cs:line 1722
+   at NHibernate.Cfg.Configuration.BuildSessionFactory() in p:\nhibernate-core\src\NHibernate\Cfg\Configuration.cs:line 1253
+   at NHibernate_Module.Repositories.NHibernateHelper.get_SessionFactory() in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\NHibernateHelper.cs:line 23
+   at NHibernate_Module.Repositories.NHibernateHelper.OpenSession() in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\NHibernateHelper.cs:line 31
+   at NHibernate_Module.Repositories.EmployeeRepository.GetByPage(Int32 dnnpage) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 98
+   at RemboltLawFirm_Mod.ViewRemboltLawFirm_Mod.Page_Load(Object sender, EventArgs e) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\ViewRemboltLawFirm_Mod.ascx.cs:line 31
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-25 18:13:52,337 [MaDesignPrime][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 18:13:52,341 [MaDesignPrime][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 18:13:55,860 [MaDesignPrime][Thread:17][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.HibernateException: Could not find named connection string default
+   at NHibernate.Connection.ConnectionProvider.GetNamedConnectionString(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProvider.cs:line 82
+   at NHibernate.Connection.ConnectionProvider.Configure(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProvider.cs:line 53
+   at NHibernate.Connection.ConnectionProviderFactory.NewConnectionProvider(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProviderFactory.cs:line 51
+   at NHibernate.Cfg.SettingsFactory.BuildSettings(IDictionary`2 properties) in p:\nhibernate-core\src\NHibernate\Cfg\SettingsFactory.cs:line 83
+   at NHibernate.Cfg.Configuration.BuildSettings() in p:\nhibernate-core\src\NHibernate\Cfg\Configuration.cs:line 1722
+   at NHibernate.Cfg.Configuration.BuildSessionFactory() in p:\nhibernate-core\src\NHibernate\Cfg\Configuration.cs:line 1253
+   at NHibernate_Module.Repositories.NHibernateHelper.get_SessionFactory() in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\NHibernateHelper.cs:line 23
+   at NHibernate_Module.Repositories.NHibernateHelper.OpenSession() in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\NHibernateHelper.cs:line 31
+   at NHibernate_Module.Repositories.EmployeeRepository.GetByPage(Int32 dnnpage) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 98
+   at RemboltLawFirm_Mod.ViewRemboltLawFirm_Mod.Page_Load(Object sender, EventArgs e) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\ViewRemboltLawFirm_Mod.ascx.cs:line 31
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-25 18:13:55,863 [MaDesignPrime][Thread:17][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=170&error=An unexpected error has occurred&content=0
+NHibernate.HibernateException: Could not find named connection string default
+   at NHibernate.Connection.ConnectionProvider.GetNamedConnectionString(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProvider.cs:line 82
+   at NHibernate.Connection.ConnectionProvider.Configure(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProvider.cs:line 53
+   at NHibernate.Connection.ConnectionProviderFactory.NewConnectionProvider(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProviderFactory.cs:line 51
+   at NHibernate.Cfg.SettingsFactory.BuildSettings(IDictionary`2 properties) in p:\nhibernate-core\src\NHibernate\Cfg\SettingsFactory.cs:line 83
+   at NHibernate.Cfg.Configuration.BuildSettings() in p:\nhibernate-core\src\NHibernate\Cfg\Configuration.cs:line 1722
+   at NHibernate.Cfg.Configuration.BuildSessionFactory() in p:\nhibernate-core\src\NHibernate\Cfg\Configuration.cs:line 1253
+   at NHibernate_Module.Repositories.NHibernateHelper.get_SessionFactory() in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\NHibernateHelper.cs:line 23
+   at NHibernate_Module.Repositories.NHibernateHelper.OpenSession() in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\NHibernateHelper.cs:line 31
+   at NHibernate_Module.Repositories.EmployeeRepository.GetByPage(Int32 dnnpage) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 98
+   at RemboltLawFirm_Mod.ViewRemboltLawFirm_Mod.Page_Load(Object sender, EventArgs e) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\ViewRemboltLawFirm_Mod.ascx.cs:line 31
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-25 18:13:59,084 [MaDesignPrime][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+NHibernate.HibernateException: Could not find named connection string default
+   at NHibernate.Connection.ConnectionProvider.GetNamedConnectionString(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProvider.cs:line 82
+   at NHibernate.Connection.ConnectionProvider.Configure(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProvider.cs:line 53
+   at NHibernate.Connection.ConnectionProviderFactory.NewConnectionProvider(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProviderFactory.cs:line 51
+   at NHibernate.Cfg.SettingsFactory.BuildSettings(IDictionary`2 properties) in p:\nhibernate-core\src\NHibernate\Cfg\SettingsFactory.cs:line 83
+   at NHibernate.Cfg.Configuration.BuildSettings() in p:\nhibernate-core\src\NHibernate\Cfg\Configuration.cs:line 1722
+   at NHibernate.Cfg.Configuration.BuildSessionFactory() in p:\nhibernate-core\src\NHibernate\Cfg\Configuration.cs:line 1253
+   at NHibernate_Module.Repositories.NHibernateHelper.get_SessionFactory() in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\NHibernateHelper.cs:line 23
+   at NHibernate_Module.Repositories.NHibernateHelper.OpenSession() in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\NHibernateHelper.cs:line 31
+   at NHibernate_Module.Repositories.EmployeeRepository.GetByPage(Int32 dnnpage) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 98
+   at RemboltLawFirm_Mod.ViewRemboltLawFirm_Mod.Page_Load(Object sender, EventArgs e) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\ViewRemboltLawFirm_Mod.ascx.cs:line 31
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-25 18:13:59,088 [MaDesignPrime][Thread:6][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=120&error=An unexpected error has occurred&content=0
+NHibernate.HibernateException: Could not find named connection string default
+   at NHibernate.Connection.ConnectionProvider.GetNamedConnectionString(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProvider.cs:line 82
+   at NHibernate.Connection.ConnectionProvider.Configure(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProvider.cs:line 53
+   at NHibernate.Connection.ConnectionProviderFactory.NewConnectionProvider(IDictionary`2 settings) in p:\nhibernate-core\src\NHibernate\Connection\ConnectionProviderFactory.cs:line 51
+   at NHibernate.Cfg.SettingsFactory.BuildSettings(IDictionary`2 properties) in p:\nhibernate-core\src\NHibernate\Cfg\SettingsFactory.cs:line 83
+   at NHibernate.Cfg.Configuration.BuildSettings() in p:\nhibernate-core\src\NHibernate\Cfg\Configuration.cs:line 1722
+   at NHibernate.Cfg.Configuration.BuildSessionFactory() in p:\nhibernate-core\src\NHibernate\Cfg\Configuration.cs:line 1253
+   at NHibernate_Module.Repositories.NHibernateHelper.get_SessionFactory() in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\NHibernateHelper.cs:line 23
+   at NHibernate_Module.Repositories.NHibernateHelper.OpenSession() in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\NHibernateHelper.cs:line 31
+   at NHibernate_Module.Repositories.EmployeeRepository.GetByPage(Int32 dnnpage) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\NHibernate_Module\Repositories\EmployeeRepository.cs:line 98
+   at RemboltLawFirm_Mod.ViewRemboltLawFirm_Mod.Page_Load(Object sender, EventArgs e) in C:\Users\Ma\Documents\Visual Studio 2010\Projects\RemboltLawFirm_Mod\RemboltLawFirm_Mod\ViewRemboltLawFirm_Mod.ascx.cs:line 31
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-06-25 18:15:48,995 [MaDesignPrime][Thread:10][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 18:15:49,056 [MaDesignPrime][Thread:10][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 18:41:49,104 [MaDesignPrime][Thread:19][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 18:41:49,107 [MaDesignPrime][Thread:19][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 18:41:49,280 [MaDesignPrime][Thread:19][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Value cannot be null.
+Parameter name: type
+System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 18:41:49,284 [MaDesignPrime][Thread:19][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(543) in tab(120) and portal(0) 
+System.Exception: Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(543) in tab(120) and portal(0)  ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+   --- End of inner exception stack trace ---
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 18:41:49,357 [MaDesignPrime][Thread:19][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 18:41:49,360 [MaDesignPrime][Thread:19][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 18:41:49,379 [MaDesignPrime][Thread:19][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Value cannot be null.
+Parameter name: type
+System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 18:41:49,382 [MaDesignPrime][Thread:19][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(585) in tab(170) and portal(0) 
+System.Exception: Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(585) in tab(170) and portal(0)  ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+   --- End of inner exception stack trace ---
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 18:57:59,324 [MaDesignPrime][Thread:10][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 18:57:59,378 [MaDesignPrime][Thread:10][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 19:09:25,307 [MaDesignPrime][Thread:9][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 19:09:25,365 [MaDesignPrime][Thread:9][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 20:14:54,981 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 20:14:55,056 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 20:14:55,193 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Value cannot be null.
+Parameter name: type
+System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 20:14:55,197 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(543) in tab(120) and portal(0) 
+System.Exception: Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(543) in tab(120) and portal(0)  ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+   --- End of inner exception stack trace ---
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 20:14:55,204 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 20:14:55,207 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 20:14:55,213 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Value cannot be null.
+Parameter name: type
+System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 20:14:55,216 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(585) in tab(170) and portal(0) 
+System.Exception: Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(585) in tab(170) and portal(0)  ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+   --- End of inner exception stack trace ---
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 20:15:03,370 [MaDesignPrime][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 20:15:03,375 [MaDesignPrime][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 20:33:52,673 [MaDesignPrime][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 20:33:52,743 [MaDesignPrime][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 21:50:38,078 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 21:50:38,168 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 21:50:38,204 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Value cannot be null.
+Parameter name: type
+System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 21:50:38,209 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(543) in tab(120) and portal(0) 
+System.Exception: Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(543) in tab(120) and portal(0)  ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+   --- End of inner exception stack trace ---
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 21:50:38,216 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 21:50:38,219 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 21:50:38,226 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Value cannot be null.
+Parameter name: type
+System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 21:50:38,229 [MaDesignPrime][Thread:8][ERROR] DotNetNuke.Services.Search.ModuleIndexer - Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(585) in tab(170) and portal(0) 
+System.Exception: Error Creating BusinessControllerClass 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController' of module(YourCompany.RemboltLawFirm_Mod) id=(585) in tab(170) and portal(0)  ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+   --- End of inner exception stack trace ---
+   at DotNetNuke.Services.Search.ModuleIndexer.GetModuleList(Int32 PortalID)
+2012-06-25 21:50:45,346 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2012-06-25 21:50:45,349 [MaDesignPrime][Thread:7][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)

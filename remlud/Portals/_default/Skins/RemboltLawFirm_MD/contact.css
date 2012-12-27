@@ -1,0 +1,46 @@
+﻿/* --- Form Elements --- */
+/* -- Reset Defaults -- */
+#dynamic_area .dnnForm{ background: none;border: none;margin: 0;padding: 0;border-left: 0 none;text-align:left;width: 100%;}
+
+#dynamic_area .dnnForm .dnnFormItem input, 
+#dynamic_area .dnnForm .dnnFormItem .dnnFormInput, 
+#dynamic_area .dnnForm .dnnFormItem textarea {
+    background: none;border: 0 none;margin: 0;padding: 0;border-left: 0 none;
+    box-shadow: none;-moz-box-shadow: none;-webkit-box-shadow: none;border-radius: 0;
+}
+#dynamic_area .dnnFormItem label, .dnnFormItem .dnnFormLabel, .dnnFormItem .dnnTooltip{float:none;text-align:left;display:inline;}
+#dynamic_area .dnnForm .dnnFormItem { line-height: inherit;clear:none;}
+
+/* -- MaD Style -- */
+#dynamic_area .dnnForm .dnnFormItem.small {width:194px;display: inline-block;}
+#dynamic_area .dnnForm .dnnFormItem.long {width:410px;display: inline-block;}
+#dynamic_area .dnnForm .dnnFormItem label{width:50px;}
+#dynamic_area .dnnForm .dnnFormItem label a{ font-family: Tahoma, Sans-Serif; font-size:13px;color: #676767;display: block;text-decoration: none;}
+#dynamic_area .dnnForm .dnnFormItem label a span{ line-height: inherit;}
+#dynamic_area .dnnForm .dnnFormItem.small input{display:block;
+                                          background:url('/Portals/_default/Skins/RemboltLawFirm_MD/Images/contact-field-short-middle.gif') repeat-x;
+                                          width:180px;height:42px;border: 0;margin: 0;padding: 0;}
+#dynamic_area .dnnForm .dnnFormItem.long input{display:block;
+                                          background:url('/Portals/_default/Skins/RemboltLawFirm_MD/Images/contact-field-short-middle.gif') repeat-x;
+                                          width:390px;height:42px;border: 0;margin: 0;padding: 0;}     
+#dynamic_area .dnnForm .dnnFormItem.captcha input{display:block;
+                                          background:url('/Portals/_default/Skins/RemboltLawFirm_MD/Images/contact-field-captcha.gif') repeat-x;
+                                          width:214px;height:42px;border: 0;margin: 0;padding: 0;}   
+#dynamic_area .dnnForm .dnnFormItem.captcha div {font-size:11px;}  
+#dynamic_area .dnnForm .dnnFormItem textarea {display:block;
+                                              background: url('/Portals/_default/Skins/RemboltLawFirm_MD/Images/contact-field-tall-middle.gif') repeat-x;
+                                              width:390px;max-width:390px;max-height: 122px;height: 122px;border: 0;margin: 0;padding: 0;}                                          
+#dynamic_area .dnnForm .smallinputstart { background:url('/Portals/_default/Skins/RemboltLawFirm_MD/Images/contact-field-short-leftside.gif') ;height:42px; width:6px;display: inline-block;float:left;}
+#dynamic_area .dnnForm .smallinputend { background:url('/Portals/_default/Skins/RemboltLawFirm_MD/Images/contact-field-short-rightside.gif') ;height:42px; width:6px;display: inline-block;float:left;}
+#dynamic_area .dnnForm .tallinputstart { background:url('/Portals/_default/Skins/RemboltLawFirm_MD/Images/contact-field-tall-leftside.gif') ;height:122px; width:6px;display: inline-block;float:left;}
+#dynamic_area .dnnForm .tallinputend { background:url('/Portals/_default/Skins/RemboltLawFirm_MD/Images/contact-field-tall-rightside.gif') ;height:122px; width:6px;display: inline-block;float:left;}
+#dynamic_area p.italics { font-style: italic;font-size:11px;line-height: 16px;color: #898989;}
+
+#side_bar h2 { font-size: 14px;color: #1c3f93;font-weight:bold; line-height:16px;}
+#side-bar p {line-height:16px;}
+#side-bar p.address {font-size:11px;line-height: 16px;color: #545454;}
+#side_bar p.italics { font-style: italic;font-family: Arial, Sans-Serif;font-size:11px; line-height:16px; margin-bottom:10px;}
+#side-bar a.linkunderline{ text-decoration: underline;color: #1c3f93;}
+
+#dynamic_area .dnnFormHelp{display:none;}
+#dynamic_area .dnnFormHelpContent { float:left;left:0;}
