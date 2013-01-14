@@ -63,6 +63,8 @@ body ul.dnnmega li.root a span{display:block;}
 #side_nav ul.sidenavRoot li ul.sidenavChild li.submenu a:hover { color: #1c3f94;background: none;}
 #side_nav ul.sidenavRoot li ul.sidenavChild li.submenu.selected a{background: #f0f0f2 no-repeat 0 5px;color: #1c3f94; padding:0px 0px 0 0;}
 
+.disabledSidenavChild { margin-left: 24px;}
+
 /* --- treat last sidenav ul element with a bottom rule --- */
 #side_nav ul.sidenavRoot li.toplevel.last ul { border-bottom: 1px #c7c7c8 solid;}
 

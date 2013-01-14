@@ -29,7 +29,7 @@
         
         <div id="contact_banner">
             <div class="contact_info">
-                PHONE: <span>402.475.5100</span> | EMAIL: <a href="mailto:hello@remboltlawfirm.com"><span>hello@remboltlawfirm.com</span></a>
+                PHONE: <span>402.475.5100</span> | EMAIL: <a href="mailto:welcome@remboltlawfirm.com"><span>welcome@remboltlawfirm.com</span></a>
             </div>
         </div>
         <div id="middle_center">

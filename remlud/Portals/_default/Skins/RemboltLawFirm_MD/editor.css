@@ -38,7 +38,7 @@
     color: #1c3f93;
     text-decoration: underline;
 }
-#dynamic_area ul.bullets li {
+#dynamic_area ul.bullets li,#dynamic_area ul li {
     font-size: 14px;
     line-height: normal;
     margin-bottom: 6px;
@@ -52,7 +52,8 @@
 #dynamic_area h2.subheads {font-size:19px;line-height: normal;color: #2d2d2d; }
 .biolist {font-size:14px;color: #2d2d2d;}
 .namedisplay {margin: 24px 0 10px 0; font-size:11px; line-height:16px; font-weight:bold;color: #545454;}
-.namedisplay a { color: #1c3f93;text-decoration: underline;font-size:11px;line-height:16px;}
+.leadisplay {margin: 10px 0 10px 0; font-size:11px; line-height:16px; font-weight:bold;color: #545454;}
+.namedisplay a,.leadisplay a { color: #1c3f93;text-decoration: underline;font-size:11px;line-height:16px;}
 .biopic { border: 1px solid #cacaca;}
 
 .medialink {margin-top:10px;}
@@ -68,8 +69,8 @@
 .paralegaldisplay {color: #545454;font-size: 11px;font-weight: bold;line-height: 16px;margin: 0 0 -10px;}
 .paralegaldisplay a {color: #1c3f93;text-decoration: underline;font-size:11px;line-height:16px;vertical-align:14px;}
 
-#side_bar ul.bullets li {font-size: 12px;line-height: normal;list-style: disc outside url("Images/dynamic_area_bullet.gif");margin-bottom: 4px;margin-left: 14px; }
-#side_bar ul.bullets li a {color: #1C3F93; text-decoration: underline; }
+#side_bar ul.bullets li,#side_bar ul li {font-size: 12px;line-height: normal;list-style: disc outside url("Images/dynamic_area_bullet.gif");margin-bottom: 4px;margin-left: 14px; }
+#side_bar ul.bullets li a,#side_bar ul li a {color: #1C3F93; text-decoration: underline; }
 #side_bar h3 {font-size: 14px; line-height: normal; margin: 6px 0 6px 0; color: #545454; }
 
 .attorneypic {padding: 0px 4px 0px 4px; }
