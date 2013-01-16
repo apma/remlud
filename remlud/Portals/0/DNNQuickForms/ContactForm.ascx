@@ -35,11 +35,12 @@
 		<dnn:label runat="server" Text="Human Test" HelpText="We want to make sure you aren't a robot." Suffix=":" />
 		<dnn:captchacontrol  id="ctlCaptcha" captchawidth="130" captchaheight="40" runat="server" errorstyle-cssclass="NormalRed"  />
 	</div>
-    <p class="italics">Please be advised that by law, correspondence cannot be considered confidential until an attorney-client relationship has been established. For this reason, we request that you do not send any confidential information to any attorney or staff member until the Firm's intake procedures are completed.</p>
+    
     <div class="rlbutton">
 	    <asp:placeholder id="plhButton" runat="server" />
     </div>
 </div>
+
 
 
 

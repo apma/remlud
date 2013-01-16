@@ -74,7 +74,7 @@
 <dnn:DnnCssInclude ID="DnnCssInclude2" runat="server" FilePath="ContentWithSidenav.css" PathNameAlias="SkinPath" />
 <dnn:DnnJsInclude ID="DnnJsInclude4" runat="server" FilePath="Scripts/global.js" PathNameAlias="SkinPath" />
 <dnn:DnnJsInclude ID="DnnJsInclude6" runat="server" FilePath="Scripts/jQueryRotate.2.2.js" PathNameAlias="SkinPath" />
-<dnn:DnnJsInclude ID="DnnJsInclude1" runat="server" FilePath="Scripts/sidenav.js" PathNameAlias="SkinPath" />
+<dnn:DnnJsInclude ID="DnnJsInclude1" runat="server" FilePath="Scripts/sidenav_20130113.js" PathNameAlias="SkinPath" />
 <% if (PortalSettings.ActiveTab.TabID == 116) { %>
 	   <dnn:DnnCssInclude ID="DnnCssInclude3" runat="server" FilePath="contact.css" PathNameAlias="SkinPath" />
 	   <dnn:DnnJsInclude ID="DnnJsInclude7" runat="server" FilePath="Scripts/contact.js" PathNameAlias="SkinPath" />
