@@ -40,7 +40,7 @@
 	<property name="SilverlightManager.MaxUploadFileSize">4194304</property>
 	<property name="TemplateManager.SearchPatterns">*.htmtemplate,*.htm,*,html</property>
 	<property name="TemplateManager.MaxUploadFileSize">4194304</property>
-    <!-- ContentAreaMode defaults to Iframe.  Set to Div to make the editor part of the current page.
+  <!-- ContentAreaMode defaults to Iframe.  Set to Div to make the editor part of the current page.
     Div mode is useful for advanced styling issues and inheriting the DOCTYPE of the current page.
     If content depends on an HTML5 doctype use Div mode -->
     <!-- <property name="ContentAreaMode">Div</property>    -->

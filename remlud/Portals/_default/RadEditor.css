@@ -5,7 +5,7 @@
     font-weight: normal;
     color: #2d2d2d;
 }
-h2.RLSubHead {
+h2.RLSubHead2 {
     font-family: Tahoma, Arial, sans-serif;
     font-size: 18px;
     line-height: normal;
@@ -36,3 +36,5 @@ h2.RLSubHead {
 }
 
 
+img.ImageLeft { float: left;}
+img.ImageRight { float: right;margin: 0 0 5px 5px; }

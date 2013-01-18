@@ -36,3 +36,5 @@ h2.RLSubHead {
 }
 
 
+img.ImageLeft { float: left;}
+img.ImageRight { float: right;margin: 0 0 5px 5px; }
