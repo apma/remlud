@@ -70,3 +70,185 @@ System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFir
 System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
    at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
    at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-17 22:13:32,185 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:13:32,193 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:13:32,198 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:13:32,202 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:13:32,207 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:13:32,211 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:13:32,216 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:13:32,220 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:13:32,225 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:13:32,230 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:13:32,236 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:13:32,242 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:13:32,247 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:15:09,584 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:15:09,590 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:15:09,596 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:15:09,601 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:15:09,606 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:15:09,611 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:15:09,615 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:15:09,619 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:15:09,624 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:15:09,627 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:15:09,631 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:15:09,635 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
+2013-01-17 22:15:09,640 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Common.Utilities.CBO - TotalRecords
+System.IndexOutOfRangeException: TotalRecords
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at DotNetNuke.Modules.Blog.Components.Entities.EntryInfo.Fill(IDataReader dr)
+   at DotNetNuke.Common.Utilities.CBO.FillObjectFromReader(Object objObject, IDataReader dr)
