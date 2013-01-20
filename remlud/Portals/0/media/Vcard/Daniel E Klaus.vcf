@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Klaus;Daniel;E.
+FN:Daniel E. Klaus
+ORG:Rembolt Ludtke LLP
+TITLE:Partner
+TEL;WORK;VOICE:(402) 475-5100
+ADR;WORK:;;1201 Lincoln Mall, Ste. 102;Lincoln;NE;68508
+LABEL;WORK;ENCODING=QUOTED-PRINTABLE:1201 Lincoln Mall, Ste. 102=0D=0ALincoln, NE 68508
+URL;WORK:http://www.remboltlawfirm.com/OurTeam/Attorneys/DanielEKlaus.aspx
+EMAIL;PREF;INTERNET:dklaus@remboltlawfirm.com
+END:VCARD

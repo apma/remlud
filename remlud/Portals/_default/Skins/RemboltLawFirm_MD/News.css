@@ -41,3 +41,6 @@ ul.qaSocialActions{ margin: 10px 0 10px 0;}
 .dnnBlogList td .CommandButton {font-size:12px;margin: 4px 0;}
 .newsportalList { padding: 5px 0;}
 .clearbottom{ padding-bottom: 50px;}
+
+/*blogMod*/
+div.dnnForm.blogViewTags.dnnClear { width: 150px;min-width: 150px;}

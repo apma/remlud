@@ -51,6 +51,7 @@
 a.video {display:block;width: 295px;height:215px;text-align:center;
     margin:8px 20px 15px 0;float:left;border:1px solid #999;}
 a.video img {margin-top:0px;border:0px;width:295px;height:215px;}
+a.video img.playbtn { width: 77px;height: 77px;margin-top: 63px;}
 a.video:hover {border:1px solid #000;}
 ul.vidlist li {float:left;list-style: none;display:block;margin-top:25px;}
 #dynamic_area_nosidebar div.vidtitle p{width:280px;font-size:14px;line-height:18px;color: #2d2d2d;font-weight:bold;text-align: center;

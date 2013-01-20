@@ -66,13 +66,15 @@ div.home_icon:hover { background: url(Images/navigation-home-rollover-v2.png) no
 #footer{height:313px;background:url('Images/background-footer.jpg') repeat;}
 #footer_content {width:986px;margin: 0 auto;font-size:13px; color:#2d2d2d; line-height:20px;}
 #footer_left {position:relative;float:left;margin:50px 0 10px 56px;width:556px; }
-#footer_left h2 {font-size:13px;font-weight:bold;}
+#footer_left #footer_locations h2 {font-size:12px;font-weight:bold;}
 #footer_right{position:relative;float:left;margin:37px 0 10px 10px;width:340px;}
 #footer_copyright{ clear:both;margin: 0 0 0 56px;position: relative;top:40px; font-size:10px;letter-spacing:.5px;}
 #footer_copyright a { text-decoration: underline;}
 
+#footer_copyright p.tierlisting{ font-family: tahoma, sans-serif;color: #727272;line-height: normal;font-size: 10px;margin-bottom: 10px;}
+.footer_badge { float: left;margin: 0 20px 0 -17px;}
 .footerlogo {float:right;}
-.locations { color:#2d2d2d;line-height:20px; font-size:13px;}
+.locations { color:#2d2d2d;line-height:20px; font-size:12px;}
 .fineprint {color:#2d2d2d;font-size:10px;}
 
 /* --- GlobalStyle --- */
@@ -84,6 +86,7 @@ div.home_icon:hover { background: url(Images/navigation-home-rollover-v2.png) no
 .floatleft{float:left;}
 .floatright{float:right;}
 .linkunderline{ text-decoration: underline;color: #1c3f93;}
+
 
 
 /*--- Button Reset --- */
