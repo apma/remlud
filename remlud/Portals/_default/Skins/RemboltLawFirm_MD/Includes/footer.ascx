@@ -1,5 +1,5 @@
 ﻿
-<%@ Register TagPrefix="dnn" TagName="COPYRIGHT" Src="/Portals/_default/Skins/RemboltLawFirm_MD/Adds/copyright.ascx" %>
+<%@ Register TagPrefix="dnn" TagName="COPYRIGHT" Src="~/Admin/Skins/Copyright.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="PRIVACY" Src="~/Admin/Skins/Privacy.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="TERMS" Src="~/Admin/Skins/Terms.ascx" %>
 
@@ -35,7 +35,7 @@
         <div id="footer_copyright">
             <p class="tierlisting"><strong>Tier 1:</strong> Bankruptcy and Creditor Debt Rights / Insolvency and Reorganization Law, Corporate Law, Labor Law - Management, Trusts & Estates Law<br/>
             <strong>Tier 2:</strong> Employment Law - Management, Government  Relations Practice, Litigation - Labor & Employment, Tax Law</p>
-            <dnn:COPYRIGHT ID="dnncopyright"/> Rembolt Ludtke LLP. All Rights Reserved. | <a href="/Home/TermsandConditions.aspx">Terms and Conditions</a>
+             Rembolt Ludtke LLP. All Rights Reserved. | <a href="/Home/TermsandConditions.aspx">Terms and Conditions</a>
         </div>
     </div>
 </div>
