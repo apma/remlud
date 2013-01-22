@@ -13,6 +13,7 @@
 
 <dnn:STYLES runat="server" ID="StylesIE7" Name="IE7Minus" StyleSheet="ie7skin.css" Condition="LT IE 8" UseSkinPath="true"/>
 
+
 <div id="wrapper">
     <!--#include file="Includes/header.ascx" -->
     <div id="page">
