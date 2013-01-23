@@ -106,3 +106,7 @@ border-color: white;
 #dynamic_area div.rlbutton a{ padding: 0 60px;}
 #dynamic_area div.rlbutton a { text-decoration: none;text-transform: capitalize;color: #fff;}
 
+/* Edit for Overwrites */
+div.vbAuthor.dnnClear{ display: none;}
+#dynamic_area #videoclick { display: none;margin: 0 auto;}
+#vidback{display:none;float:right;margin: 25px 130px 0 0;} 

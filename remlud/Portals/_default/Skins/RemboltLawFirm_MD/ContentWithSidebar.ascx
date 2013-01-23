@@ -31,7 +31,8 @@
                     <div id="content_holder">
                         <div id="dynamic_area">
                             <div id="ContentPane" runat="server"></div>
-                            
+                            <div id="videoclick" class="biopic" href="" style="width:440px;height:320px;" ></div>
+							<a id="vidback" href="<%=DotNetNuke.Common.Globals.NavigateURL(pageId) %>">Click to go Back</a>
                             </div>
                         
                         <div id="side_bar">
@@ -51,7 +52,7 @@
 <!--#include file="Includes/footer.ascx" -->
 
 
-
+<dnn:DnnJsInclude ID="DnnJsInclude6" runat="server" FilePath="Scripts/flowplayer-3.2.11.min.js" PathNameAlias="SkinPath" />
 <dnn:DnnJsInclude ID="DnnJsInclude1" runat="server" FilePath="jquery.cycle.min.js" PathNameAlias="SkinPath" />
 <dnn:DnnJsInclude ID="DnnJsInclude2" runat="server" FilePath="~/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js" />
 <dnn:DnnJsInclude ID="DnnJsInclude3" runat="server" FilePath="DNNMega/jquery.dnnmega.debug.js" PathNameAlias="SkinPath" />

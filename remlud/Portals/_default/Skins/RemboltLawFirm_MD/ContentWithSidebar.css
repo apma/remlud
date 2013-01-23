@@ -28,3 +28,5 @@ a.linkunderline:link, #side-bar a.linkunderline:focus, #side-bar a.linkunderline
     color: #1c3f93;
     margin-bottom: 15px;
 }
+
+#dynamic_area #videoclick { display: none;margin: 0 auto;}

@@ -1,0 +1,124 @@
+2013-01-22 20:46:36,209 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 20:46:36,209 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 20:46:36,244 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 20:46:36,246 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 20:46:36,264 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 20:46:36,265 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 20:46:36,267 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 20:46:36,268 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 20:46:36,273 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 20:46:36,274 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 20:46:36,276 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 20:46:36,278 [MaDesignAlpha][Thread:8][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 21:12:13,045 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 21:12:13,080 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 21:12:13,098 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 21:12:13,101 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 21:12:13,107 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 21:12:13,110 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 21:14:12,944 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.UI.WebControls.CaptchaControl - Font 'MS Sans Serif' cannot be found.
+System.ArgumentException: Font 'MS Sans Serif' cannot be found.
+   at System.Drawing.FontFamily.CreateFontFamily(String name, FontCollection fontCollection)
+   at DotNetNuke.UI.WebControls.CaptchaControl.GetFont()
+2013-01-22 21:37:52,253 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 21:37:52,288 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 21:37:52,306 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 21:37:52,309 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 21:37:52,314 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 21:37:52,317 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 22:16:54,785 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 22:16:54,824 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 22:16:54,842 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 22:16:54,845 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 22:16:54,850 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-01-22 22:16:54,853 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'YourCompany.Modules.RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)

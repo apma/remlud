@@ -38,3 +38,6 @@ h2.RLSubHead {
 
 img.ImageLeft { float: left;margin: 0 8px 6px 0;}
 img.ImageRight { float: right;margin: 0 0 6px 6px; }
+
+/* No shows */
+#dynamic_area #vidback { display: none;}
