@@ -23,6 +23,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 using System.Web.UI.WebControls;
 
 using DotNetNuke.Common.Utilities;
@@ -197,7 +198,7 @@ namespace DotNetNuke.Common.Lists
 		{
 			get
 			{
-				return ViewState["ListName"] != null ? ViewState["ListName"].ToString() : "";
+				return HttpUtility.HtmlEncode(ViewState["ListName"] != null ? ViewState["ListName"].ToString() : "");
 			}
 			set
 			{
@@ -257,7 +258,7 @@ namespace DotNetNuke.Common.Lists
 		{
 			get
 			{
-				return ViewState["ParentKey"] != null ? ViewState["ParentKey"].ToString() : "";
+				return HttpUtility.HtmlEncode(ViewState["ParentKey"] != null ? ViewState["ParentKey"].ToString() : "");
 			}
 			set
 			{

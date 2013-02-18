@@ -159,7 +159,8 @@ namespace DotNetNuke.Modules.Admin.Host
                                {
                                    { LocalizeString("LegacyDoctype"), "0" }, 
                                    { LocalizeString("TransDoctype"), "1" }, 
-                                   { LocalizeString("StrictDoctype"), "2" }
+                                   { LocalizeString("StrictDoctype"), "2" },
+                                   { LocalizeString("Html5Doctype"), "3" }
                                };
 
             docTypeCombo.DataSource = docTypes;
@@ -719,6 +720,16 @@ namespace DotNetNuke.Modules.Admin.Host
             {
                 try
                 {
+                    var smtpServer = txtSMTPServer.Text;
+                    if (!string.IsNullOrEmpty(smtpServer) 
+                        && smtpServer.Contains(":") 
+                        && smtpServer.Split(':')[1] != "25"
+                        && !SecurityPolicy.HasAspNetHostingPermission())
+                    {
+                        UI.Skins.Skin.AddModuleMessage(this, Localization.GetString("SmtpServerInvalid", LocalResourceFile), ModuleMessage.ModuleMessageType.RedError);
+                        return;
+                    }
+
                     HostController.Instance.Update("CheckUpgrade", chkUpgrade.Checked ? "Y" : "N", false);
                     HostController.Instance.Update("DisplayBetaNotice", chkBetaNotice.Checked ? "Y" : "N", false);
                     HostController.Instance.Update("HostPortalId", hostPortalsCombo.SelectedValue);

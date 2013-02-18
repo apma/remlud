@@ -568,11 +568,11 @@ namespace DotNetNuke.Modules.Admin.Users
             string url;
             if (!String.IsNullOrEmpty(Filter))
             {
-                url = !String.IsNullOrEmpty(currentPage) ? Globals.NavigateURL(TabId, "", "filter=" + filter, "currentpage=" + CurrentPage) : Globals.NavigateURL(TabId, "", "filter=" + filter);
+                url = !String.IsNullOrEmpty(currentPage) ? Globals.NavigateURL(TabId, "", "filter=" + filter, "currentpage=" + currentPage) : Globals.NavigateURL(TabId, "", "filter=" + filter);
             }
             else
             {
-                url = !String.IsNullOrEmpty(currentPage) ? Globals.NavigateURL(TabId, "", "currentpage=" + CurrentPage) : Globals.NavigateURL(TabId, "");
+                url = !String.IsNullOrEmpty(currentPage) ? Globals.NavigateURL(TabId, "", "currentpage=" + currentPage) : Globals.NavigateURL(TabId, "");
             }
             return url;
         }

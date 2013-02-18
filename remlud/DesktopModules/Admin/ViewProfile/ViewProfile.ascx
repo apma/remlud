@@ -12,11 +12,15 @@
 <script language="javascript" type="text/javascript">
 
     jQuery(document).ready(function($) {
-        function ProfileViewModel() {
+        function ProfileViewModelModule<%=ModuleContext.ModuleId.ToString(CultureInfo.InvariantCulture) %>() {
             var self = this;
             self.AboutMeText = '<%=LocalizeString("AboutMe") %>';
             self.LocationText = '<%=LocalizeString("Location") %>';
             self.GetInTouchText = '<%=LocalizeString("GetInTouch") %>';
+            self.EmptyAboutMeText = '<%=LocalizeString("EmptyAboutMe") %>';
+            self.EmptyLocationText = '<%=LocalizeString("EmptyLocation") %>';
+            self.EmptyGetInTouchText = '<%=LocalizeString("EmptyGetInTouch") %>';
+            
             <% = ProfileProperties %>
 
             self.Location = ko.computed(function() {
@@ -36,7 +40,7 @@
             self.Visible = true;
         };
 
-        ko.applyBindings(new ProfileViewModel(), document.getElementById($('#<%= profileOutput.ClientID %>').attr("id")));
+        ko.applyBindings(new ProfileViewModelModule<%=ModuleContext.ModuleId.ToString(CultureInfo.InvariantCulture) %>(), document.getElementById($('#<%= profileOutput.ClientID %>').attr("id")));
 
         });
 

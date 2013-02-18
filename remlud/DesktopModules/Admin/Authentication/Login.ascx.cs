@@ -34,6 +34,7 @@ using DotNetNuke.Common;
 using DotNetNuke.Common.Utilities;
 using DotNetNuke.Entities.Host;
 using DotNetNuke.Entities.Modules;
+using DotNetNuke.Entities.Portals;
 using DotNetNuke.Entities.Profile;
 using DotNetNuke.Entities.Users;
 using DotNetNuke.Framework;
@@ -340,26 +341,37 @@ namespace DotNetNuke.Modules.Admin.Authentication
             {
                 try
                 {
-                    var authLoginControl = (AuthenticationLoginBase)LoadControl("~/" + authSystem.LoginControlSrc);
-                    BindLoginControl(authLoginControl, authSystem);
-                    if (authSystem.AuthenticationType == "DNN")
+                    //Figure out if known Auth types are enabled (so we can improve perf and stop loading the control)
+                    bool enabled = true;
+                    if (authSystem.AuthenticationType == "Facebook" || authSystem.AuthenticationType == "Google"
+                        || authSystem.AuthenticationType == "Live" || authSystem.AuthenticationType == "Twitter")
                     {
-                        defaultLoginControl = authLoginControl;
+                        enabled = PortalController.GetPortalSettingAsBoolean(authSystem.AuthenticationType + "_Enabled", PortalId, false);
                     }
 
-                    //Check if AuthSystem is Enabled
-                    if (authLoginControl.Enabled)
+                    if (enabled)
                     {
-                        var oAuthLoginControl = authLoginControl as OAuthLoginBase;
-                        if (oAuthLoginControl != null)
+                        var authLoginControl = (AuthenticationLoginBase)LoadControl("~/" + authSystem.LoginControlSrc);
+                        BindLoginControl(authLoginControl, authSystem);
+                        if (authSystem.AuthenticationType == "DNN")
                         {
-                            //Add Login Control to List
-                            _oAuthControls.Add(oAuthLoginControl);
+                            defaultLoginControl = authLoginControl;
                         }
-                        else
+
+                        //Check if AuthSystem is Enabled
+                        if (authLoginControl.Enabled)
                         {
-                            //Add Login Control to List
-                            _loginControls.Add(authLoginControl);
+                            var oAuthLoginControl = authLoginControl as OAuthLoginBase;
+                            if (oAuthLoginControl != null)
+                            {
+                                //Add Login Control to List
+                                _oAuthControls.Add(oAuthLoginControl);
+                            }
+                            else
+                            {
+                                //Add Login Control to List
+                                _loginControls.Add(authLoginControl);
+                            }
                         }
                     }
                 }
@@ -521,11 +533,11 @@ namespace DotNetNuke.Modules.Admin.Authentication
 
         private void InitialiseUser()
 		{
-			//Set UserName to authentication Token
-			User.Username = UserToken.Replace("http://", "").TrimEnd('/');
-
 			//Load any Profile properties that may have been returned
 			UpdateProfile(User, false);
+
+            //Set UserName to authentication Token            
+            User.Username = GenerateUserName();
 
 			//Set DisplayName to UserToken if null
 			if (string.IsNullOrEmpty(User.DisplayName))
@@ -551,6 +563,85 @@ namespace DotNetNuke.Modules.Admin.Authentication
 				User.LastName = "User";
 			}
 		}
+
+        private string GenerateUserName()
+        {
+            //Try the best username. Default it to UserToken
+            var userName = UserToken.Replace("http://", "").TrimEnd('/');
+
+            //Try Email prefix
+            var emailPrefix = string.Empty;
+            if (!string.IsNullOrEmpty(User.Email))
+            {                
+                if (User.Email.IndexOf("@", StringComparison.Ordinal) != -1)
+                {
+                    emailPrefix = User.Email.Substring(0, User.Email.IndexOf("@", StringComparison.Ordinal));
+                    var user = UserController.GetUserByName(PortalId, emailPrefix);
+                    if (user == null)
+                    {
+                        return emailPrefix;
+                    }
+                }
+            }
+
+            //Try First Name
+            if (!string.IsNullOrEmpty(User.FirstName))
+            {
+                var user = UserController.GetUserByName(PortalId, User.FirstName);
+                if (user == null)
+                {
+                    return User.FirstName;
+                }
+            }
+
+            //Try Last Name
+            if (!string.IsNullOrEmpty(User.LastName))
+            {
+                var user = UserController.GetUserByName(PortalId, User.LastName);
+                if (user == null)
+                {
+                    return User.LastName;
+                }
+            }
+
+            //Try First Name + space + First letter last name            
+            if (!string.IsNullOrEmpty(User.LastName) && !string.IsNullOrEmpty(User.FirstName))
+            {
+                var newUserName = User.FirstName + " " + User.LastName.Substring(0,1);
+                var user = UserController.GetUserByName(PortalId, newUserName);
+                if (user == null)
+                {
+                    return newUserName;
+                }
+            }
+
+            //Try First letter of First Name + lastname
+            if (!string.IsNullOrEmpty(User.LastName) && !string.IsNullOrEmpty(User.FirstName))
+            {
+                var newUserName = User.FirstName.Substring(0, 1) + User.LastName;
+                var user = UserController.GetUserByName(PortalId, newUserName);
+                if (user == null)
+                {
+                    return newUserName;
+                }
+            }
+
+            //Try Email Prefix + incremental numbers until unique name found
+            if (!string.IsNullOrEmpty(emailPrefix))
+            {
+                for (var i = 1; i < 10000; i++)
+                {
+                    var newUserName = emailPrefix + i;
+                    var user = UserController.GetUserByName(PortalId, newUserName);
+                    if (user == null)
+                    {
+                        return newUserName;
+                    }
+                }
+            }
+
+            return userName;
+        }
 
 		/// -----------------------------------------------------------------------------
 		/// <summary>
@@ -993,7 +1084,14 @@ namespace DotNetNuke.Modules.Admin.Authentication
 					}
 					break;
 				case UserLoginStatus.LOGIN_USERLOCKEDOUT:
-					AddLocalizedModuleMessage(string.Format(Localization.GetString("UserLockedOut", LocalResourceFile), Host.AutoAccountUnlockDuration), ModuleMessage.ModuleMessageType.RedError, true);
+                    if (Host.AutoAccountUnlockDuration > 0)
+                    {
+                        AddLocalizedModuleMessage(string.Format(Localization.GetString("UserLockedOut", LocalResourceFile), Host.AutoAccountUnlockDuration), ModuleMessage.ModuleMessageType.RedError, true);
+                    }
+                    else
+                    {
+                        AddLocalizedModuleMessage(Localization.GetString("UserLockedOut_ContactAdmin", LocalResourceFile), ModuleMessage.ModuleMessageType.RedError, true);
+                    }
 					//notify administrator about account lockout ( possible hack attempt )
 					var Custom = new ArrayList {e.UserToken};
 

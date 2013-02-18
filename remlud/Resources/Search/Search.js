@@ -63,14 +63,14 @@ function initSearch()
 
   var siteIcon = $get('SearchIconSite');
   siteIcon.style.backgroundImage=dnn.getVar('SearchIconSiteUrl');
-  $addHandler(siteIcon, 'click', null);// selectSearch);
-  $addHandler(siteIcon, 'mouseover', null);
+  $addHandler(siteIcon, 'click', selectSearch);
+  $addHandler(siteIcon, 'mouseover', searchHilite);
   $addHandler(siteIcon, 'mouseout', searchDefault);
 
   var webIcon = $get('SearchIconWeb');
   webIcon.style.backgroundImage=dnn.getVar('SearchIconWebUrl');
-  $addHandler(webIcon, 'click', null);// selectSearch);
-    $addHandler(webIcon, 'mouseover', null); //searchHilite);
+  $addHandler(webIcon, 'click', selectSearch);
+  $addHandler(webIcon, 'mouseover', searchHilite);
   $addHandler(webIcon, 'mouseout', searchDefault);
   
   /* Set the default display style to resolve DOM bug */

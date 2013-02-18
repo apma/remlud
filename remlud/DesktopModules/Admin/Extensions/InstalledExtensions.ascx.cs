@@ -275,7 +275,7 @@ namespace DotNetNuke.Modules.Admin.Extensions
                 var package = (PackageInfo)dataItem;
                 if ((package.PackageType.ToUpper() == "MODULE"))
                 {
-                    return PackagesInUse.ContainsKey(package.PackageID) ? "<a href=\"" + ModuleContext.EditUrl("PackageID", package.PackageID.ToString(), "UsageDetails") + "\">Yes</a>" : "No";
+                    return PackagesInUse.ContainsKey(package.PackageID) ? "<a href=\"" + ModuleContext.EditUrl("PackageID", package.PackageID.ToString(), "UsageDetails") + "\">" + LocalizeString("Yes") + "</a>" : LocalizeString("No");
                 }
             }
             return string.Empty;

@@ -129,7 +129,7 @@ namespace DotNetNuke.Services.Exceptions
 			PortalSettings portalSettings = PortalController.GetCurrentPortalSettings();
 			if (portalSettings != null && !String.IsNullOrEmpty(portalSettings.LogoFile))
 			{
-				var fileInfo = FileManager.Instance.GetFile(portalSettings.PortalId, portalSettings.LogoFile);
+				IFileInfo fileInfo = FileManager.Instance.GetFile(portalSettings.PortalId, portalSettings.LogoFile);
 				headerImage.ImageUrl = FileManager.Instance.GetUrl(fileInfo);
 			}
 			else
@@ -138,7 +138,7 @@ namespace DotNetNuke.Services.Exceptions
 			}
 
             string strLocalizedMessage = Null.NullString;
-            var objSecurity = new PortalSecurity();
+            PortalSecurity objSecurity = new PortalSecurity();
             string status = objSecurity.InputFilter(Request.QueryString["status"],
                                                     PortalSecurity.FilterFlag.NoScripting |
                                                     PortalSecurity.FilterFlag.NoMarkup);
@@ -154,9 +154,9 @@ namespace DotNetNuke.Services.Exceptions
                         ErrorPlaceHolder.Controls.Add(new LiteralControl(HttpUtility.HtmlEncode(exc.ToString())));
                     else
                     {
-                        
 
-                        var lex = new PageLoadException(exc.Message, exc);
+
+                        PageLoadException lex = new PageLoadException(exc.Message, exc);
                         //process this error using the Exception Management Application Block
                         Exceptions.LogException(lex);
                         //add to a placeholder and place on page

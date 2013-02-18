@@ -41,7 +41,7 @@ namespace DotNetNuke.UI.Skins.Controls
     /// <remarks></remarks>
     public partial class Language : SkinObjectBase
     {
-		#region "Private Members"
+		#region Private Members
 
         private const string MyFileName = "Language.ascx";
         private string _SelectedItemTemplate;
@@ -58,7 +58,7 @@ namespace DotNetNuke.UI.Skins.Controls
 		
 		#endregion
 
-		#region "Public Properties"
+		#region Public Properties
 
         public string AlternateTemplate
         {
@@ -213,7 +213,7 @@ namespace DotNetNuke.UI.Skins.Controls
 
 		#endregion
 
-		#region "Protected Properties"
+		#region Protected Properties
 
         protected string CurrentCulture
         {
@@ -250,8 +250,7 @@ namespace DotNetNuke.UI.Skins.Controls
             {
                 if (_localTokenReplace == null)
                 {
-                    _localTokenReplace = new LanguageTokenReplace();
-                    _localTokenReplace.resourceFile = LocalResourceFile;
+                    _localTokenReplace = new LanguageTokenReplace {resourceFile = LocalResourceFile};
                 }
                 return _localTokenReplace;
             }
@@ -259,7 +258,7 @@ namespace DotNetNuke.UI.Skins.Controls
 
 		#endregion
 
-		#region "Private Methods"
+		#region Private Methods
 
         private string parseTemplate(string template, string locale)
         {
@@ -309,7 +308,7 @@ namespace DotNetNuke.UI.Skins.Controls
 
 		#endregion
 
-		#region " Event Handlers "
+		#region Event Handlers
 
         protected override void OnLoad(EventArgs e)
         {

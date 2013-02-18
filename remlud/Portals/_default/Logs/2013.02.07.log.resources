@@ -1,0 +1,192 @@
+2013-02-07 05:12:57,869 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 05:12:57,905 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 05:12:57,922 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 05:12:57,925 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 05:17:22,193 [MaDesignAlpha][Thread:10][ERROR] DotNetNuke.UI.Modules.ModuleHost - c:\MaDesign\Sites\Remlud\remlud\DesktopModules\RemboltLawFirm_Mod\EditEmployees.ascx(90): error CS1061: 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' does not contain a definition for 'RemovePractice_Click' and no extension method 'RemovePractice_Click' accepting a first argument of type 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' could be found (are you missing a using directive or an assembly reference?)
+System.Web.HttpCompileException: c:\MaDesign\Sites\Remlud\remlud\DesktopModules\RemboltLawFirm_Mod\EditEmployees.ascx(90): error CS1061: 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' does not contain a definition for 'RemovePractice_Click' and no extension method 'RemovePractice_Click' accepting a first argument of type 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.WebFormsModuleControlFactory.CreateModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2013-02-07 05:17:22,214 [MaDesignAlpha][Thread:10][ERROR] DotNetNuke.UI.Modules.ModuleHost - FriendlyMessage="Error: RL_Employee_Edit is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.Web.HttpCompileException: c:\MaDesign\Sites\Remlud\remlud\DesktopModules\RemboltLawFirm_Mod\EditEmployees.ascx(90): error CS1061: 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' does not contain a definition for 'RemovePractice_Click' and no extension method 'RemovePractice_Click' accepting a first argument of type 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.WebFormsModuleControlFactory.CreateModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2013-02-07 05:31:48,923 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.UI.Modules.ModuleHost - c:\MaDesign\Sites\Remlud\remlud\DesktopModules\RemboltLawFirm_Mod\EditEmployees.ascx(90): error CS1061: 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' does not contain a definition for 'RemovePractice_Click' and no extension method 'RemovePractice_Click' accepting a first argument of type 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' could be found (are you missing a using directive or an assembly reference?)
+System.Web.HttpCompileException: c:\MaDesign\Sites\Remlud\remlud\DesktopModules\RemboltLawFirm_Mod\EditEmployees.ascx(90): error CS1061: 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' does not contain a definition for 'RemovePractice_Click' and no extension method 'RemovePractice_Click' accepting a first argument of type 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.WebFormsModuleControlFactory.CreateModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2013-02-07 05:31:48,930 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.UI.Modules.ModuleHost - FriendlyMessage="Error: RL_Employee_Edit is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.Web.HttpCompileException: c:\MaDesign\Sites\Remlud\remlud\DesktopModules\RemboltLawFirm_Mod\EditEmployees.ascx(90): error CS1061: 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' does not contain a definition for 'RemovePractice_Click' and no extension method 'RemovePractice_Click' accepting a first argument of type 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.WebFormsModuleControlFactory.CreateModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2013-02-07 05:35:04,950 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.UI.Modules.ModuleHost - c:\MaDesign\Sites\Remlud\remlud\DesktopModules\RemboltLawFirm_Mod\EditEmployees.ascx(93): error CS1061: 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' does not contain a definition for 'UpdateEmployee_Click' and no extension method 'UpdateEmployee_Click' accepting a first argument of type 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' could be found (are you missing a using directive or an assembly reference?)
+System.Web.HttpCompileException: c:\MaDesign\Sites\Remlud\remlud\DesktopModules\RemboltLawFirm_Mod\EditEmployees.ascx(93): error CS1061: 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' does not contain a definition for 'UpdateEmployee_Click' and no extension method 'UpdateEmployee_Click' accepting a first argument of type 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.WebFormsModuleControlFactory.CreateModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2013-02-07 05:35:04,958 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.UI.Modules.ModuleHost - FriendlyMessage="Error: RL_Employee_Edit is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.Web.HttpCompileException: c:\MaDesign\Sites\Remlud\remlud\DesktopModules\RemboltLawFirm_Mod\EditEmployees.ascx(93): error CS1061: 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' does not contain a definition for 'UpdateEmployee_Click' and no extension method 'UpdateEmployee_Click' accepting a first argument of type 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.WebFormsModuleControlFactory.CreateModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2013-02-07 06:10:36,619 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 06:10:36,652 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 06:10:36,672 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.Entities.Modules.EventMessageProcessor - Value cannot be null.
+Parameter name: type
+System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Entities.Modules.EventMessageProcessor.UpgradeModule(EventMessage message)
+2013-02-07 06:10:37,500 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 06:10:37,503 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+System.Web.HttpException: Could not load type 'RemboltLawFirm_Mod.RemboltLawFirm_ModController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 06:10:37,506 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.Entities.Modules.EventMessageProcessor - Value cannot be null.
+Parameter name: type
+System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey, Boolean UseCache)
+   at DotNetNuke.Framework.Reflection.CreateObject(String TypeName, String CacheKey)
+   at DotNetNuke.Entities.Modules.EventMessageProcessor.UpdateSupportedFeatures(EventMessage message)
+   at DotNetNuke.Entities.Modules.EventMessageProcessor.ProcessMessage(EventMessage message)
+2013-02-07 06:10:43,949 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 06:10:43,952 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 06:10:43,957 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 06:10:43,960 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 06:18:27,955 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 06:18:27,988 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 06:18:28,006 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 06:18:28,009 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 06:19:12,095 [MaDesignAlpha][Thread:19][ERROR] DotNetNuke.UI.Modules.ModuleHost - c:\MaDesign\Sites\Remlud\remlud\DesktopModules\RemboltLawFirm_Mod\EditEmployees.ascx(93): error CS1061: 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' does not contain a definition for 'UpdateEmployee_Click' and no extension method 'UpdateEmployee_Click' accepting a first argument of type 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' could be found (are you missing a using directive or an assembly reference?)
+System.Web.HttpCompileException: c:\MaDesign\Sites\Remlud\remlud\DesktopModules\RemboltLawFirm_Mod\EditEmployees.ascx(93): error CS1061: 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' does not contain a definition for 'UpdateEmployee_Click' and no extension method 'UpdateEmployee_Click' accepting a first argument of type 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.WebFormsModuleControlFactory.CreateModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2013-02-07 06:19:12,115 [MaDesignAlpha][Thread:19][ERROR] DotNetNuke.UI.Modules.ModuleHost - FriendlyMessage="Error: RLEDIT is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.Web.HttpCompileException: c:\MaDesign\Sites\Remlud\remlud\DesktopModules\RemboltLawFirm_Mod\EditEmployees.ascx(93): error CS1061: 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' does not contain a definition for 'UpdateEmployee_Click' and no extension method 'UpdateEmployee_Click' accepting a first argument of type 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.WebFormsModuleControlFactory.CreateModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2013-02-07 06:28:55,719 [MaDesignAlpha][Thread:19][ERROR] DotNetNuke.UI.Modules.ModuleHost - c:\MaDesign\Sites\Remlud\remlud\DesktopModules\RemboltLawFirm_Mod\EditEmployees.ascx(90): error CS1061: 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' does not contain a definition for 'RemovePractice_Click' and no extension method 'RemovePractice_Click' accepting a first argument of type 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' could be found (are you missing a using directive or an assembly reference?)
+System.Web.HttpCompileException: c:\MaDesign\Sites\Remlud\remlud\DesktopModules\RemboltLawFirm_Mod\EditEmployees.ascx(90): error CS1061: 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' does not contain a definition for 'RemovePractice_Click' and no extension method 'RemovePractice_Click' accepting a first argument of type 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.WebFormsModuleControlFactory.CreateModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()
+2013-02-07 06:28:55,838 [MaDesignAlpha][Thread:19][ERROR] DotNetNuke.UI.Modules.ModuleHost - FriendlyMessage="Error: RLEDIT is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.Web.HttpCompileException: c:\MaDesign\Sites\Remlud\remlud\DesktopModules\RemboltLawFirm_Mod\EditEmployees.ascx(90): error CS1061: 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' does not contain a definition for 'RemovePractice_Click' and no extension method 'RemovePractice_Click' accepting a first argument of type 'ASP.desktopmodules_remboltlawfirm_mod_editemployees_ascx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc)
+   at DotNetNuke.UI.Modules.WebFormsModuleControlFactory.CreateModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration)
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl()"
+2013-02-07 06:28:57,221 [MaDesignAlpha][Thread:19][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 06:28:57,225 [MaDesignAlpha][Thread:19][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 06:28:57,229 [MaDesignAlpha][Thread:19][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-07 06:28:57,232 [MaDesignAlpha][Thread:19][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)

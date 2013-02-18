@@ -552,6 +552,8 @@ namespace DotNetNuke.Modules.Admin.Extensions
                     XPathNavigator nav = doc.CreateNavigator();
                     XPathNavigator packageNav = nav.SelectSingleNode("dotnetnuke/packages");
                     Package.Manifest = packageNav.InnerXml;
+                    var pkgIconFile = Util.ParsePackageIconFileName(Package);
+                    Package.IconFile = (pkgIconFile.Trim().Length > 0) ? Util.ParsePackageIconFile(Package) : null;
                     PackageController.SavePackage(Package);
                     break;
                 case 4:

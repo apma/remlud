@@ -265,11 +265,13 @@ namespace DotNetNuke.Modules.Admin.Security
                             ctlIcon.Url = role.IconFile;
 
                             UpdateFeeTextBoxes();
+                            cmdManage.Visible = role.Status == RoleStatus.Approved;
                         }
                         else //security violation attempt to access item not related to this Module
                         {
                             Response.Redirect(Globals.NavigateURL("Security Roles"));
                         }
+
                         if (_roleID == PortalSettings.AdministratorRoleId || _roleID == PortalSettings.RegisteredRoleId)
                         {
                             cmdDelete.Visible = false;

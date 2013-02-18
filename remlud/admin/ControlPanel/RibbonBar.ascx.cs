@@ -51,6 +51,15 @@ namespace DotNetNuke.UI.ControlPanels
     {
         public override bool IsDockable { get; set; }
 
+        public override bool IncludeInControlHierarchy
+        {
+            get
+            {
+                return base.IncludeInControlHierarchy && (IsPageAdmin() || IsModuleAdmin());
+            }
+        }
+
+
         #region "Private Methods"
 
         private void Localize()

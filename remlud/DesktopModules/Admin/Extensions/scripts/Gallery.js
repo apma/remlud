@@ -13,8 +13,8 @@ function Gallery(params) {
         rowId: 0
         , index: 1
         , pageSize: 10
-        , orderBy: "Title"
-        , orderDir: "asc"
+        , orderBy: ""
+        , orderDir: ""
         , thenBy: ""
         , thenDir: "asc"
         , animationSpeed: "slow"
@@ -516,7 +516,7 @@ Gallery.prototype.DefaultDialogOptions = {
 }
 
 Gallery.prototype.getDownloadUrl = function (extensionID) {
-    return this.BaseDownLoadUrl.replace("{{ExtensionID}}", extensionID);
+    return this.BaseDownLoadUrl.replace(escape("{{ExtensionID}}"), extensionID);
 }
 
 Gallery.prototype.ShowDetails = function (extensionID) {

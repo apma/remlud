@@ -22,7 +22,7 @@
 /* background color for the content part of the pages */
 body{background-color:white;margin:0;font-family:Helvetica, Arial, sans-serif;font-size:12px;}
 .ControlPanel, .PagingTable{width:100%;background-color:#fff;border:#036 1px solid;}
-.SkinObject{font-weight:normal;font-size:8.5pt;text-decoration:none;}
+.SkinObject{font-weight:bold;font-size:8.5pt;text-decoration:none;}
 a.SkinObject:link, a.SkinObject:visited, a.SkinObject:hover, a.SkinObject:active{text-decoration:none;}
 
 /* styles for LANGUAGE skinobject */
@@ -256,8 +256,7 @@ div.SearchIcon img{margin-top:3px;}
 /* Module actions */
 	.dnnActionMenuBorder{-moz-box-shadow: 0 0 5px #888;-webkit-box-shadow: 0 0 5px #888;box-shadow: 0 0 5px #888;z-index:-1;
 	background:transparent;position:absolute;margin:-8px 0 0 -8px;padding: 0 16px 16px 0;width:100%;height:100%;border:1px #ccc solid}
-	.DnnModule{z-index:902;position:relative; zoom:1; /*Entropy skin IE7*/  }
-	/*.DnnModule{z-index:902;position:relative; zoom:1; /*Entropy skin IE7 }*/
+	.DnnModule{z-index:902;position:relative; zoom:1; /*Entropy skin IE7*/ }
 		.dnnActionMenu{margin:0;padding:0;position:absolute;z-index:906;color:#000;left:10px;top:10px;}
 		ul.dnnActionMenuBody {display:none;background:#fff;border:5px solid #aaa;padding:10px;border-radius:3px;-moz-border-radius:3px;text-align:left;
 		position:absolute;left:0;top:10;min-width:480px;-moz-box-shadow:0 0 5px #888;-webkit-box-shadow:0 0 5px#888;box-shadow:0 0 5px #888;}
@@ -565,5 +564,3 @@ div.SearchIcon img{margin-top:3px;}
 	.dnnForm .ui-tabs .ui-tabs-panel{ display:block;border-width: 0; padding: 1em 1.4em; background: none;}
 		.dnnForm .ui-tabs-panel{position:relative;}
 	.dnnForm .ui-tabs-hide {display:none !important;}
-	
-	

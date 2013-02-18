@@ -48,9 +48,9 @@
 #dynamic_area_nosidebar  p.disclaimer {font-family: Arial, Helvetica, sans-serif; font-size:11px; color: #898989; font-style:italic; margin-top:15px;line-height: normal; }
 
 /* -- videos -- */
-a.video {display:block;width: 295px;height:215px;text-align:center;
+a.video {display:block;width: 295px;height:196px;text-align:center;
     margin:8px 20px 15px 0;float:left;border:1px solid #999;}
-a.video img {margin-top:0px;border:0px;width:295px;height:215px;}
+a.video img {margin-top:0px;border:0px;width:295px;height:196px;}
 a.video img.playbtn { width: 77px;height: 77px;margin-top: 63px;}
 a.video:hover {border:1px solid #000;}
 ul.vidlist li {float:left;list-style: none;display:block;margin-top:25px;}

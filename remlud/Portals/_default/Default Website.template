@@ -491,7 +491,7 @@
       <roles>
         <role>
           <rolename>Administrators</rolename>
-          <description>Portal Administrators</description>
+          <description>Administrators of this Website</description>
           <billingfrequency />
           <billingperiod>-1</billingperiod>
           <servicefee>-3.402823E+38</servicefee>
@@ -521,7 +521,7 @@
         </role>
         <role>
           <rolename>Subscribers</rolename>
-          <description>A public role for portal subscriptions</description>
+          <description>A public role for site subscriptions</description>
           <billingfrequency />
           <billingperiod>-1</billingperiod>
           <servicefee>-3.402823E+38</servicefee>
@@ -854,7 +854,7 @@
               </modulepermissions>
               <content type="DNNHTML" version="06.02.00"><![CDATA[&lt;htmltext&gt;&lt;content&gt;&lt;![CDATA[&lt;div class=&quot;getting-started-wrap clearfix&quot;&gt;
 &lt;p&gt;[Tab.GettingStarted.LeftPane.Module.Content.0.Text]&lt;/p&gt;
-&lt;iframe width=&quot;630&quot; scrolling=&quot;no&quot; height=&quot;490&quot; frameborder=&quot;0&quot; src=&quot;http://www.dotnetnuke.com/Resources/Video-Library/Introduction.aspx?V=06.02.00&quot;&gt;&lt;/iframe&gt;
+&lt;iframe width=&quot;630&quot; scrolling=&quot;no&quot; height=&quot;490&quot; frameborder=&quot;0&quot; src=&quot;http://www.dotnetnuke.com/Resources/Video-Library/Introduction.aspx?V=06.02.01&quot;&gt;&lt;/iframe&gt;
 &lt;/div&gt;]]&gt;&lt;/content&gt;&lt;/htmltext&gt;]]></content>
               <modulesettings>
                 <modulesetting>
@@ -1135,7 +1135,7 @@
                   <rolename>Administrators</rolename>
                 </permission>
               </modulepermissions>
-              <content type="DNNHTML" version="06.02.00"><![CDATA[&lt;htmltext&gt;&lt;content&gt;&lt;![CDATA[&lt;ul id=&quot;RightLinks&quot;&gt;
+              <content type="DNNHTML" version="06.02.00"><![CDATA[&lt;htmltext&gt;&lt;content&gt;&lt;![CDATA[&lt;!--SEO NOINDEX--&gt;&lt;ul id=&quot;RightLinks&quot;&gt;
 &lt;li class=&quot;icoAbout&quot;&gt;&lt;a href=&quot;AboutUs.aspx&quot;&gt;&lt;img alt=&quot;About Icon&quot; src=&quot;{{PortalRoot}}/Images/DNN/Spacer.gif&quot; /&gt;
 &lt;p&gt;&lt;span&gt;[Tab.Home.RightPane.Module.Content.0.Text]&lt;/span&gt;[Tab.Home.RightPane.Module.Content.1.Text]&lt;/p&gt;
 &lt;/a&gt;
@@ -1148,7 +1148,7 @@
 &lt;p&gt;&lt;span&gt;[Tab.Home.RightPane.Module.Content.4.Text]&lt;/span&gt;[Tab.Home.RightPane.Module.Content.5.Text]&lt;/p&gt;
 &lt;/a&gt;
 &lt;/li&gt;
-&lt;/ul&gt;]]&gt;&lt;/content&gt;&lt;/htmltext&gt;]]></content>
+&lt;/ul&gt;&lt;!--END SEO--&gt;]]&gt;&lt;/content&gt;&lt;/htmltext&gt;]]></content>
               <modulesettings>
                 <modulesetting>
                   <settingname>WorkflowID</settingname>
@@ -1963,11 +1963,11 @@
                   <rolename>Administrators</rolename>
                 </permission>
               </modulepermissions>
-              <content type="DNNHTML" version="06.02.00"><![CDATA[&lt;htmltext&gt;&lt;content&gt;&lt;![CDATA[&lt;h3&gt;[Tab.About.RightPane.OtherModule.Content.0.Text]&lt;/h3&gt; &lt;ul class=&quot;sidebar-nav&quot;&gt; &lt;p&gt;• &lt;a href=&quot;Home.aspx&quot;&gt;[Tab.About.RightPane.OtherModule.Content.1.Text]&lt;/a&gt;&lt;/p&gt; &lt;p&gt;• 
+              <content type="DNNHTML" version="06.02.00"><![CDATA[&lt;htmltext&gt;&lt;content&gt;&lt;![CDATA[&lt;!--SEO NOINDEX--&gt;&lt;h3&gt;[Tab.About.RightPane.OtherModule.Content.0.Text]&lt;/h3&gt; &lt;ul class=&quot;sidebar-nav&quot;&gt; &lt;p&gt;• &lt;a href=&quot;Home.aspx&quot;&gt;[Tab.About.RightPane.OtherModule.Content.1.Text]&lt;/a&gt;&lt;/p&gt; &lt;p&gt;• 
             &lt;a href=&quot;AboutUs.aspx&quot;&gt;[Tab.About.RightPane.OtherModule.Content.2.Text]&lt;/a&gt;&lt;/p&gt; &lt;p&gt;• &lt;a href=&quot;OurServices.aspx&quot;&gt;[Tab.About.RightPane.OtherModule.Content.3.Text]&lt;/a&gt;&lt;/p&gt; 
             &lt;p&gt;&lt;span class=&quot;Apple-tab-span&quot; style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;-&#160;&lt;a href=&quot;OurServices.aspx#vintage-designs&quot;&gt;[Tab.About.RightPane.OtherModule.Content.4.Text]&lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;span class=&quot;Apple-tab-span&quot; style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;-&#160;&lt;a href=&quot;OurServices.aspx#high-performance&quot;
             &gt;[Tab.About.RightPane.OtherModule.Content.5.Text]&lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;span class=&quot;Apple-tab-span&quot; style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;-&#160;
-            &lt;a href=&quot;OurServices.aspx#electric-bicycles&quot;&gt;[Tab.About.RightPane.OtherModule.Content.6.Text]&lt;/a&gt;&lt;/p&gt; &lt;p&gt;• &lt;a href=&quot;NewsPromotions.aspx&quot;&gt;[Tab.About.RightPane.OtherModule.Content.7.Text]&lt;/a&gt;&lt;/p&gt; &lt;/ul&gt;]]&gt;&lt;/content&gt;&lt;/htmltext&gt;]]></content>
+            &lt;a href=&quot;OurServices.aspx#electric-bicycles&quot;&gt;[Tab.About.RightPane.OtherModule.Content.6.Text]&lt;/a&gt;&lt;/p&gt; &lt;p&gt;• &lt;a href=&quot;NewsPromotions.aspx&quot;&gt;[Tab.About.RightPane.OtherModule.Content.7.Text]&lt;/a&gt;&lt;/p&gt; &lt;/ul&gt;&lt;!--END SEO--&gt;]]&gt;&lt;/content&gt;&lt;/htmltext&gt;]]></content>
               <modulesettings>
                 <modulesetting>
                   <settingname>WorkflowID</settingname>
@@ -2902,7 +2902,7 @@
                   <rolename>Administrators</rolename>
                 </permission>
               </modulepermissions>
-              <content type="DNNHTML" version="06.02.00"><![CDATA[&lt;htmltext&gt;&lt;content&gt;&lt;![CDATA[&lt;h3 class=&quot;clear&quot;&gt;[Tab.Promotions.RightPane.SidebarNavModule.Content.0.Text]&lt;/h3&gt;
+              <content type="DNNHTML" version="06.02.00"><![CDATA[&lt;htmltext&gt;&lt;content&gt;&lt;![CDATA[&lt;!--SEO NOINDEX--&gt;&lt;h3 class=&quot;clear&quot;&gt;[Tab.Promotions.RightPane.SidebarNavModule.Content.0.Text]&lt;/h3&gt;
 &lt;ul class=&quot;sidebar-nav&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;a href=&quot;Home.aspx&quot;&gt;[Tab.Promotions.RightPane.SidebarNavModule.Content.1.Text]&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;a href=&quot;AboutUs.aspx&quot;&gt;[Tab.Promotions.RightPane.SidebarNavModule.Content.2.Text]&lt;/a&gt;&lt;/li&gt;
@@ -2914,7 +2914,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;NewsPromotions.aspx&quot;&gt;[Tab.Promotions.RightPane.SidebarNavModule.Content.7.Text]&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;]]&gt;&lt;/content&gt;&lt;/htmltext&gt;]]></content>
+&lt;/ul&gt;&lt;!--END SEO--&gt;]]&gt;&lt;/content&gt;&lt;/htmltext&gt;]]></content>
               <modulesettings>
                 <modulesetting>
                   <settingname>WorkflowID</settingname>
@@ -3037,7 +3037,7 @@
               <border />
               <iconfile />
               <visibility>Maximized</visibility>
-              <containersrc>[G]Containers/DarkKnightMobile/NoTitle.ascx</containersrc>
+              <containersrc>[G]Containers/DarkKnight/NoTitle.ascx</containersrc>
               <displaytitle>true</displaytitle>
               <displayprint>false</displayprint>
               <displaysyndicate>false</displaysyndicate>
@@ -3116,7 +3116,7 @@
               <border />
               <iconfile />
               <visibility>Maximized</visibility>
-              <containersrc>[G]Containers/DarkKnightMobile/NoTitle.ascx</containersrc>
+              <containersrc>[G]Containers/DarkKnight/NoTitle.ascx</containersrc>
               <displaytitle>true</displaytitle>
               <displayprint>false</displayprint>
               <displaysyndicate>false</displaysyndicate>
@@ -3190,7 +3190,7 @@
               <border />
               <iconfile />
               <visibility>Maximized</visibility>
-              <containersrc>[G]Containers/DarkKnightMobile/NoTitle.ascx</containersrc>
+              <containersrc>[G]Containers/DarkKnight/NoTitle.ascx</containersrc>
               <displaytitle>true</displaytitle>
               <displayprint>false</displayprint>
               <displaysyndicate>false</displaysyndicate>
@@ -3440,7 +3440,7 @@
               <border />
               <iconfile />
               <visibility>Maximized</visibility>
-              <containersrc>[G]Containers/DarkKnightMobile/NoTitle.ascx</containersrc>
+              <containersrc>[G]Containers/DarkKnight/NoTitle.ascx</containersrc>
               <displaytitle>true</displaytitle>
               <displayprint>false</displayprint>
               <displaysyndicate>false</displaysyndicate>
@@ -3567,7 +3567,7 @@
               <border />
               <iconfile />
               <visibility>Maximized</visibility>
-              <containersrc>[G]Containers/DarkKnightMobile/NoTitle.ascx</containersrc>
+              <containersrc>[G]Containers/DarkKnight/NoTitle.ascx</containersrc>
               <displaytitle>true</displaytitle>
               <displayprint>false</displayprint>
               <displaysyndicate>false</displaysyndicate>
@@ -3646,7 +3646,7 @@
               <border />
               <iconfile />
               <visibility>Maximized</visibility>
-              <containersrc>[G]Containers/DarkKnightMobile/NoTitle.ascx</containersrc>
+              <containersrc>[G]Containers/DarkKnight/NoTitle.ascx</containersrc>
               <displaytitle>true</displaytitle>
               <displayprint>false</displayprint>
               <displaysyndicate>false</displaysyndicate>
@@ -3719,7 +3719,7 @@
               <border />
               <iconfile />
               <visibility>Maximized</visibility>
-              <containersrc>[G]Containers/DarkKnightMobile/NoTitle.ascx</containersrc>
+              <containersrc>[G]Containers/DarkKnight/NoTitle.ascx</containersrc>
               <displaytitle>true</displaytitle>
               <displayprint>false</displayprint>
               <displaysyndicate>false</displaysyndicate>
@@ -3969,7 +3969,7 @@
               <border />
               <iconfile />
               <visibility>Maximized</visibility>
-              <containersrc>[G]Containers/DarkKnightMobile/NoTitle.ascx</containersrc>
+              <containersrc>[G]Containers/DarkKnight/NoTitle.ascx</containersrc>
               <displaytitle>true</displaytitle>
               <displayprint>false</displayprint>
               <displaysyndicate>false</displaysyndicate>
@@ -4015,10 +4015,12 @@
                   <settingvalue>
                     &lt;div class="pBio"&gt;
                     &lt;h3 data-bind="text: AboutMeText"&gt;&lt;/h3&gt;
-                    &lt;p data-bind="html: Biography"&gt;&lt;/p&gt;
+                    &lt;span data-bind="text: EmptyAboutMeText, visible: Biography().length==0"&gt;&lt;/span&gt;
+					&lt;p data-bind="html: Biography"&gt;&lt;/p&gt;
                     &lt;/div&gt;
                     &lt;div class="pAddress"&gt;
                     &lt;h3 data-bind="text: LocationText"&gt;&lt;/h3&gt;
+					&lt;span data-bind="text: EmptyLocationText, visible: Street().length==0 &amp;&amp; Location().length==0 &amp;&amp; Country().length==0 &amp;&amp; PostalCode().length==0"&gt;&lt;/span&gt;
                     &lt;p&gt;&lt;span data-bind="text: Street()"&gt;&lt;/span&gt;&lt;span data-bind="visible: Street().length &gt; 0"&gt;&lt;br/&gt;&lt;/span&gt;
                     &lt;span data-bind="text: Location()"&gt;&lt;/span&gt;&lt;span data-bind="visible: Location().length &gt; 0"&gt;&lt;br/&gt;&lt;/span&gt;
                     &lt;span data-bind="text: Country()"&gt;&lt;/span&gt;&lt;span data-bind="visible: Country().length &gt; 0"&gt;&lt;br/&gt;&lt;/span&gt;
@@ -4027,11 +4029,12 @@
                     &lt;/div&gt;
                     &lt;div class="pContact"&gt;
                     &lt;h3 data-bind="text: GetInTouchText"&gt;&lt;/h3&gt;
+					&lt;span data-bind="text: EmptyGetInTouchText, visible: Telephone().length==0 &amp;&amp; Email().length==0 &amp;&amp; Website().length==0 &amp;&amp; IM().length==0"&gt;&lt;/span&gt;
                     &lt;ul&gt;
-                    &lt;li data-bind="visible: Telephone().length &gt; 0"&gt;&lt;strong&gt;&lt;span data-bind="text: TelephoneText"&gt;:&lt;/strong&gt; &lt;span data-bind="text: Telephone()"&gt;&lt;/li&gt;
-                    &lt;li data-bind="visible: Email().length &gt; 0"&gt;&lt;strong&gt;&lt;span data-bind="text: EmailText"&gt;:&lt;/strong&gt; &lt;span data-bind="text: Email()"&gt;&lt;/li&gt;
-                    &lt;li data-bind="visible: Website().length &gt; 0"&gt;&lt;strong&gt;&lt;span data-bind="text: WebsiteText"&gt;:&lt;/strong&gt; &lt;span data-bind="text: Website()"&gt;&lt;/li&gt;
-                    &lt;li data-bind="visible: IM().length &gt; 0"&gt;&lt;strong&gt;&lt;span data-bind="text: IMText"&gt;:&lt;/strong&gt; &lt;span data-bind="text: IM()"&gt;&lt;/li&gt;
+                    &lt;li data-bind="visible: Telephone().length &gt; 0"&gt;&lt;strong&gt;&lt;span data-bind="text: TelephoneText"&gt;:&lt;/span&gt;&lt;/strong&gt; &lt;span data-bind="text: Telephone()"&gt;&lt;/span&gt;&lt;/li&gt;
+                    &lt;li data-bind="visible: Email().length &gt; 0"&gt;&lt;strong&gt;&lt;span data-bind="text: EmailText"&gt;:&lt;/span&gt;&lt;/strong&gt; &lt;span data-bind="text: Email()"&gt;&lt;/span&gt;&lt;/li&gt;
+                    &lt;li data-bind="visible: Website().length &gt; 0"&gt;&lt;strong&gt;&lt;span data-bind="text: WebsiteText"&gt;:&lt;/span&gt;&lt;/strong&gt; &lt;span data-bind="text: Website()"&gt;&lt;/span&gt;&lt;/li&gt;
+                    &lt;li data-bind="visible: IM().length &gt; 0"&gt;&lt;strong&gt;&lt;span data-bind="text: IMText"&gt;:&lt;/span&gt;&lt;/strong&gt; &lt;span data-bind="text: IM()"&gt;&lt;/span&gt;&lt;/li&gt;
                     &lt;/ul&gt;
                     &lt;/div&gt;
                     &lt;div class="dnnClear"&gt;&lt;/div&gt;                  
@@ -4105,7 +4108,7 @@
               <border />
               <iconfile />
               <visibility>Maximized</visibility>
-              <containersrc>[G]Containers/DarkKnightMobile/NoTitle.ascx</containersrc>
+              <containersrc>[G]Containers/DarkKnight/NoTitle.ascx</containersrc>
               <displaytitle>true</displaytitle>
               <displayprint>false</displayprint>
               <displaysyndicate>false</displaysyndicate>
@@ -4184,7 +4187,7 @@
               <border />
               <iconfile />
               <visibility>Maximized</visibility>
-              <containersrc>[G]Containers/DarkKnightMobile/NoTitle.ascx</containersrc>
+              <containersrc>[G]Containers/DarkKnight/NoTitle.ascx</containersrc>
               <displaytitle>true</displaytitle>
               <displayprint>false</displayprint>
               <displaysyndicate>false</displaysyndicate>
@@ -4257,7 +4260,7 @@
               <border />
               <iconfile />
               <visibility>Maximized</visibility>
-              <containersrc>[G]Containers/DarkKnightMobile/NoTitle.ascx</containersrc>
+              <containersrc>[G]Containers/DarkKnight/NoTitle.ascx</containersrc>
               <displaytitle>true</displaytitle>
               <displayprint>false</displayprint>
               <displaysyndicate>false</displaysyndicate>
@@ -4507,7 +4510,7 @@
               <border />
               <iconfile />
               <visibility>Maximized</visibility>
-              <containersrc>[G]Containers/DarkKnightMobile/NoTitle.ascx</containersrc>
+              <containersrc>[G]Containers/DarkKnight/NoTitle.ascx</containersrc>
               <displaytitle>true</displaytitle>
               <displayprint>false</displayprint>
               <displaysyndicate>false</displaysyndicate>
@@ -4646,7 +4649,7 @@
               <border />
               <iconfile />
               <visibility>Maximized</visibility>
-              <containersrc>[G]Containers/DarkKnightMobile/NoTitle.ascx</containersrc>
+              <containersrc>[G]Containers/DarkKnight/NoTitle.ascx</containersrc>
               <displaytitle>true</displaytitle>
               <displayprint>false</displayprint>
               <displaysyndicate>false</displaysyndicate>
@@ -4725,7 +4728,7 @@
               <border />
               <iconfile />
               <visibility>Maximized</visibility>
-              <containersrc>[G]Containers/DarkKnightMobile/NoTitle.ascx</containersrc>
+              <containersrc>[G]Containers/DarkKnight/NoTitle.ascx</containersrc>
               <displaytitle>true</displaytitle>
               <displayprint>false</displayprint>
               <displaysyndicate>false</displaysyndicate>
@@ -4798,7 +4801,7 @@
               <border />
               <iconfile />
               <visibility>Maximized</visibility>
-              <containersrc>[G]Containers/DarkKnightMobile/NoTitle.ascx</containersrc>
+              <containersrc>[G]Containers/DarkKnight/NoTitle.ascx</containersrc>
               <displaytitle>true</displaytitle>
               <displayprint>false</displayprint>
               <displaysyndicate>false</displaysyndicate>
@@ -5048,7 +5051,7 @@
               <border />
               <iconfile />
               <visibility>Maximized</visibility>
-              <containersrc>[G]Containers/DarkKnightMobile/NoTitle.ascx</containersrc>
+              <containersrc>[G]Containers/DarkKnight/NoTitle.ascx</containersrc>
               <displaytitle>true</displaytitle>
               <displayprint>false</displayprint>
               <displaysyndicate>false</displaysyndicate>

@@ -913,7 +913,7 @@ namespace DotNetNuke.UI.Skins.Controls
 
         private bool CheckToExclude(string tabName, Int32 tabId)
         {
-            if ((PagesToExclude == string.Empty))
+            if (string.IsNullOrEmpty(PagesToExclude))
             {
                 return false;
             }
@@ -947,7 +947,7 @@ namespace DotNetNuke.UI.Skins.Controls
             StartingItemId = 0;
             iRootGroupId = 0;
 			//check if we have a value to work with
-            if ((ShowOnlyCurrent == string.Empty))
+            if (string.IsNullOrEmpty(ShowOnlyCurrent))
             {
                 return;
             }
@@ -985,7 +985,7 @@ namespace DotNetNuke.UI.Skins.Controls
 
         private bool CheckShowOnlyCurrent(int tabId, int parentId, int startingItemId, int iRootGroupId)
         {
-            if ((string.Empty == ShowOnlyCurrent && parentId == -1) || ("ChildItems" == ShowOnlyCurrent && parentId == PortalSettings.ActiveTab.TabID) ||
+            if ((string.IsNullOrEmpty(ShowOnlyCurrent) && parentId == -1) || ("ChildItems" == ShowOnlyCurrent && parentId == PortalSettings.ActiveTab.TabID) ||
                 ("CurrentItem" == ShowOnlyCurrent && tabId == PortalSettings.ActiveTab.TabID) || ("RootItem" == ShowOnlyCurrent && iRootGroupId == parentId) ||
                 (startingItemId > 0 && parentId == startingItemId))
             {
@@ -1045,22 +1045,22 @@ namespace DotNetNuke.UI.Skins.Controls
                             parent = null;
                         }
                     }
-                    if (SelectedPathItemCss != string.Empty)
+                    if (!string.IsNullOrEmpty(SelectedPathItemCss))
                     {
                         panelItemToCheck.CssClass = SelectedPathItemCss;
                     }
-                    if ((SelectedPathItemImage != string.Empty))
+                    if (!string.IsNullOrEmpty(SelectedPathItemImage))
                     {
                         panelItemToCheck.ImageUrl = SelectedPathItemImage.Replace("*SkinPath*", dnnSkinPath).Replace("*PageName*", pageName);
                     }
                 }
                 else
                 {
-                    if ((SelectedPathHeaderItemCss != string.Empty))
+                    if (!string.IsNullOrEmpty(SelectedPathHeaderItemCss))
                     {
                         panelItemToCheck.CssClass = SelectedPathHeaderItemCss;
                     }
-                    if ((SelectedPathHeaderItemImage != string.Empty))
+                    if (!string.IsNullOrEmpty(SelectedPathHeaderItemImage))
                     {
                         panelItemToCheck.ImageUrl = SelectedPathHeaderItemImage.Replace("*SkinPath*", dnnSkinPath).Replace("*PageName*", pageName);
                     }
@@ -1070,7 +1070,7 @@ namespace DotNetNuke.UI.Skins.Controls
 
         private void SetPanelbarProperties()
         {
-            if ((Style != string.Empty))
+            if (!string.IsNullOrEmpty(Style))
             {
                 Style += "; ";
                 try
@@ -1094,39 +1094,39 @@ namespace DotNetNuke.UI.Skins.Controls
         {
             string sLevel = EnableLevelCss && iLevel < MaxLevelNumber ? "Level" + iLevel : string.Empty;
             string sItem = iItem <= MaxItemNumber && ((EnableItemCss && iLevel > 0) || (EnableRootItemCss && iLevel == 0)) ? iItem.ToString() : string.Empty;
-            if ((ItemCssClass != string.Empty))
+            if (!string.IsNullOrEmpty(ItemCssClass))
             {
                 currentPanelItem.CssClass = sLevel + ItemCssClass + sItem;
             }
-            if ((ItemDisabledCssClass != string.Empty))
+            if (!string.IsNullOrEmpty(ItemDisabledCssClass))
             {
                 currentPanelItem.DisabledCssClass = sLevel + ItemDisabledCssClass + sItem;
             }
-            if ((ItemExpandedCssClass != string.Empty))
+            if (!string.IsNullOrEmpty(ItemExpandedCssClass))
             {
                 currentPanelItem.ExpandedCssClass = sLevel + ItemExpandedCssClass + sItem;
             }
-            if ((ItemFocusedCssClass != string.Empty))
+            if (!string.IsNullOrEmpty(ItemFocusedCssClass))
             {
                 currentPanelItem.FocusedCssClass = sLevel + ItemFocusedCssClass + sItem;
             }
-            if ((ItemClickedCssClass != string.Empty))
+            if (!string.IsNullOrEmpty(ItemClickedCssClass))
             {
                 currentPanelItem.ClickedCssClass = sLevel + ItemClickedCssClass + sItem;
             }
-            if ((ItemImageUrl != string.Empty))
+            if (!string.IsNullOrEmpty(ItemImageUrl))
             {
                 currentPanelItem.ImageUrl = ItemImageUrl.Replace("*SkinPath*", dnnSkinPath).Replace("*PageName*", pageName);
             }
-            if ((ItemHoveredImageUrl != string.Empty))
+            if (!string.IsNullOrEmpty(ItemHoveredImageUrl))
             {
                 currentPanelItem.HoveredImageUrl = ItemHoveredImageUrl.Replace("*SkinPath*", dnnSkinPath).Replace("*PageName*", pageName);
             }
-            if ((!ItemHeight.IsEmpty))
+            if (!ItemHeight.IsEmpty)
             {
                 currentPanelItem.Height = ItemHeight;
             }
-            if ((!ItemWidth.IsEmpty))
+            if (!ItemWidth.IsEmpty)
             {
                 currentPanelItem.Width = ItemWidth;
             }
@@ -1137,39 +1137,39 @@ namespace DotNetNuke.UI.Skins.Controls
             string sLevel = EnableLevelCss && iLevel < MaxLevelNumber ? "Level" + iLevel : string.Empty;
             string sItem = iItem <= MaxItemNumber && ((EnableItemCss && iLevel > 0) || (EnableRootItemCss && iLevel == 0)) ? iItem.ToString() : string.Empty;
 
-            if ((RootItemCssClass != string.Empty))
+            if (!string.IsNullOrEmpty(RootItemCssClass))
             {
                 currentPanelItem.CssClass = sLevel + RootItemCssClass + sItem;
             }
-            if ((RootItemDisabledCssClass != string.Empty))
+            if (!string.IsNullOrEmpty(RootItemDisabledCssClass))
             {
                 currentPanelItem.DisabledCssClass = sLevel + RootItemDisabledCssClass + sItem;
             }
-            if ((RootItemExpandedCssClass != string.Empty))
+            if (!string.IsNullOrEmpty(RootItemExpandedCssClass))
             {
                 currentPanelItem.ExpandedCssClass = sLevel + RootItemExpandedCssClass + sItem;
             }
-            if ((RootItemFocusedCssClass != string.Empty))
+            if (!string.IsNullOrEmpty(RootItemFocusedCssClass))
             {
                 currentPanelItem.FocusedCssClass = sLevel + RootItemFocusedCssClass + sItem;
             }
-            if ((RootItemClickedCssClass != string.Empty))
+            if (!string.IsNullOrEmpty(RootItemClickedCssClass))
             {
                 currentPanelItem.ClickedCssClass = sLevel + RootItemClickedCssClass + sItem;
             }
-            if ((RootItemImageUrl != string.Empty))
+            if (!string.IsNullOrEmpty(RootItemImageUrl))
             {
                 currentPanelItem.ImageUrl = RootItemImageUrl.Replace("*SkinPath*", dnnSkinPath).Replace("*PageName*", pageName);
             }
-            if ((RootItemHoveredImageUrl != string.Empty))
+            if (!string.IsNullOrEmpty(RootItemHoveredImageUrl))
             {
                 currentPanelItem.HoveredImageUrl = RootItemHoveredImageUrl.Replace("*SkinPath*", dnnSkinPath).Replace("*PageName*", pageName);
             }
-            if ((!RootItemHeight.IsEmpty))
+            if (!RootItemHeight.IsEmpty)
             {
                 currentPanelItem.Height = RootItemHeight;
             }
-            if ((!RootItemWidth.IsEmpty))
+            if (!RootItemWidth.IsEmpty)
             {
                 currentPanelItem.Width = RootItemWidth;
             }
