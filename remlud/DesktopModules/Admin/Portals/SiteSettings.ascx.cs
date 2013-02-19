@@ -526,7 +526,24 @@ namespace DotNetNuke.Modules.Admin.Portals
 
                 var customRegistrationFields = PortalController.GetPortalSetting("Registration_RegistrationFields", portalId, String.Empty);
 
-                CustomRegistrationFields = BuildCustomRegistrationFields(customRegistrationFields);
+                if (!String.IsNullOrEmpty(customRegistrationFields))
+                {
+                    var sb = new StringBuilder();
+                    sb.Append("[ ");
+                    int i = 0;
+                    foreach (var field in customRegistrationFields.Split(','))
+                    {
+                        if (i != 0) sb.Append(",");
+                        sb.Append("{ id: \"" + field + "\", name: \"" + field + "\"}");
+                        i++;
+                    }
+                    sb.Append(" ]");
+                    CustomRegistrationFields = sb.ToString();
+                }
+                else
+                {
+                    CustomRegistrationFields = "null";
+                }
 
                 passwordRegistrationSettings.DataSource = settings;
                 passwordRegistrationSettings.DataBind();
@@ -544,34 +561,10 @@ namespace DotNetNuke.Modules.Admin.Portals
                 profileSettings.DataSource = settings;
                 profileSettings.DataBind();
             }
-            else
-            {
-                CustomRegistrationFields = BuildCustomRegistrationFields(registrationFields.Text);
-            }
             passwordSettings.EditMode = UserInfo.IsSuperUser ? PropertyEditorMode.Edit : PropertyEditorMode.View;
             passwordSettings.LocalResourceFile = LocalResourceFile;
             passwordSettings.DataSource = new PasswordConfig();
             passwordSettings.DataBind();
-        }
-
-        private string BuildCustomRegistrationFields(string customRegistrationFields)
-        {
-            if (!String.IsNullOrEmpty(customRegistrationFields))
-            {
-                var sb = new StringBuilder();
-                sb.Append("[ ");
-                int i = 0;
-                foreach (var field in customRegistrationFields.Split(','))
-                {
-                    if (i != 0) sb.Append(",");
-                    sb.Append("{ id: \"" + field + "\", name: \"" + field + "\"}");
-                    i++;
-                }
-                sb.Append(" ]");
-                return sb.ToString();
-            }
-
-            return "null";
         }
 
         /// -----------------------------------------------------------------------------

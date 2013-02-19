@@ -151,10 +151,9 @@ namespace DotNetNuke.Modules.Admin.Authentication
 
                     var verificationCode = Request.QueryString["verificationcode"];
 
-
                     try
                     {
-                        UserController.VerifyUser(verificationCode.Replace(".", "+").Replace("-", "/").Replace("_", "="));
+                        UserController.VerifyUser(verificationCode);
                         UI.Skins.Skin.AddModuleMessage(this, Localization.GetString("VerificationSuccess", LocalResourceFile), ModuleMessage.ModuleMessageType.GreenSuccess);
                     }
                     catch (UserAlreadyVerifiedException)

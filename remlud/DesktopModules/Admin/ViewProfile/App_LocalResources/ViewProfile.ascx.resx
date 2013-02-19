@@ -120,15 +120,6 @@
   <data name="AboutMe.Text" xml:space="preserve">
     <value>About Me</value>
   </data>
-  <data name="EmptyAboutMe.Text" xml:space="preserve">
-    <value>There is no biography information from this user</value>
-  </data>
-  <data name="EmptyLocation.Text" xml:space="preserve">
-    <value>There is no location information for this user</value>
-  </data>
-  <data name="EmptyGetInTouch.Text" xml:space="preserve">
-    <value>There is no contact information from this user</value>
-  </data>
   <data name="ControlTitle_viewprofile.Text" xml:space="preserve">
     <value>View Profile</value>
   </data>

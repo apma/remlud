@@ -1,0 +1,32 @@
+2012-05-22 16:18:18,489 [P3NW8SH172][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException: Validation of viewstate MAC failed. If this application is hosted by a Web Farm or cluster, ensure that <machineKey> configuration specifies the same validationKey and validation algorithm. AutoGenerate cannot be used in a cluster. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 76.84.9.129
+	Port: 51507
+	User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19
+	ViewState: ijuOY31fRwVxe6GZwUOa60izIjXP2G7XbKTjHcu1G98DlHie3W9W/+lL0rv/k5pvFTyNTH0cTdL6QV6slI58KrUnJPyL/WDPJZ00r41nTHxh26JPDOrNmUlkCUvxE4FKUbd9MOJ40H/G7+8QaqRO3zEqvUObToJTRBbFkgoRtYI0dA/s4f1D/Ov3ku0wGKJDISnGNP43PKpy9t3uaxwFuFsI4GyTEgFy9eOoNWHlKOC9YcAC3F8uw7lFovLTWQ/PFQSbQ15/2Ga7wLpbVlVc8R1YeZ8yYoB2KsKsmTgZQG+/S+1Am1PzgRkDDyyeqtouMUKGEt83EAO9HjagoxRunaNktt0lZ5YL+IIBd0duDlUznrm85R482JcwD3LNM828Yieo5Cmf1qqqukVDzvp6GH+VeXmhcTr14306plwD433qbu8oI/ZnBYS7ulRIE25fFmL7docLVrSxJT9xAdphP9tG9N6XH+HIx9y9Jf5Qq8SO4iId9cUfv66frGP0WLRRjeKWaJ+olSIUj73Gi20ZZxuAEsicIJkFbSWriw5dlI8MAozEB35zx7g+Pge1icrHiEI3RyzDkGqKo3lU9ZhkEM2paBo10aMa1pk8JTi7p16juTQlkKcOhVirG/UKcFwyvHJDhEjvHglfEtOKOH1xHDmZnWbex7msBas1QbImvyElPHDApcBjnpQAyx3+VM65sdVipCYazjWtR+3gjZJ8yAJvaECEilO6/6KF8kNLu/+TDoPaS7CDx5fI2RiDf85YLEnWwvd6sFul2gbLVs/YkE2ztoZk/bGLNg26cglGddSZFjhtXBJbYHDW78QReS+tIfxLolgS0C0W...
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.ViewStateException.ThrowMacValidationError(Exception inner, String persistedState)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString)
+   at System.Web.UI.ObjectStateFormatter.System.Web.UI.IStateFormatter.Deserialize(String serializedState)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter formatter, String serializedState)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2012-05-22 16:18:18,536 [P3NW8SH172][Thread:6][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=55&error=An unexpected error has occurred&content=0
+System.Web.HttpException: Validation of viewstate MAC failed. If this application is hosted by a Web Farm or cluster, ensure that <machineKey> configuration specifies the same validationKey and validation algorithm. AutoGenerate cannot be used in a cluster. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: 76.84.9.129
+	Port: 51507
+	User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19
+	ViewState: ijuOY31fRwVxe6GZwUOa60izIjXP2G7XbKTjHcu1G98DlHie3W9W/+lL0rv/k5pvFTyNTH0cTdL6QV6slI58KrUnJPyL/WDPJZ00r41nTHxh26JPDOrNmUlkCUvxE4FKUbd9MOJ40H/G7+8QaqRO3zEqvUObToJTRBbFkgoRtYI0dA/s4f1D/Ov3ku0wGKJDISnGNP43PKpy9t3uaxwFuFsI4GyTEgFy9eOoNWHlKOC9YcAC3F8uw7lFovLTWQ/PFQSbQ15/2Ga7wLpbVlVc8R1YeZ8yYoB2KsKsmTgZQG+/S+1Am1PzgRkDDyyeqtouMUKGEt83EAO9HjagoxRunaNktt0lZ5YL+IIBd0duDlUznrm85R482JcwD3LNM828Yieo5Cmf1qqqukVDzvp6GH+VeXmhcTr14306plwD433qbu8oI/ZnBYS7ulRIE25fFmL7docLVrSxJT9xAdphP9tG9N6XH+HIx9y9Jf5Qq8SO4iId9cUfv66frGP0WLRRjeKWaJ+olSIUj73Gi20ZZxuAEsicIJkFbSWriw5dlI8MAozEB35zx7g+Pge1icrHiEI3RyzDkGqKo3lU9ZhkEM2paBo10aMa1pk8JTi7p16juTQlkKcOhVirG/UKcFwyvHJDhEjvHglfEtOKOH1xHDmZnWbex7msBas1QbImvyElPHDApcBjnpQAyx3+VM65sdVipCYazjWtR+3gjZJ8yAJvaECEilO6/6KF8kNLu/+TDoPaS7CDx5fI2RiDf85YLEnWwvd6sFul2gbLVs/YkE2ztoZk/bGLNg26cglGddSZFjhtXBJbYHDW78QReS+tIfxLolgS0C0W...
+   --- End of inner exception stack trace ---
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.ViewStateException.ThrowMacValidationError(Exception inner, String persistedState)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString)
+   at System.Web.UI.ObjectStateFormatter.System.Web.UI.IStateFormatter.Deserialize(String serializedState)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter formatter, String serializedState)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)

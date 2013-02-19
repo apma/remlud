@@ -17,7 +17,6 @@ using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Linq;
 using NHibernate.Mapping;
-using NHibernate_Module;
 using NHibernate_Module.Repositories;
 using NHibernate_Module.Domain;
 
@@ -76,75 +75,79 @@ namespace RemboltLawFirm_Mod
             }
 
         }
- 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void UpdateEmployee_Click(object sender, EventArgs e)
         {
-        //    //Check for Employee existing in Db
-        //    var pageId = int.Parse(DNNPageInput.Text);
-        //    employee = _employeeRepository.GetByPage(pageId);
+            //Check for Employee existing in Db
+            var pageId = int.Parse(DNNPageInput.Text);
+            employee = _employeeRepository.GetByPage(pageId);
             
-        //    //Setup pseudo-form
-        //    var firstName = FirstNameInput.Text;
-        //    var lastName = LastNameInput.Text;
-        //    var title = TitleInput.Text;
-        //    var email = EmailInput.Text;
-        //    var displayName = DisplayNameInput.Text;
-        //    var imageLink = ImageLinkInput.Text;
-        //    var videoLink = VideoLinkInput.Text;
-        //    var vcardLink = VcardLinkInput.Text;
+            //Setup pseudo-form
+            var firstName = FirstNameInput.Text;
+            var lastName = LastNameInput.Text;
+            var title = TitleInput.Text;
+            var email = EmailInput.Text;
+            var displayName = DisplayNameInput.Text;
+            var imageLink = ImageLinkInput.Text;
+            var videoLink = VideoLinkInput.Text;
+            var vcardLink = VcardLinkInput.Text;
 
-        //    if (employee != null)
-        //    {
-        //        employee.FirstName = FirstNameInput.Text;
-        //        employee.LastName = lastName;
-        //        employee.Title = title ;
-        //        employee.Email = email;
-        //        employee.NameDisplay = displayName;
-        //        employee.ImageLink = imageLink;
-        //        employee.VideoLink = videoLink;
-        //        employee.VcardLink = vcardLink;
+            if (employee != null)
+            {
+                employee.FirstName = FirstNameInput.Text;
+                employee.LastName = lastName;
+                employee.Title = title ;
+                employee.Email = email;
+                employee.NameDisplay = displayName;
+                employee.ImageLink = imageLink;
+                employee.VideoLink = videoLink;
+                employee.VcardLink = vcardLink;
 
-        //        //Assemble Practices Selected
-        //        foreach (var listIndex in ListPractices.GetSelectedIndices())
-        //        {
-        //            var item = ListPractices.Items[listIndex].Value;
-        //            practiceName = _practiceRepository.GetByName(item);
+                //Assemble Practices Selected
+                foreach (var listIndex in ListPractices.GetSelectedIndices())
+                {
+                    var item = ListPractices.Items[listIndex].Value;
+                    practiceName = _practiceRepository.GetByName(item);
 
-        //            employee.Practices.Add(practiceName);
-        //        }
-        //        _employeeRepository.Update(employee);
-        //        Response.Redirect(Request.RawUrl);
-        //    }
-        //    else
-        //    {
-        //        employee = new Employee
-        //                       {
-        //                           LastName = lastName,
-        //                           FirstName = firstName,
-        //                           Title = title,
-        //                           Email = email,
-        //                           DNNPage = pageId,
-        //                           NameDisplay = displayName,
-        //                           ImageLink = imageLink,
-        //                           VideoLink = videoLink,
-        //                           VcardLink = vcardLink
-        //                       };
+                    employee.Practices.Add(practiceName);
+                }
+                _employeeRepository.Update(employee);
+                Response.Redirect(Request.RawUrl);
+            }
+            else
+            {
+                employee = new Employee
+                               {
+                                   LastName = lastName,
+                                   FirstName = firstName,
+                                   Title = title,
+                                   Email = email,
+                                   DNNPage = pageId,
+                                   NameDisplay = displayName,
+                                   ImageLink = imageLink,
+                                   VideoLink = videoLink,
+                                   VcardLink = vcardLink
+                               };
 
-        //        _employeeRepository.Add(employee);
-        //        //Assemble Practices Selected
-        //        foreach (var listIndex in ListPractices.GetSelectedIndices())
-        //        {
-        //            var item = ListPractices.Items[listIndex].Value;
-        //            practiceName = _practiceRepository.GetByName(item);
-        //            employee.Practices.Add(practiceName);
-        //        }
+                _employeeRepository.Add(employee);
+                //Assemble Practices Selected
+                foreach (var listIndex in ListPractices.GetSelectedIndices())
+                {
+                    var item = ListPractices.Items[listIndex].Value;
+                    practiceName = _practiceRepository.GetByName(item);
+                    employee.Practices.Add(practiceName);
+                }
 
-        //        _employeeRepository.Update(employee);
-        //    }
-        //}
+                _employeeRepository.Update(employee);
+            }
+        }
 
-        //public void RemovePractice_Click(object sender, EventArgs e)
-        //{
+        public void RemovePractice_Click(object sender, EventArgs e)
+        {
         //    using (ISession session = NHibernateHelper.OpenSession())
         //    using (ITransaction transaction = session.BeginTransaction())
         //    {
@@ -159,30 +162,29 @@ namespace RemboltLawFirm_Mod
         //            _employeeRepository.Update(employee);
         //        }
         //        transaction.Commit();
-        //        session.Flush();
         //    }
-        //    practiceLink = _practiceRepository.GetByName(EmployeePractices.SelectedItem.Text);
+            //practiceLink = _practiceRepository.GetByName(EmployeePractices.SelectedItem.Text);
 
-        //    employeeLink = _employeeRepository.GetByPage(employeePageId);
+            //employeeLink = _employeeRepository.GetByPage(employeePageId);
 
-        //    employeeLink.Practices.Remove(practiceLink);
-        //    _employeeRepository.Update(employeeLink);
+            //employeeLink.Practices.Remove(practiceLink);
+            //_employeeRepository.Update(employeeLink);
 
-        //    using (ISession session = NHibernateHelper.OpenSession())
-        //    using (ITransaction transaction = session.BeginTransaction())
-        //    {
+            //using (ISession session = NHibernateHelper.OpenSession())
+            //using (ITransaction transaction = session.BeginTransaction())
+            //{
+                
+            //    session.CreateQuery("delete from RL_EmployeePractices e where e.PracticeId = :practice and e.EmployeeId = :employee")
+            //        .SetParameter(":practice", practiceLink.PracticeId)
+            //        .SetParameter(":employee", employeeLink.EmployeeId);
 
-        //        session.CreateQuery("delete from RL_EmployeePractices e where e.PracticeId = :practice and e.EmployeeId = :employee")
-        //            .SetParameter(":practice", practiceLink.PracticeId)
-        //            .SetParameter(":employee", employeeLink.EmployeeId);
+                
+            //    transaction.Commit();
 
 
-        //        transaction.Commit();
-        //        session.Flush();
-
-        //    }
-
-        //    Response.Redirect(Request.RawUrl);
+            //}
+            
+            Response.Redirect(Request.RawUrl);
         }
 
     }

@@ -92,12 +92,6 @@ namespace DotNetNuke.Modules.Admin.Users
 
 			try
 			{
-                if(Null.IsNull(ProfileUserId))
-                {
-                    Visible = false;
-                    return;
-                }
-
                 var template = (ModuleContext.Settings["ProfileTemplate"] != null) 
                             ? Convert.ToString(ModuleContext.Settings["ProfileTemplate"]) 
                             : Localization.GetString("DefaultTemplate", LocalResourceFile);
@@ -171,13 +165,12 @@ namespace DotNetNuke.Modules.Admin.Users
                                         ? property.PropertyName
                                         : propertyName.Trim(':');
 
-                    sb.Append("self." + property.PropertyName + " = ko.observable(");
-                    sb.Append("\"");
+                    sb.Append("self." + property.PropertyName + " = ko.observable('");
                     if(property.PropertyName == "Biography")
                     {
-                        value = Localization.GetSafeJSString(value.Replace("\n", ""));
+                        value = value.Replace("\n", "");
                     }
-                    sb.Append(value.Replace("'", "&apos;") + "\"" + ");");
+                    sb.Append(value + "');");
                     sb.Append('\n');
                     sb.Append("self." + property.PropertyName + "Text = '");
                     sb.Append(propertyName + "';");

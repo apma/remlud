@@ -22,10 +22,10 @@
 
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Data.Common;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
@@ -133,20 +133,22 @@ namespace DotNetNuke.Services.Install
         /// -----------------------------------------------------------------------------
         private static ArrayList GetInstallerLocales()
         {
-            ArrayList supportedLocales = new ArrayList();
+            var supportedLocales = new ArrayList();
             string filePath = Globals.ApplicationMapPath + LocalesFile.Replace("/", "\\");
 
             if (File.Exists(filePath))
             {
-                XPathDocument doc = new XPathDocument(filePath);
+                var doc = new XPathDocument(filePath);
                 foreach (XPathNavigator nav in doc.CreateNavigator().Select("root/language"))
                 {
                     if (nav.NodeType != XPathNodeType.Comment)
                     {
-                        Locale objLocale = new Locale();
-                        objLocale.Text = nav.GetAttribute("name", "");
-                        objLocale.Code = nav.GetAttribute("key", "");
-                        objLocale.Fallback = nav.GetAttribute("fallback", "");
+                        var objLocale = new Locale
+                                            {
+                                                Text = nav.GetAttribute("name", ""),
+                                                Code = nav.GetAttribute("key", ""),
+                                                Fallback = nav.GetAttribute("fallback", "")
+                                            };
 
                         supportedLocales.Add(objLocale);
                     }
@@ -154,10 +156,12 @@ namespace DotNetNuke.Services.Install
             }
             else
             {
-                Locale objLocale = new Locale();
-                objLocale.Text = "English";
-                objLocale.Code = "en-US";
-                objLocale.Fallback = "";
+                var objLocale = new Locale
+                                    {
+                                        Text = "English",
+                                        Code = "en-US",
+                                        Fallback = ""
+                                    };
                 supportedLocales.Add(objLocale);
             }
             return supportedLocales;
@@ -303,11 +307,7 @@ namespace DotNetNuke.Services.Install
 
         private void SelectBrowserLanguage()
         {
-            IList<string> codes = new List<string>();
-            foreach(ListItem item in cboLanguages.Items)
-            {
-                codes.Add(item.Value);
-            }
+            var codes = cboLanguages.Items.Cast<ListItem>().Select(x => x.Value);
             string cultureCode = TestableLocalization.Instance.BestCultureCodeBasedOnBrowserLanguages(codes);
 
             cboLanguages.Items.FindByValue(cultureCode).Selected = true;
@@ -346,8 +346,8 @@ namespace DotNetNuke.Services.Install
             {
                 case 0:
                     //validate user
-                    UserLoginStatus loginStatus = UserLoginStatus.LOGIN_FAILURE;
-                    UserInfo hostUser = UserController.ValidateUser(-1, userNameTextBox.Text, passwordTextBox.Text, "DNN", "", "", AuthenticationLoginBase.GetIPAddress(), ref loginStatus);
+				    var loginStatus = UserLoginStatus.LOGIN_FAILURE;
+                    var hostUser = UserController.ValidateUser(-1, userNameTextBox.Text, passwordTextBox.Text, "DNN", "", "", AuthenticationLoginBase.GetIPAddress(), ref loginStatus);
 
                     if (loginStatus != UserLoginStatus.LOGIN_FAILURE && hostUser.IsSuperUser)
                     {

@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Tahoma';
+    /*src: url('Fonts/TitilliumText22L005-webfont.eot');
+    src: url('Fonts/TitilliumText22L005-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Fonts/TitilliumText22L005-webfont.ttf') format('truetype'),
+         url('Fonts/TitilliumText22L005-webfont.woff') format('woff'),         
+		 url('Fonts/TitilliumText22L005-webfont.svg#TitilliumText22LBold') format('svg');
+    */
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{height:100%;}
+#Body{height:100%;font-family:Helvetica, Arial, sans-serif;color:#333;}
+#Form{height:100%;}
+a{outline:0;border:0;}
+p, ul, ol{margin:0;padding:0 0 1em 0;}
+
+/* --- GlobalStyle --- */
+.copy {color:#2d2d2d; font-size:15px; line-height:22px;}
+
+
+/* --- header */
+#header {width:100%; height: 175px;background:url('Images/background-header.jpg') repeat-x;}
+#header_content {width:960px;margin: 0 auto;}
+#main_nav{position:relative;height:40px;width:960px;margin: 0 auto; top:110px;}
+
+/* --- content */
+#page{min-height:550px;width:960px;margin: 0 auto;}
+
+/* --- footer */
+#footer{height:313px; background:url('Images/background-footer.jpg') repeat-x;}
+#footer_content {width:960px;margin: 0 auto;}
+#footer_left {position:relative;float:left;background:green;height:313px;margin:10px 0 10px 10px;width:540px;}
+#footer_right{position:relative;float:left;background:blue;height:313px;margin:10px 0 10px 10px;width:380px;}
+
+.locations { color:#2d2d2d;line-height:20px; font-size:13px;}
+.fineprint {color:#2d2d2d;font-size:10px;}
+

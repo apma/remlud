@@ -615,7 +615,4 @@ Using Windows Explorer, browse to the folders of your website ( {0} ). Right-cli
   <data name="MustSelecteATemplate.Text" xml:space="preserve">
     <value>&lt;b&gt;&lt;font color='red'&gt;You must select a site template.&lt;/font&gt;&lt;/b&gt;</value>
   </data>
-  <data name="None_Specified.Text" xml:space="preserve">
-    <value>None Specified</value>
-  </data>
 </root>

@@ -30,7 +30,7 @@
 				</div>    
 				<div class="dnnFormItem">
 					<dnn:Label ID="plDescription" runat="server" ResourceKey="Description" Suffix=":" HelpKey="DescriptionHelp" ControlName="txtDescription" />
-					<asp:TextBox ID="txtDescription" runat="server" MaxLength="500" TextMode="MultiLine" Rows="2" />
+					<asp:TextBox ID="txtDescription" runat="server" MaxLength="625" TextMode="MultiLine" Rows="2" />
 				</div>    
 				<div class="dnnFormItem">
 					<dnn:Label ID="plKeywords" runat="server" ResourceKey="KeyWords" Suffix=":" HelpKey="KeyWordsHelp" ControlName="txtKeyWords" />
@@ -219,7 +219,7 @@
 				</div>       
 				<div class="dnnFormItem">
 					<dnn:Label ID="plPageHeadText" runat="server" ResourceKey="PageHeadText" Suffix=":" HelpKey="PageHeadText.Help" ControlName="txtPageHeadText" />
-					<asp:TextBox ID="txtPageHeadText" runat="server" TextMode="MultiLine" Rows="4" Columns="50" />
+					<asp:TextBox ID="txtPageHeadText" runat="server" TextMode="MultiLine" MaxLength="500" Rows="4" Columns="50" />
 				</div>       
 			</fieldset>
 			<h2 id="dnnPanel-TabsCacheSettings"  class="dnnFormSectionHead"><a href="" class=""><%=LocalizeString("CacheSettings")%></a></h2>

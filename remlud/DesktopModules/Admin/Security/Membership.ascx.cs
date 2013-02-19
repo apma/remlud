@@ -205,13 +205,6 @@ namespace DotNetNuke.Modules.Admin.Users
             lastLockoutDate.Value = UserMembership.LastLockoutDate.Year > 2000 
                                         ? (object) UserMembership.LastLockoutDate 
                                         : LocalizeString("Never");
-// ReSharper disable SpecifyACultureInStringConversionExplicitly
-            isOnLine.Value = LocalizeString(UserMembership.IsOnLine.ToString());
-            lockedOut.Value = LocalizeString(UserMembership.LockedOut.ToString());
-            approved.Value = LocalizeString(UserMembership.Approved.ToString());
-            updatePassword.Value = LocalizeString(UserMembership.UpdatePassword.ToString());
-            isDeleted.Value = LocalizeString(UserMembership.IsDeleted.ToString());
-            // ReSharper restore SpecifyACultureInStringConversionExplicitly
 
             membershipForm.DataSource = UserMembership;
             membershipForm.DataBind();
