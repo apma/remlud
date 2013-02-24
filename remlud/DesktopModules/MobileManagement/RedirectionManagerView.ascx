@@ -79,7 +79,7 @@
     (function ($) {
         $(document).ready(function () {
             $("#<%=lnkAdd.ClientID %>").click(function (e) {
-                var href = $(this).attr("href").replace("{0}", $("input[type=radio][name$=optSimpleAdvanced]:checked").val());
+                var href = $(this).attr("href").replace(escape(escape("{0}")), $("input[type=radio][name$=optSimpleAdvanced]:checked").val());
                 $(this).attr("href", href);
             });
             $('a.delete').dnnConfirm({

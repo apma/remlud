@@ -13,7 +13,7 @@
     <xsl:apply-templates select="root" />
   </xsl:template>
 	<xsl:template match="root">
- 
+    <xsl:comment>SEO NOINDEX</xsl:comment>
 		<div id="{$ControlID}">
 			<ul class="dnnmega">
         <xsl:apply-templates select="node">
@@ -21,6 +21,7 @@
         </xsl:apply-templates>
 			</ul>
 		</div>
+    <xsl:comment>END SEO</xsl:comment>
 	</xsl:template>
 
   <xsl:template match="node">

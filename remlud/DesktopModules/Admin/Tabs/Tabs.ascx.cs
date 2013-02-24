@@ -277,6 +277,18 @@ namespace DesktopModules.Admin.Tabs
                         }
                     }
                     BindTree();
+
+                    if(!string.IsNullOrEmpty(Request.QueryString["edittabid"]))
+                    {
+                        var tabId = Request.QueryString["edittabid"];
+                        var node = ctlPages.FindNodeByValue(tabId);
+                        if(node != null)
+                        {
+                            node.Selected = true;
+                            node.ExpandParentNodes();
+                            CtlPagesNodeClick(ctlPages, new RadTreeNodeEventArgs(node));
+                        }
+                    }
                 }
             }
             catch (Exception exc) //Module failed to load
@@ -520,7 +532,7 @@ namespace DesktopModules.Admin.Tabs
 
         protected void CtlPagesNodeExpand(object sender, RadTreeNodeEventArgs e)
         {
-            AddChildnodes(e.Node);
+            AddChildNodes(e.Node);
         }
 
         protected void OnCreatePagesClick(object sender, EventArgs e)
@@ -618,6 +630,7 @@ namespace DesktopModules.Admin.Tabs
 
                 tab.IsDeleted = false;
                 tab.Url = ctlURL.Url;
+                tabcontroller.UpdateTabSetting(tab.TabID, "LinkNewWindow", ctlURL.NewWindow.ToString());
 
                 tab.SkinSrc = drpSkin.SelectedValue;
                 tab.ContainerSrc = drpContainer.SelectedValue;
@@ -676,6 +689,141 @@ namespace DesktopModules.Admin.Tabs
 
         #region Private Methods
 
+        private void AddAttributes(ref RadTreeNode node, TabInfo tab)
+        {
+            var canView = true;
+            bool canEdit;
+            bool canAdd;
+            bool canDelete;
+            bool canHide;
+            bool canMakeVisible;
+            bool canEnable;
+            bool canDisable;
+            bool canMakeHome;
+
+            if (node.Attributes["isPortalRoot"] != null && Boolean.Parse(node.Attributes["isPortalRoot"]))
+            {
+                canAdd = PortalSecurity.IsInRole(PortalSettings.AdministratorRoleName);
+                canView = false;
+                canEdit = false;
+                canDelete = false;
+                canHide = false;
+                canMakeVisible = false;
+                canEnable = false;
+                canDisable = false;
+                canMakeHome = false;
+            }
+            else if (tab == null)
+            {
+                canView = false;
+                canEdit = false;
+                canAdd = false;
+                canDelete = false;
+                canHide = false;
+                canMakeVisible = false;
+                canEnable = false;
+                canDisable = false;
+                canMakeHome = false;
+            }
+            else
+            {
+                canAdd = TabPermissionController.CanAddPage(tab);
+                canDelete = TabPermissionController.CanDeletePage(tab);
+                canMakeVisible = canHide = canDisable = canEnable = canEdit = TabPermissionController.CanManagePage(tab);
+                canMakeHome = PortalSecurity.IsInRole(PortalSettings.AdministratorRoleName) && !tab.DisableLink;
+
+                if (TabController.IsSpecialTab(tab.TabID, PortalSettings.PortalId))
+                {
+                    canDelete = false;
+                    canMakeHome = false;
+                }
+
+                if (rblMode.SelectedValue == "H")
+                {
+                    canMakeHome = false;
+                }
+
+                if (tab.IsVisible)
+                {
+                    canMakeVisible = false;
+                }
+                else
+                {
+                    canHide = false;
+                }
+
+                if (tab.DisableLink)
+                {
+                    canDisable = false;
+                }
+                else
+                {
+                    canEnable = false;
+                }
+            }
+
+            node.Attributes.Add("CanView", canView.ToString(CultureInfo.InvariantCulture));
+            node.Attributes.Add("CanEdit", canEdit.ToString(CultureInfo.InvariantCulture));
+            node.Attributes.Add("CanAdd", canAdd.ToString(CultureInfo.InvariantCulture));
+            node.Attributes.Add("CanDelete", canDelete.ToString(CultureInfo.InvariantCulture));
+            node.Attributes.Add("CanHide", canHide.ToString(CultureInfo.InvariantCulture));
+            node.Attributes.Add("CanMakeVisible", canMakeVisible.ToString(CultureInfo.InvariantCulture));
+            node.Attributes.Add("CanEnable", canEnable.ToString(CultureInfo.InvariantCulture));
+            node.Attributes.Add("CanDisable", canDisable.ToString(CultureInfo.InvariantCulture));
+            node.Attributes.Add("CanMakeHome", canMakeHome.ToString(CultureInfo.InvariantCulture));
+
+            node.AllowEdit = canEdit;
+        }
+
+        private void AddChildNodes(RadTreeNode parentNode)
+        {
+            parentNode.Nodes.Clear();
+
+            var parentId = int.Parse(parentNode.Value);
+
+            foreach (var objTab in Tabs)
+            {
+                if (objTab.ParentId == parentId)
+                {
+                    var node = new RadTreeNode
+                    {
+                        Text = string.Format("{0} {1}", objTab.TabName, GetNodeStatusIcon(objTab)),
+                        Value = objTab.TabID.ToString(CultureInfo.InvariantCulture),
+                        AllowEdit = true,
+                        ImageUrl = GetNodeIcon(objTab)
+                    };
+                    AddAttributes(ref node, objTab);
+                    //If objTab.HasChildren Then
+                    //    node.ExpandMode = TreeNodeExpandMode.ServerSide
+                    //End If
+
+                    AddChildNodes(node);
+                    parentNode.Nodes.Add(node);
+                }
+            }
+        }
+
+        private void BindSkinsAndContainers()
+        {
+            var portalController = new PortalController();
+            var portal = portalController.GetPortal(PortalSettings.PortalId);
+
+            var skins = SkinController.GetSkins(portal, SkinController.RootSkin, SkinScope.All)
+                                         .ToDictionary(skin => skin.Key, skin => skin.Value);
+            var containers = SkinController.GetSkins(portal, SkinController.RootContainer, SkinScope.All)
+                                                    .ToDictionary(skin => skin.Key, skin => skin.Value);
+
+            drpSkin.Items.Clear();
+            drpSkin.DataSource = skins;
+            drpSkin.DataBind();
+            drpSkin.Items.Insert(0, new ListItem(Localization.GetString("DefaultSkin", LocalResourceFile), ""));
+
+            drpContainer.Items.Clear();
+            drpContainer.DataSource = containers;
+            drpContainer.DataBind();
+            drpContainer.Items.Insert(0, new ListItem(Localization.GetString("DefaultContainer", LocalResourceFile), ""));
+        }
+
         private void BindTab(int tabId)
         {
             pnlBulk.Visible = false;
@@ -700,7 +848,8 @@ namespace DesktopModules.Admin.Tabs
                 dgPermissions.TabID = tab.TabID;
                 dgPermissions.DataBind();
 
-                cmdMore.NavigateUrl = ModuleContext.NavigateUrl(tabId, "", false, "ctl=Tab", "action=edit", "returntabid=" + TabId);
+                var returnUrl = Globals.NavigateURL(TabId, string.Empty, "edittabid=" + tabId, "isHost=" + (rblMode.SelectedValue == "H"));
+                cmdMore.NavigateUrl = ModuleContext.NavigateUrl(tabId, "", false, "ctl=Tab", "action=edit", "returnurl=" + returnUrl);
 
                 txtTitle.Text = tab.Title;
                 txtName.Text = tab.TabName;
@@ -719,6 +868,11 @@ namespace DesktopModules.Admin.Tabs
                 if (string.IsNullOrEmpty(tab.Url))
                 {
                     ctlURL.UrlType = "N";
+                }
+                bool newWindow = false;
+                if (tab.TabSettings["LinkNewWindow"] != null && Boolean.TryParse((string)tab.TabSettings["LinkNewWindow"], out newWindow))
+                {
+                    ctlURL.NewWindow = newWindow;
                 }
 
                 chkPermanentRedirect.Checked = tab.PermanentRedirect;
@@ -744,8 +898,8 @@ namespace DesktopModules.Admin.Tabs
                     chkSecure.Checked = tab.IsSecure;
                 }
 
-                ctlIcon.Url = tab.IconFile;
-                ctlIconLarge.Url = tab.IconFileLarge;
+                ctlIcon.Url = tab.IconFileRaw;
+                ctlIconLarge.Url = tab.IconFileLargeRaw;
 
                 ShowPermissions(!tab.IsSuperTab && TabPermissionController.CanAdminPage());
 
@@ -757,25 +911,121 @@ namespace DesktopModules.Admin.Tabs
             }
         }
 
-        private void BindSkinsAndContainers()
+        private void BindTree()
         {
-            var portalController = new PortalController();
-            var portal = portalController.GetPortal(PortalSettings.PortalId);
+            ctlPages.Nodes.Clear();
 
-            var skins = SkinController.GetSkins(portal, SkinController.RootSkin, SkinScope.All)
-                                         .ToDictionary(skin => skin.Key, skin => skin.Value);
-            var containers = SkinController.GetSkins(portal, SkinController.RootContainer, SkinScope.All)
-                                                    .ToDictionary(skin => skin.Key, skin => skin.Value);
+            var rootNode = new RadTreeNode();
+            var strParent = "-1";
 
-            drpSkin.Items.Clear();
-            drpSkin.DataSource = skins;
-            drpSkin.DataBind();
-            drpSkin.Items.Insert(0, new ListItem(Localization.GetString("DefaultSkin", LocalResourceFile), ""));
+            if (Settings["ParentPageFilter"] != null)
+            {
+                strParent = Convert.ToString(Settings["ParentPageFilter"]);
+            }
 
-            drpContainer.Items.Clear();
-            drpContainer.DataSource = containers;
-            drpContainer.DataBind();
-            drpContainer.Items.Insert(0, new ListItem(Localization.GetString("DefaultContainer", LocalResourceFile), ""));
+            if (strParent == "-1")
+            {
+                rootNode.Text = PortalSettings.PortalName;
+                rootNode.ImageUrl = IconPortal;
+                rootNode.Value = Null.NullInteger.ToString(CultureInfo.InvariantCulture);
+                rootNode.Expanded = true;
+                rootNode.AllowEdit = false;
+                rootNode.EnableContextMenu = true;
+                rootNode.Attributes.Add("isPortalRoot", "True");
+                AddAttributes(ref rootNode, null);
+            }
+            else
+            {
+                var tabController = new TabController();
+                var parent = tabController.GetTab(Convert.ToInt32(strParent), -1, false);
+                if (parent != null)
+                {
+                    rootNode.Text = parent.TabName;
+                    rootNode.ImageUrl = IconPortal;
+                    rootNode.Value = parent.TabID.ToString(CultureInfo.InvariantCulture);
+                    rootNode.Expanded = true;
+                    rootNode.EnableContextMenu = true;
+                    rootNode.PostBack = false;
+                }
+            }
+
+
+            foreach (var tab in Tabs)
+            {
+                if (TabPermissionController.CanViewPage(tab))
+                {
+                    if (strParent != "-1")
+                    {
+                        if (tab.ParentId == Convert.ToInt32(strParent))
+                        {
+                            var node = new RadTreeNode
+                            {
+                                Text = string.Format("{0} {1}", tab.TabName, GetNodeStatusIcon(tab)),
+                                Value = tab.TabID.ToString(CultureInfo.InvariantCulture),
+                                AllowEdit = true,
+                                ImageUrl = GetNodeIcon(tab)
+                            };
+                            AddAttributes(ref node, tab);
+
+                            AddChildNodes(node);
+                            rootNode.Nodes.Add(node);
+                        }
+                    }
+                    else
+                    {
+                        if (tab.Level == 0)
+                        {
+                            var node = new RadTreeNode
+                            {
+                                Text = string.Format("{0} {1}", tab.TabName, GetNodeStatusIcon(tab)),
+                                Value = tab.TabID.ToString(CultureInfo.InvariantCulture),
+                                AllowEdit = true,
+                                ImageUrl = GetNodeIcon(tab)
+                            };
+                            AddAttributes(ref node, tab);
+
+                            AddChildNodes(node);
+                            rootNode.Nodes.Add(node);
+                        }
+                    }
+                }
+            }
+
+            ctlPages.Nodes.Add(rootNode);
+            //AttachContextMenu(ctlPages)
+
+            if (SelectedNode != null)
+            {
+                if (!Page.IsPostBack)
+                {
+                    try
+                    {
+                        ctlPages.FindNodeByValue(SelectedNode).Selected = true;
+                        ctlPages.FindNodeByValue(SelectedNode).ExpandParentNodes();
+                        var tabid = Convert.ToInt32(SelectedNode);
+                        BindTab(tabid);
+                        pnlBulk.Visible = false;
+                    }
+                    catch (Exception exc)
+                    {
+                        Exceptions.ProcessModuleLoadException(this, exc);
+                    }
+                }
+            }
+        }
+
+        private void BindTreeAndShowTab(int tabId)
+        {
+            BindTree();
+            var node = ctlPages.FindNodeByValue(tabId.ToString(CultureInfo.InvariantCulture));
+            //rare cases it is null (e.g. when a page is created when page local is not default locale)
+            if (node != null)
+            {
+                node.Selected = true;
+                node.ExpandParentNodes();
+            }
+
+            BindTab(tabId);
         }
 
         private void CheckSecurity()
@@ -784,6 +1034,78 @@ namespace DesktopModules.Admin.Tabs
             {
                 Response.Redirect(Globals.NavigateURL("Access Denied"), true);
             }
+        }
+
+        private string GetNodeIcon(TabInfo tab)
+        {
+            if (PortalSettings.HomeTabId == tab.TabID)
+            {
+                return IconHome;
+            }
+
+            if (IsSecuredTab(tab))
+            {
+                if (IsAdminTab(tab))
+                {
+                    return AdminOnlyIcon;
+                }
+
+                if (IsRegisteredUserTab(tab))
+                {
+                    return RegisteredUsersIcon;
+                }
+
+                return SecuredIcon;
+            }
+
+            return AllUsersIcon;
+        }
+
+        private string GetNodeStatusIcon(TabInfo tab)
+        {
+            if (tab.DisableLink)
+            {
+                return "<img src=\"" + IconPageDisabled + "\" class=\"statusicon\" />";
+            }
+
+            if (tab.IsVisible == false)
+            {
+                return "<img src=\"" + IconPageHidden + "\" class=\"statusicon\" />";
+            }
+
+            return "";
+        }
+
+        private bool IsAdminTab(TabInfo tab)
+        {
+            var perms = tab.TabPermissions;
+            return perms.Cast<TabPermissionInfo>().All(perm => perm.RoleName == PortalSettings.AdministratorRoleName || !perm.AllowAccess);
+        }
+
+        private static bool IsNumeric(object expression)
+        {
+            if (expression == null)
+                return false;
+
+            double testDouble;
+            if (double.TryParse(expression.ToString(), out testDouble))
+                return true;
+
+            //VB's 'IsNumeric' returns true for any boolean value:
+            bool testBool;
+            return bool.TryParse(expression.ToString(), out testBool);
+        }
+
+        private bool IsRegisteredUserTab(TabInfo tab)
+        {
+            var perms = tab.TabPermissions;
+            return perms.Cast<TabPermissionInfo>().Any(perm => perm.RoleName == PortalSettings.RegisteredRoleName && perm.AllowAccess);
+        }
+
+        private static bool IsSecuredTab(TabInfo tab)
+        {
+            var perms = tab.TabPermissions;
+            return perms.Cast<TabPermissionInfo>().All(perm => perm.RoleName != "All Users" || !perm.AllowAccess);
         }
 
         private void LocalizeControl()
@@ -848,307 +1170,42 @@ namespace DesktopModules.Admin.Tabs
             lblAdminOnly.Text = LocalizeString("lblAdminOnly");
         }
 
-        private void AddAttributes(ref RadTreeNode node, TabInfo tab)
+        private bool MoveTab(TabInfo tab, TabInfo targetTab, Position position)
         {
-            var canView = true;
-            bool canEdit;
-            bool canAdd;
-            bool canDelete;
-            bool canHide;
-            bool canMakeVisible;
-            bool canEnable;
-            bool canDisable;
-            bool canMakeHome;
-
-            if (node.Attributes["isPortalRoot"] != null && Boolean.Parse(node.Attributes["isPortalRoot"]))
+            //Validate Tab Path
+            if (targetTab == null || !IsValidTabPath(tab, Globals.GenerateTabPath((targetTab == null) ? Null.NullInteger : targetTab.TabID, tab.TabName)))
             {
-                canAdd = PortalSecurity.IsInRole(PortalSettings.AdministratorRoleName);
-                canView = false;
-                canEdit = false;
-                canDelete = false;
-                canHide = false;
-                canMakeVisible = false;
-                canEnable = false;
-                canDisable = false;
-                canMakeHome = false;
-            }
-            else if (tab == null)
-            {
-                canView = false;
-                canEdit = false;
-                canAdd = false;
-                canDelete = false;
-                canHide = false;
-                canMakeVisible = false;
-                canEnable = false;
-                canDisable = false;
-                canMakeHome = false;
-            }
-            else
-            {
-                canAdd = TabPermissionController.CanAddPage(tab);
-                canDelete = TabPermissionController.CanDeletePage(tab);
-                canMakeVisible = canHide = canDisable = canEnable = canEdit = TabPermissionController.CanManagePage(tab);
-                canMakeHome = PortalSecurity.IsInRole(PortalSettings.AdministratorRoleName) && !tab.DisableLink;
-
-                if (TabController.IsSpecialTab(tab.TabID, PortalSettings.PortalId) || rblMode.SelectedValue == "H")
-                {
-                    canDelete = false;
-                    canMakeHome = false;
-                }
-
-                if (tab.IsVisible)
-                {
-                    canMakeVisible = false;
-                }
-                else
-                {
-                    canHide = false;
-                }
-
-                if (tab.DisableLink)
-                {
-                    canDisable = false;
-                }
-                else
-                {
-                    canEnable = false;
-                }
-            }
-
-            node.Attributes.Add("CanView", canView.ToString(CultureInfo.InvariantCulture));
-            node.Attributes.Add("CanEdit", canEdit.ToString(CultureInfo.InvariantCulture));
-            node.Attributes.Add("CanAdd", canAdd.ToString(CultureInfo.InvariantCulture));
-            node.Attributes.Add("CanDelete", canDelete.ToString(CultureInfo.InvariantCulture));
-            node.Attributes.Add("CanHide", canHide.ToString(CultureInfo.InvariantCulture));
-            node.Attributes.Add("CanMakeVisible", canMakeVisible.ToString(CultureInfo.InvariantCulture));
-            node.Attributes.Add("CanEnable", canEnable.ToString(CultureInfo.InvariantCulture));
-            node.Attributes.Add("CanDisable", canDisable.ToString(CultureInfo.InvariantCulture));
-            node.Attributes.Add("CanMakeHome", canMakeHome.ToString(CultureInfo.InvariantCulture));
-
-            node.AllowEdit = canEdit;
-        }
-
-        private void BindTree()
-        {
-            ctlPages.Nodes.Clear();
-
-            var rootNode = new RadTreeNode();
-            var strParent = "-1";
-
-            if (Settings["ParentPageFilter"] != null)
-            {
-                strParent = Convert.ToString(Settings["ParentPageFilter"]);
-            }
-
-            if (strParent == "-1")
-            {
-                rootNode.Text = PortalSettings.PortalName;
-                rootNode.ImageUrl = IconPortal;
-                rootNode.Value = Null.NullInteger.ToString(CultureInfo.InvariantCulture);
-                rootNode.Expanded = true;
-                rootNode.AllowEdit = false;
-                rootNode.EnableContextMenu = true;
-                rootNode.Attributes.Add("isPortalRoot", "True");
-                AddAttributes(ref rootNode, null);
-            }
-            else
-            {
-                var tabController = new TabController();
-                var parent = tabController.GetTab(Convert.ToInt32(strParent), -1, false);
-                if (parent != null)
-                {
-                    rootNode.Text = parent.TabName;
-                    rootNode.ImageUrl = IconPortal;
-                    rootNode.Value = parent.TabID.ToString(CultureInfo.InvariantCulture);
-                    rootNode.Expanded = true;
-                    rootNode.EnableContextMenu = true;
-                    rootNode.PostBack = false;
-                }
-            }
-
-
-            foreach (var tab in Tabs)
-            {
-                if (TabPermissionController.CanViewPage(tab))
-                {
-                    if (strParent != "-1")
-                    {
-                        if (tab.ParentId == Convert.ToInt32(strParent))
-                        {
-                            var node = new RadTreeNode
-                                           {
-                                               Text = string.Format("{0} {1}", tab.TabName, GetNodeStatusIcon(tab)), 
-                                               Value = tab.TabID.ToString(CultureInfo.InvariantCulture), 
-                                               AllowEdit = true, 
-                                               ImageUrl = GetNodeIcon(tab)
-                                           };
-                            AddAttributes(ref node, tab);
-
-                            AddChildnodes(node);
-                            rootNode.Nodes.Add(node);
-                        }
-                    }
-                    else
-                    {
-                        if (tab.Level == 0)
-                        {
-                            var node = new RadTreeNode
-                                           {
-                                               Text = string.Format("{0} {1}", tab.TabName, GetNodeStatusIcon(tab)), 
-                                               Value = tab.TabID.ToString(CultureInfo.InvariantCulture), 
-                                               AllowEdit = true, 
-                                               ImageUrl = GetNodeIcon(tab)
-                                           };
-                            AddAttributes(ref node, tab);
-
-                            AddChildnodes(node);
-                            rootNode.Nodes.Add(node);
-                        }
-                    }
-                }
-            }
-
-            ctlPages.Nodes.Add(rootNode);
-            //AttachContextMenu(ctlPages)
-
-            if (SelectedNode != null)
-            {
-                if (!Page.IsPostBack)
-                {
-                    try
-                    {
-                        ctlPages.FindNodeByValue(SelectedNode).Selected = true;
-                        ctlPages.FindNodeByValue(SelectedNode).ExpandParentNodes();
-                        var tabid = Convert.ToInt32(SelectedNode);
-                        BindTab(tabid);                        
-                        pnlBulk.Visible = false;
-                    }
-                    catch (Exception exc)
-                    {
-                        Exceptions.ProcessModuleLoadException(this, exc);
-                    }
-                }
-            }
-        }
-
-        private void BindTreeAndShowTab(int tabId)
-        {
-            BindTree();
-			var node = ctlPages.FindNodeByValue(tabId.ToString(CultureInfo.InvariantCulture));
-            //rare cases it is null (e.g. when a page is created when page local is not default locale)
-            if (node != null)
-            {
-                node.Selected = true;
-                node.ExpandParentNodes();
-            }
-            
-            BindTab(tabId);
-        }
-
-        private void ShowPermissions(bool show)
-        {
-            PermissionsSection.Visible = show;
-        }
-
-        private void AddChildnodes(RadTreeNode parentNode)
-        {
-            parentNode.Nodes.Clear();
-
-            var parentId = int.Parse(parentNode.Value);
-
-            foreach (var objTab in Tabs)
-            {
-                if (objTab.ParentId == parentId)
-                {
-                    var node = new RadTreeNode
-                                   {
-                                       Text = string.Format("{0} {1}", objTab.TabName, GetNodeStatusIcon(objTab)), 
-                                       Value = objTab.TabID.ToString(CultureInfo.InvariantCulture), 
-                                       AllowEdit = true, 
-                                       ImageUrl = GetNodeIcon(objTab)
-                                   };
-                    AddAttributes(ref node, objTab);
-                    //If objTab.HasChildren Then
-                    //    node.ExpandMode = TreeNodeExpandMode.ServerSide
-                    //End If
-
-                    AddChildnodes(node);
-                    parentNode.Nodes.Add(node);
-                }
-            }
-        }
-
-        private string GetNodeStatusIcon(TabInfo tab)
-        {
-            if (tab.DisableLink)
-            {
-                return "<img src=\"" + IconPageDisabled + "\" class=\"statusicon\" />";
-            }
-
-            if (tab.IsVisible == false)
-            {
-                return "<img src=\"" + IconPageHidden + "\" class=\"statusicon\" />";
-            }
-
-            return "";
-        }
-
-        private string GetNodeIcon(TabInfo tab)
-        {
-            if (PortalSettings.HomeTabId == tab.TabID)
-            {
-                return IconHome;
-            }
-
-            if (IsSecuredTab(tab))
-            {
-                if (IsAdminTab(tab))
-                {
-                    return AdminOnlyIcon;
-                }
-
-                if (IsRegisteredUserTab(tab))
-                {
-                    return RegisteredUsersIcon;
-                }
-
-                return SecuredIcon;
-            }
-
-            return AllUsersIcon;
-        }
-
-        private static bool IsNumeric(object expression)
-        {
-            if (expression == null)
                 return false;
+            }
 
-            double testDouble;
-            if (double.TryParse(expression.ToString(), out testDouble))
-                return true;
+            var tabController = new TabController();
+            switch (position)
+            {
+                case Position.Above:
+                    tabController.MoveTabBefore(tab, targetTab.TabID);
+                    break;
+                case Position.Below:
+                    tabController.MoveTabAfter(tab, targetTab.TabID);
+                    break;
+            }
 
-            //VB's 'IsNumeric' returns true for any boolean value:
-            bool testBool;
-            return bool.TryParse(expression.ToString(), out testBool);
+            ShowSuccessMessage(string.Format(Localization.GetString("TabMoved", LocalResourceFile), tab.TabName));
+            return true;
         }
 
-        private static bool IsSecuredTab(TabInfo tab)
+        private bool MoveTabToParent(TabInfo tab, TabInfo targetTab)
         {
-            var perms = tab.TabPermissions;
-            return perms.Cast<TabPermissionInfo>().All(perm => perm.RoleName != "All Users" || !perm.AllowAccess);
-        }
+            //Validate Tab Path
+            if (!IsValidTabPath(tab, Globals.GenerateTabPath((targetTab == null) ? Null.NullInteger : targetTab.TabID, tab.TabName)))
+            {
+                return false;
+            }
 
-        private bool IsRegisteredUserTab(TabInfo tab)
-        {
-            var perms = tab.TabPermissions;
-            return perms.Cast<TabPermissionInfo>().Any(perm => perm.RoleName == PortalSettings.RegisteredRoleName && perm.AllowAccess);
-        }
+            var tabController = new TabController();
+            tabController.MoveTabToParent(tab, (targetTab == null) ? Null.NullInteger : targetTab.TabID);
 
-        private bool IsAdminTab(TabInfo tab)
-        {
-            var perms = tab.TabPermissions;
-            return perms.Cast<TabPermissionInfo>().All(perm => perm.RoleName == PortalSettings.AdministratorRoleName || !perm.AllowAccess);
+            ShowSuccessMessage(string.Format(Localization.GetString("TabMoved", LocalResourceFile), tab.TabName));
+            return true;
         }
 
         private void PerformDragAndDrop(RadTreeViewDropPosition dropPosition, RadTreeNode sourceNode, RadTreeNode destNode)
@@ -1186,47 +1243,19 @@ namespace DesktopModules.Admin.Tabs
             }
         }
 
-        private bool MoveTabToParent(TabInfo tab, TabInfo targetTab)
+        private void ShowPermissions(bool show)
         {
-            //Validate Tab Path
-            if (!IsValidTabPath(tab, Globals.GenerateTabPath((targetTab == null) ? Null.NullInteger : targetTab.TabID, tab.TabName)))
-            {
-                return false;
-            }
-
-            var tabController = new TabController();
-            tabController.MoveTabToParent(tab, (targetTab == null) ? Null.NullInteger : targetTab.TabID);
-
-            ShowSuccessMessage(string.Format(Localization.GetString("TabMoved", LocalResourceFile), tab.TabName));
-            return true;
-        }
-
-        private bool MoveTab(TabInfo tab, TabInfo targetTab, Position position)
-        {
-            //Validate Tab Path
-            if (targetTab == null || !IsValidTabPath(tab, Globals.GenerateTabPath((targetTab == null) ? Null.NullInteger : targetTab.TabID, tab.TabName)))
-            {
-                return false;
-            }
-
-            var tabController = new TabController();
-            switch (position)
-            {
-                case Position.Above:
-                    tabController.MoveTabBefore(tab, targetTab.TabID);
-                    break;
-                case Position.Below:
-                    tabController.MoveTabAfter(tab, targetTab.TabID);
-                    break;
-            }
-
-            ShowSuccessMessage(string.Format(Localization.GetString("TabMoved", LocalResourceFile), tab.TabName));
-            return true;
+            PermissionsSection.Visible = show;
         }
 
         #endregion
 
         #region Public Methods
+
+        public string GetConfirmString()
+        {
+            return ClientAPI.GetSafeJSString(Localization.GetString("ConfirmDelete", LocalResourceFile));
+        }
 
         public string ModuleEditUrl(int moduleId)
         {
@@ -1243,47 +1272,27 @@ namespace DesktopModules.Admin.Tabs
             return "#";
         }
 
-        public string GetConfirmString()
-        {
-            return ClientAPI.GetSafeJSString(Localization.GetString("ConfirmDelete", LocalResourceFile));
-        }
-
         #endregion
 
         #region Tab Moving Helpers
 
-        private void ShowWarningMessage(string message)
+        private void ApplyDefaultTabTemplate(TabInfo tab)
         {
-            Skin.AddModuleMessage(this, message, ModuleMessage.ModuleMessageType.YellowWarning);
-        }
-
-        private void ShowErrorMessage(string message)
-        {
-            Skin.AddModuleMessage(this, message, ModuleMessage.ModuleMessageType.RedError);
-        }
-
-        private void ShowSuccessMessage(string message)
-        {
-            Skin.AddModuleMessage(this, message, ModuleMessage.ModuleMessageType.GreenSuccess);
-        }
-
-        private static int GetParentTabId(List<TabInfo> lstTabs, int currentIndex, int parentLevel)
-        {
-            var oParent = lstTabs[0];
-
-            for (var i = 0; i < lstTabs.Count; i++)
+            var templateFile = Path.Combine(PortalSettings.HomeDirectoryMapPath, "Templates\\" + DefaultPageTemplate);
+            if (File.Exists(templateFile))
             {
-                if (i == currentIndex)
+                var xmlDoc = new XmlDocument();
+                try
                 {
-                    return oParent.TabID;
+                    xmlDoc.Load(templateFile);
+                    TabController.DeserializePanes(xmlDoc.SelectSingleNode("//portal/tabs/tab/panes"), tab.PortalID, tab.TabID, PortalTemplateModuleAction.Ignore, new Hashtable());
                 }
-                if (lstTabs[i].Level == parentLevel)
+                catch (Exception ex)
                 {
-                    oParent = lstTabs[i];
+                    Exceptions.LogException(ex);
+                    throw new DotNetNukeException("Unable to process page template.", ex, DotNetNukeErrorCode.DeserializePanesFailed);
                 }
             }
-
-            return Null.NullInteger;
         }
 
         private int CreateTabFromParent(TabInfo objRoot, string tabName, int parentId)
@@ -1316,7 +1325,7 @@ namespace DesktopModules.Admin.Tabs
             }
 
             var portalSettings = PortalController.GetCurrentPortalSettings();
-            if(portalSettings.ContentLocalizationEnabled)
+            if (portalSettings.ContentLocalizationEnabled)
             {
                 tab.CultureCode = LocaleController.Instance.GetDefaultLocale(tab.PortalID).Code;
             }
@@ -1366,13 +1375,13 @@ namespace DesktopModules.Admin.Tabs
                 foreach (PermissionInfo permission in permissions)
                 {
                     var newTabPermission = new TabPermissionInfo
-                                               {
-                                                   PermissionID = permission.PermissionID,
-                                                   PermissionKey = permission.PermissionKey,
-                                                   PermissionName = permission.PermissionName,
-                                                   AllowAccess = true,
-                                                   RoleID = PortalSettings.Current.AdministratorRoleId
-                                               };
+                    {
+                        PermissionID = permission.PermissionID,
+                        PermissionKey = permission.PermissionKey,
+                        PermissionName = permission.PermissionName,
+                        AllowAccess = true,
+                        RoleID = PortalSettings.Current.AdministratorRoleId
+                    };
                     tab.TabPermissions.Add(newTabPermission);
                 }
             }
@@ -1392,8 +1401,8 @@ namespace DesktopModules.Admin.Tabs
 
             var ctrl = new TabController();
             tab.TabID = ctrl.AddTab(tab);
-            ApplyDefaultTabTemplate(tab);       
-     
+            ApplyDefaultTabTemplate(tab);
+
             //create localized tabs if content localization is enabled
             if (portalSettings.ContentLocalizationEnabled)
             {
@@ -1402,6 +1411,25 @@ namespace DesktopModules.Admin.Tabs
 
             ShowSuccessMessage(string.Format(Localization.GetString("TabCreated", LocalResourceFile), tab.TabName));
             return tab.TabID;
+        }
+
+        private static int GetParentTabId(List<TabInfo> lstTabs, int currentIndex, int parentLevel)
+        {
+            var oParent = lstTabs[0];
+
+            for (var i = 0; i < lstTabs.Count; i++)
+            {
+                if (i == currentIndex)
+                {
+                    return oParent.TabID;
+                }
+                if (lstTabs[i].Level == parentLevel)
+                {
+                    oParent = lstTabs[i];
+                }
+            }
+
+            return Null.NullInteger;
         }
 
         private bool IsValidTabName(string tabName)
@@ -1427,14 +1455,14 @@ namespace DesktopModules.Admin.Tabs
             var valid = true;
 
             //get default culture if the tab's culture is null
-        	var cultureCode = tab.CultureCode;
-			if(string.IsNullOrEmpty(cultureCode))
-			{
-				cultureCode = PortalSettings.DefaultLanguage;
-			}
+            var cultureCode = tab.CultureCode;
+            if (string.IsNullOrEmpty(cultureCode))
+            {
+                cultureCode = PortalSettings.DefaultLanguage;
+            }
 
-			//Validate Tab Path
-			var tabID = TabController.GetTabByTabPath(tab.PortalID, newTabPath, cultureCode);
+            //Validate Tab Path
+            var tabID = TabController.GetTabByTabPath(tab.PortalID, newTabPath, cultureCode);
             if (tabID != Null.NullInteger && tabID != tab.TabID)
             {
                 var controller = new TabController();
@@ -1457,20 +1485,19 @@ namespace DesktopModules.Admin.Tabs
             return valid;
         }
 
-        private void ApplyDefaultTabTemplate(TabInfo tab)
+        private void ShowErrorMessage(string message)
         {
-            var templateFile = Path.Combine(PortalSettings.HomeDirectoryMapPath, "Templates\\" + DefaultPageTemplate);
-            var xmlDoc = new XmlDocument();
-            try
-            {
-                xmlDoc.Load(templateFile);
-                TabController.DeserializePanes(xmlDoc.SelectSingleNode("//portal/tabs/tab/panes"), tab.PortalID, tab.TabID, PortalTemplateModuleAction.Ignore, new Hashtable());
-            }
-            catch (Exception ex)
-            {
-                Exceptions.LogException(ex);
-                throw new DotNetNukeException("Unable to process page template.", ex, DotNetNukeErrorCode.DeserializePanesFailed);
-            }
+            Skin.AddModuleMessage(this, message, ModuleMessage.ModuleMessageType.RedError);
+        }
+
+        private void ShowSuccessMessage(string message)
+        {
+            Skin.AddModuleMessage(this, message, ModuleMessage.ModuleMessageType.GreenSuccess);
+        }
+
+        private void ShowWarningMessage(string message)
+        {
+            Skin.AddModuleMessage(this, message, ModuleMessage.ModuleMessageType.YellowWarning);
         }
 
         #endregion

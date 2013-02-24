@@ -86,8 +86,10 @@
 
             if (defaultAction || opts.isButton) {
                 $dnnDialog = $("<div class='dnnDialog'></div>").html(opts.text).dialog(opts);
-                $this.click(function (e) {
-
+                $this.click(function (e, isTrigger) {
+                	if (isTrigger) {
+                		return true;
+                	}
                     if ($dnnDialog.is(':visible')) {
                         $dnnDialog.dialog("close");
                         return true;
@@ -99,19 +101,20 @@
                         open: function(e) {
                             $('.ui-dialog-buttonpane').find('button:contains("' + opts.noText + '")').addClass('dnnConfirmCancel');
                         },
+                        position: 'center',
                         buttons: [
                         {
                             text: opts.yesText,
                             click: function () {
+                                $dnnDialog.dialog("close");
                                 if ($.isFunction(opts.callbackTrue)) {
                                     opts.callbackTrue.call(this);
                                 }
                                 else {
                                     if (opts.isButton) {
-                                        $this.click();
+                                    	$this.trigger("click", [true]);
                                     }
                                     else {
-                                        $dnnDialog.dialog("close");
                                         window.location.href = defaultAction;
                                     }
                                 }

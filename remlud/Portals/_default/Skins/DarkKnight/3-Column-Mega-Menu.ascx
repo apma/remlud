@@ -41,12 +41,12 @@
 		    <div id="LogoRow">
 			    <dnn:LOGO id="dnnLogo" runat="server" />
                 <div class="LogoRowRight">
-                   <div id="Login">
+                    <div id="Login">
                         <dnn:USER ID="dnnUser" runat="server" LegacyMode="false" /> 
                         <dnn:LOGIN ID="dnnLogin" CssClass="LoginLink" runat="server" LegacyMode="false" />
 					    <dnn:LANGUAGE runat="server" id="dnnLANGUAGE"  showMenu="False" showLinks="True" />
                     </div>
-			        <div id="SocialMediaPane" runat="server"></div>
+					<div id="SocialMediaPane" runat="server"></div>
                 </div>
 		    </div>
             <div id="Breadcrumb"><dnn:TEXT runat="server" id="dnnTEXT"  CssClass="Intro" Text="You are here:" ResourceKey="Breadcrumb" /><dnn:BREADCRUMB ID="dnnBreadcrumb" runat="server" RootLevel="0" Separator="<span class=&quot;Sep&quot;></span>" /></div>

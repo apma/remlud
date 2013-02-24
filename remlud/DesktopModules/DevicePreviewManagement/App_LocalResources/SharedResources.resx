@@ -159,4 +159,7 @@
   <data name="Width.Header" xml:space="preserve">
     <value>Width</value>
   </data>
+  <data name="CreateNew.Text" xml:space="preserve">
+    <value>Create New Device Preview</value>
+  </data>
 </root>

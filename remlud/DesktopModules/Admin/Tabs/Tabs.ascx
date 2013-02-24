@@ -180,7 +180,7 @@
 			<fieldset>
 				<div class="dnnFormItem">
 					<dnn:Label ID="lblName" runat="server" Suffix=":" />
-					<asp:TextBox ID="txtName" runat="server" CssClass="dnnFormRequired" />
+					<asp:TextBox ID="txtName" runat="server" CssClass="dnnFormRequired" MaxLength="50" />
 					<asp:RequiredFieldValidator ID="valName" runat="server" Display="Dynamic" resourcekey="valName" ControlToValidate="txtName" CssClass="dnnFormMessage dnnFormError" ValidationGroup="Page" SetFocusOnError="true" />
 				</div>
 				<div class="dnnFormItem">
@@ -302,7 +302,7 @@
 			<fieldset>
 				<div class="dnnFormItem">
 					<dnn:Label ID="lblUrl" runat="server" suffix=":" />
-					<dnn:URL ID="ctlURL" runat="server" ShowLog="False" ShowNone="True" ShowTrack="False" />
+					<dnn:URL ID="ctlURL" runat="server" ShowLog="False" ShowNone="True" ShowTrack="False" ShowNewWindow="True" />
 				</div>
 				<div class="dnnFormItem">
 					<dnn:Label ID="lblPermanentRedirect" runat="server" suffix=":" />

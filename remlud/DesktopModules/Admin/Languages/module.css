@@ -10,6 +10,11 @@
 	.dnnFormItem .dnnFormRadioButtons label{width:auto}
 .dnnLanguageEditor .dnnFormItem .dnnLEMode label{font-weight:normal;margin:0 15px 0 5px}
 .dnnLanguageEditor .dnnTree .dnnFormItem label{width:70%;}
+.dnnLanguageEditor .dnnGrid span.dnnLabelBox{width: 85%; margin-right: 15px; min-width: 35%;min-height: 17px;float:left;-moz-border-radius:3px;border-radius:3px;padding:5px;
+		background-color:#fffff5;-moz-box-shadow:inset 0 0 3px 3px #fffbe1;-webkit-box-shadow:inset 0 0 3px 3px #fffbe1;box-shadow:inset 0 0 3px 3px #fffbe1;
+		border-color:#686450 #bcb691 #bcb691 #686450;border-width:1px;border-style: solid;margin:0;font-family:Helvetica, Arial, Verdana, sans-serif;display: inline-block;
+        text-align: left;color: #a3a3a3;font-size: 13px;word-wrap: break-word;}
+.dnnLanguageEditor .dnnGrid span.dnnTextArea{ min-height: 80px;max-height: 108px;overflow: auto;}
 .dnnFormItem .lpwRadioButtons label {width:auto;}
 .dnnFormItem .lpwCheckBoxes label {width:auto;text-align:left}
 	.dnnFormItem .lpwRadioButtons input[type=radio]{width:auto;}
@@ -37,3 +42,5 @@
 	.enableLocalizationProgress .RadUploadProgressArea > .ruShadow {background-image:none;}
 	
 .dnnLangEditorContent .dnnGrid .Pending {border-style: solid; border-color: Red;}
+.dnnResourceVerifier .dnnFormItem input{ float: none;vertical-align: bottom;}
+.dnnResourceVerifier .dnnFormItem table{ margin-left: 26px;}

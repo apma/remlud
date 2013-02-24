@@ -168,7 +168,7 @@
                                         <li class="ListCol-3">
                                             <ul>
                                                 <li data-bind="text: CreatedOnDate"></li>
-                                                <li class="hoverControls"><a href="#" data-bind="click: $root.setReplySelected"><%=LocalizeString("Reply")%></a></li>
+                                                <li class="hoverControls"><a href="#" id="SelectedReply" data-bind="click: $root.setReplySelected"><%=LocalizeString("Reply")%></a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -180,7 +180,7 @@
                 </div>
                 <div class="dnnCoreMessagingFooter">
                     <textarea name="replyMessage" id="replyMessage" data-bind="hasfocus: isReplySelected"></textarea>
-                    <a href="#" class="dnnPrimaryAction" data-bind="click: $root.reply"><%=LocalizeString("Reply")%></a>
+                    <a href="#" class="dnnPrimaryAction" id="SelectedReplyButton" data-bind="click: $root.reply"><%=LocalizeString("Reply")%></a>
                     <div class="dnnClear"></div>
                 </div>
             </div>
@@ -234,6 +234,7 @@
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
         var sm = new CoreMessaging($, ko, {
+            profilePicHandler: '<% = DotNetNuke.Common.Globals.UserProfilePicFormattedUrl() %>',
             conversationSetAsReadText: '<%=DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(LocalizeString("ConversationSetAsRead"))%>',
             conversationSetAsUnreadText: '<%=DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(LocalizeString("ConversationSetAsUnread"))%>',
             loadingText: '<%=DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(LocalizeString("Loading"))%>',

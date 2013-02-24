@@ -12,7 +12,7 @@
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" %>
 
 <dnn:STYLES runat="server" ID="StylesIE7" Name="IE7Minus" StyleSheet="ie7skin.css" Condition="LT IE 8" UseSkinPath="true"/>
-
+<dnn:DnnCssInclude ID="DnnCssInclude2" runat="server" FilePath="RadEditor.css" PathNameAlias="SkinPath" />
 
 <div id="wrapper">
     <!--#include file="Includes/header.ascx" -->

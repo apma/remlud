@@ -1,6 +1,7 @@
 <%@ Control language="C#" Inherits="DotNetNuke.Modules.Journal.View" AutoEventWireup="false"  Codebehind="View.ascx.cs" %>
 <%@ Import Namespace="DotNetNuke.Common.Utilities" %>
 <%@ Register Namespace="DotNetNuke.Modules.Journal.Controls" Assembly="DotNetNuke.Modules.Journal" TagPrefix="dnnj" %>
+<%@ Import Namespace="DotNetNuke.Services.Localization" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" %>
 
 <div id="userFileManager"></div>
@@ -228,6 +229,27 @@
             data.JournalId = jid;
             journalPost('Like',data,buildLikes,jid);
         });
+
+        $(".journalrow .minidel").each(function() {
+            if($(this).data("confirmBinded")) {
+                return;
+            }
+
+            $(this).data("confirmBinded", true);
+            var clickFunc = $(this).attr("onclick").substr(0, $(this).attr("onclick").indexOf("("));
+            $(this).attr("onclick", "");
+            var $this = this;
+            $(this).dnnConfirm({
+                text: '<%= Localization.GetSafeJSString(LocalizeString("DeleteItem")) %>',
+                yesText: '<%= Localization.GetSafeJSString("Yes.Text", Localization.SharedResourceFile) %>',
+                noText: '<%= Localization.GetSafeJSString("No.Text", Localization.SharedResourceFile) %>',
+                title: '<%= Localization.GetSafeJSString("Confirm.Text", Localization.SharedResourceFile) %>',
+                isButton: true,
+                callbackTrue: function() {
+                    eval(clickFunc).call($this, $this);
+                }
+            });
+        });
     }
     pluginInit();
 
@@ -253,12 +275,12 @@
             
     });
        function journalDelete(obj) {
-//            var p = obj.parentNode;
-//            var jid = p.id.replace('jid-','');
-//            //console.log(jid);
-//            var data = {};
-//            data.JournalId = jid;
-//            journalPost('Delete',data,journalRemove,jid)
+            var p = obj.parentNode;
+            var jid = p.id.replace('jid-','');
+            //console.log(jid);
+            var data = {};
+            data.JournalId = jid;
+            journalPost('Delete',data,journalRemove,jid)
         };
         function journalRemove(data, jid) {
             $('#jid-' + jid).slideUp(function(){

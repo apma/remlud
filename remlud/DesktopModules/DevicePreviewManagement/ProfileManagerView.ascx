@@ -5,7 +5,7 @@
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
 <div class="dnnForm dnnClear">
 	<h2 class="dnnFormSectionHead">
-		Create New Device Preview<span>All fields are required</span></h2>
+		<%=LocalizeString("CreateNew")%><span><%=LocalizeString("RequiredFields")%></span></h2>
 	<div id="AddProfile" runat="server" class="dnnForm dnnClear dnnAddProfile">
 		<asp:ValidationSummary ID="valAddSummary" runat="server" CssClass="dnnFormMessage dnnFormValidationSummary"
 			DisplayMode="List" ShowSummary="true" ValidationGroup="AddProfile" />
@@ -140,10 +140,10 @@
 		$().ready(function () {
 			var setUp = function () {
 				$('a.delete').dnnConfirm({
-					text: '<%= LocalizeString("DeleteItem") %>',
-					yesText: '<%= Localization.GetString("Yes.Text", Localization.SharedResourceFile) %>',
-					noText: '<%= Localization.GetString("No.Text", Localization.SharedResourceFile) %>',
-					title: '<%= Localization.GetString("Confirm.Text", Localization.SharedResourceFile) %>'
+					text: '<%= Localization.GetSafeJSString(LocalizeString("DeleteItem")) %>',
+					yesText: '<%= Localization.GetSafeJSString("Yes.Text", Localization.SharedResourceFile) %>',
+					noText: '<%= Localization.GetSafeJSString("No.Text", Localization.SharedResourceFile) %>',
+					title: '<%= Localization.GetSafeJSString("Confirm.Text", Localization.SharedResourceFile) %>'
 				});
 
 				var listContainer = $("#<%=ProfilesList.ClientID %> tbody");

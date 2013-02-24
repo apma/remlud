@@ -15,14 +15,17 @@
   <data name="LocalizedTemplateName.Text">
     <value xml:space="preserve">leere Website</value>
   </data>
+  <data name="PortalDescription.Text">
+    <value xml:space="preserve">Standardvorlage für Websites</value>
+  </data>
+  <data name="RoleGroup.Description.Text">
+    <value xml:space="preserve">A dummy role group that represents the Global roles</value>
+  </data>
   <data name="Setting.DefaultLanguage.Text">
     <value xml:space="preserve">de-DE</value>
   </data>
   <data name="Setting.FooterText.Text">
     <value xml:space="preserve">Copyright DotNetNuke Corporation, [year]</value>
-  </data>
-  <data name="PortalDescription.Text">
-    <value xml:space="preserve">Standardvorlage für Websites</value>
   </data>
   <data name="Tab.Home.Description.Text">
     <value />
@@ -38,8 +41,5 @@
   </data>
   <data name="Tab.Home.Title.Text">
     <value />
-  </data>
-  <data name="RoleGroup.Description.Text">
-    <value xml:space="preserve">A dummy role group that represents the Global roles</value>
   </data>
 </root>

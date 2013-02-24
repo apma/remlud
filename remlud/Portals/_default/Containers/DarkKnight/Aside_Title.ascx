@@ -5,9 +5,8 @@
 <div class="c_DNN6_Aside">
 	<div class="TopL"><div class="TopR"><div class="Top"></div></div></div>
 	<div class="Middle">
-        <h2 class="Title"><dnn:TITLE ID="dnnTitle" runat="server" /></h2>
+        <h2 class="Title"><div class="dnnIcon"><dnn:ICON runat="server" /></div><dnn:TITLE ID="dnnTitle" runat="server" /></h2>
         <div id="ContentPane" runat="server"></div>
     </div>
 	<div class="BottomL"><div class="BottomR"><div class="Bottom"></div></div></div>
 </div>
-

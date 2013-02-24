@@ -173,6 +173,8 @@
                       </xs:complexType>
                     </xs:element>
                     <xs:element name="moduleID" type="xs:string" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="content" type="xs:string" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="contentKey" type="xs:string" minOccurs="0" maxOccurs="1" />
                     <xs:element name="KeyID" type="xs:string" minOccurs="0" maxOccurs="1" />
                     <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" />
                     <xs:element name="tabtype" type="tabType" minOccurs="0" maxOccurs="1" />
@@ -268,6 +270,7 @@
                                               </xs:complexType>
                                             </xs:element>
                                             <xs:element name="KeyID" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                            <xs:element name="contentKey" type="xs:string" minOccurs="0" maxOccurs="1" />
                                             <xs:element name="title" type="xs:string" minOccurs="0" maxOccurs="1" />
                                             <xs:element name="alignment" type="alignmentEnum" minOccurs="0" maxOccurs="1" />
                                             <xs:element name="showtitle" type="xs:boolean" minOccurs="0" maxOccurs="1" />

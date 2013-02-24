@@ -19,7 +19,6 @@
 		    </ItemTemplate>
 		    <EditItemTemplate>
                 <asp:textbox runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "HTTPAlias") %>' ID="txtHTTPAlias" CssClass="dnnFormInput" />
-                <asp:CheckBox ID="chkChild" runat="server" resourcekey="createChild" />
 		    </EditItemTemplate>
 		</asp:TemplateColumn>
         <asp:TemplateColumn>

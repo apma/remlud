@@ -2491,7 +2491,6 @@ namespace DotNetNuke.Modules.Admin.FileManager
                     }
 
                     return string.Format("{0}(\"{1}\", \"{2}\")", parameters["callback"], parameters["folder"].Replace("\\", "\\\\"), files);
-                    break;
             }
 
             return string.Empty;

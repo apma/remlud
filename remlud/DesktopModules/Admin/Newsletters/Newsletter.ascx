@@ -21,7 +21,7 @@
             </div>
             <div class="dnnFormItem">
                 <dnn:label id="plEmail" runat="server" controlname="txtEmail"/>
-                <asp:TextBox ID="txtEmail" runat="server" TextMode="MultiLine" rows="3" Columns="60" />
+                <asp:TextBox ID="txtEmail" runat="server" TextMode="MultiLine" rows="3" Columns="60" CssClass="noResize" />
             </div>
             <div class="dnnFormItem">
                 <dnn:label id="plFrom" runat="server" controlname="txtFrom"/>

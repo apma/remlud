@@ -17,3 +17,4 @@ span.dnnNewsletterRadios{display:block;float:left;overflow:hidden;width:50%;}
 	.dnnNewsletters .dnnLangSelector{width:50%;float:left;}
 	.dnnLangSelector ul li{float:left;display:block;width:50%;}
 	.dnnLangSelector ul li label{width:auto}
+	.dnnNewsletters .newMessage .dnnFormItem textarea.noResize{ resize: none;}

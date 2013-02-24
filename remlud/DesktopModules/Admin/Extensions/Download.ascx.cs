@@ -193,7 +193,7 @@ namespace DotNetNuke.Modules.Admin.Extensions
 
         private static string GetOData(string extensionRequest)
         {
-            var request = (HttpWebRequest)WebRequest.Create(new Uri(extensionRequest));
+            var request = Globals.GetExternalRequest(extensionRequest);
             request.Method = "GET";
             request.Accept = "application/atom+xml";
             using (var response = (HttpWebResponse)request.GetResponse())
@@ -233,7 +233,7 @@ namespace DotNetNuke.Modules.Admin.Extensions
             string password = ps.DecryptString(settings["Store_Password"], Config.GetDecryptionkey());
             postData = postData + "username=" + username + "&password=" + password + "&fileid=" + ViewState["fileId"].ToString();
 
-            WebRequest request = WebRequest.Create(fileCheck.ToString());
+            WebRequest request = Globals.GetExternalRequest(fileCheck);
 
             request.Method = "POST";
             // Create POST data and convert it to a byte array.
@@ -393,7 +393,7 @@ namespace DotNetNuke.Modules.Admin.Extensions
                 URL = URL + restoftheurl;
             }
 
-            var wreq = (HttpWebRequest)WebRequest.Create(URL);
+            var wreq = Globals.GetExternalRequest(URL);
             wreq.UserAgent = UserAgent;
             wreq.Referer = Referer;
             wreq.Method = "GET";

@@ -53,6 +53,12 @@ namespace DotNetNuke.Modules.Admin.Portals
 {
     public partial class Signup : PortalModuleBase
     {
+        #region Private Properties
+
+        private CultureDropDownTypes DisplayType { get; set; }
+
+        #endregion
+
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
@@ -96,6 +102,9 @@ namespace DotNetNuke.Modules.Admin.Portals
                     Response.Redirect(Globals.NavigateURL("Access Denied"), true);
                 }
                 valEmail2.ValidationExpression = Globals.glbEmailRegEx;
+
+                //set the async timeout same with script time out
+                AJAX.GetScriptManager(Page).AsyncPostBackTimeout = 900;
 
                 if (!Page.IsPostBack)
                 {
@@ -218,7 +227,24 @@ namespace DotNetNuke.Modules.Admin.Portals
             }
             else
             {
-                text = string.Format("{0} - {1}", template.Name, template.CultureCode);
+                if (DisplayType == 0)
+                {
+                    string _ViewType = Convert.ToString(Services.Personalization.Personalization.GetProfile("LanguageDisplayMode", "ViewType" + PortalId));
+                    switch (_ViewType)
+                    {
+                        case "NATIVE":
+                            DisplayType = CultureDropDownTypes.NativeName;
+                            break;
+                        case "ENGLISH":
+                            DisplayType = CultureDropDownTypes.EnglishName;
+                            break;
+                        default:
+                            DisplayType = CultureDropDownTypes.DisplayName;
+                            break;
+                    }
+                }
+
+                text = string.Format("{0} - {1}", template.Name, Localization.GetLocaleName(template.CultureCode, DisplayType));
                 value = string.Format("{0}|{1}", Path.GetFileName(template.TemplateFilePath), template.CultureCode);
             }
             
@@ -305,7 +331,7 @@ namespace DotNetNuke.Modules.Admin.Portals
                     {
                         blnChild = (optType.SelectedValue == "C");
 
-						strPortalAlias = blnChild ? txtPortalAlias.Text.Substring(txtPortalAlias.Text.LastIndexOf("/") + 1) : txtPortalAlias.Text;
+                        strPortalAlias = blnChild ? PortalController.GetPortalFolder(txtPortalAlias.Text) : txtPortalAlias.Text;
                     }
 
                     string message = String.Empty;

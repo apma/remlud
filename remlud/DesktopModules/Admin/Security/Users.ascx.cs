@@ -224,7 +224,7 @@ namespace DotNetNuke.Modules.Admin.Users
 
         protected string UserFilter(bool newFilter)
         {
-            var page = !string.IsNullOrEmpty(CurrentPage.ToString()) ? "currentpage=" + CurrentPage : "";
+            var page = !string.IsNullOrEmpty(CurrentPage.ToString()) ? "page=" + CurrentPage : "";
             string filterString;
             string filterPropertyString;
             if (!newFilter)
@@ -600,6 +600,11 @@ namespace DotNetNuke.Modules.Admin.Users
             {
                 CurrentPage = Convert.ToInt32(Request.QueryString["CurrentPage"]);
             }
+            else if (Request.QueryString["Page"] != null)
+            {
+                CurrentPage = Convert.ToInt32(Request.QueryString["Page"]);
+            }
+
             if (Request.QueryString["filter"] != null)
             {
                 Filter = Request.QueryString["filter"];

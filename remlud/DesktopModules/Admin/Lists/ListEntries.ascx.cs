@@ -22,6 +22,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI.WebControls;
@@ -33,6 +34,7 @@ using DotNetNuke.Services.Localization;
 using DotNetNuke.UI.Skins.Controls;
 using DotNetNuke.UI.Utilities;
 using DotNetNuke.UI.WebControls;
+using DotNetNuke.Security;
 
 #endregion
 
@@ -776,14 +778,29 @@ namespace DotNetNuke.Common.Lists
 		/// -----------------------------------------------------------------------------
 		protected void OnSaveEntryClick(object sender, EventArgs e)
 		{
+            String entryValue;
+            String entryText;
+            if (UserInfo.IsSuperUser)
+            {
+                entryValue = txtEntryValue.Text;
+                entryText = txtEntryText.Text;
+            }
+            else
+            {
+                var ps = new PortalSecurity();
+
+                entryValue = ps.InputFilter(txtEntryValue.Text, PortalSecurity.FilterFlag.NoScripting);
+                entryText = ps.InputFilter(txtEntryText.Text, PortalSecurity.FilterFlag.NoScripting);
+            }
+
 			var listController = new ListController();
 			var entry = new ListEntryInfo();
 			{
 				entry.DefinitionID = Null.NullInteger;
 				entry.PortalID = ListPortalID;
 				entry.ListName = txtEntryName.Text;
-				entry.Value = txtEntryValue.Text;
-				entry.Text = txtEntryText.Text;
+                entry.Value = entryValue;
+                entry.Text = entryText;
 			}
 			if (Page.IsValid)
 			{

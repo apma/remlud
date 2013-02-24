@@ -942,10 +942,16 @@
   <data name="txtBatch.Help" xml:space="preserve">
     <value>The number of messages sent by the messaging scheduler in each batch.</value>
   </data>
-  <data name="SmtpServerInvalid.Text" xml:space="preserve">
-    <value>Smtp server's value is incorrect, you can't add custom port in it if your install instance is running under medium trust level.</value>
+  <data name="SmtpServerWarning.Text" xml:space="preserve">
+    <value>You are try to use a custom SMTP port with your install instance running under medium trust, you need contact your host provider to make sure this setting can work correctly on the server.</value>
   </data>
   <data name="Html5Doctype.Text" xml:space="preserve">
     <value>HTML 5</value>
+  </data>
+  <data name="plBatch.Help" xml:space="preserve">
+    <value>The number of messages sent by the messaging scheduler in each batch.</value>
+  </data>
+  <data name="plBatch.Text" xml:space="preserve">
+    <value>Number of messages sent in each batch:</value>
   </data>
 </root>

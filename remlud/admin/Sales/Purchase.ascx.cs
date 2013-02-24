@@ -211,7 +211,7 @@ namespace DotNetNuke.Modules.Admin.Sales
             double retValue = 0;
             try
             {
-                var objRequest = (HttpWebRequest) WebRequest.Create("http://www.xe.com/ucc/convert.cgi");
+                var objRequest = Globals.GetExternalRequest("http://www.xe.com/ucc/convert.cgi");
                 objRequest.Method = "POST";
                 objRequest.ContentLength = strPost.Length;
                 objRequest.ContentType = "application/x-www-form-urlencoded";

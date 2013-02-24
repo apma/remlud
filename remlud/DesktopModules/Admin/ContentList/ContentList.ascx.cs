@@ -44,6 +44,12 @@ namespace DotNetNuke.Modules.ContentList
 
         #region Private Members
 
+        /// <summary>Number of characters to take when generating a title from HTML content.</summary>
+        private const int MaxTitleLength = 250;
+
+        /// <summary>The number of characters to take when generating a summary using the actual HTML content of a ContentItem.</summary>
+        private const int MaxContentBrief = 1000;
+
         private int _currentPage = 1;
         private string _tagQuery = Null.NullString;
 
@@ -103,23 +109,60 @@ namespace DotNetNuke.Modules.ContentList
                 {
                     foreach (var item in results)
                     {
+                        // Parent tab lookup
+                        var tab = tabController.GetTab(item.TabID, PortalId, false);
+
                         var dr = dt.NewRow();
                         dr["TabId"] = item.TabID;
                         dr["ContentKey"] = item.ContentKey;
-                        dr["Title"] = item.Content;
 
-                        //get tab info and use the tab description
-                        var tab = tabController.GetTab(item.TabID, PortalId, false);
-                        if(tab != null)
+                        // If the title metadata item is set, use that; otherwise, generate something reasonable
+                        // using the parent page title.  If even that is blank, then generate something based on
+                        // the beginning of the actual content (truncated to be very short). Basically we are just
+                        // trying to extract something useful and descriptive related to this ContentItem.
+                        var title = item.ContentTitle;
+
+                        if (string.IsNullOrEmpty(title))
                         {
-                            dr["Description"] = tab.Description;
-                        }
-                        else
-                        {
-                            dr["Description"] = item.Content.Length > 1000 ? item.Content.Substring(0, 1000) : item.Content;
+                            // Look up the page title.
+                            title = tab.Title;
+
+                            if (string.IsNullOrEmpty(title))
+                            {
+                                title = tab.ContentTitle;
+
+                                if (string.IsNullOrEmpty(title))
+                                {
+                                    title = HtmlUtils.Shorten(HtmlUtils.StripTags(item.Content, false), MaxTitleLength, "&hellip;");
+                                }
+                            }
                         }
 
+                        dr["Title"] = title;
+
+                        // Try to generate a description block from the Description property of the Page/Tab; or, if
+                        // that is missing, try to generate a description from the actual content of the ContentItem.
+                        string description = null;
+
+                        if (tab != null)
+                        {
+                            description = HtmlUtils.Shorten(tab.Description, MaxContentBrief, "&hellip;");
+                        }
+
+                        if (string.IsNullOrEmpty(description))
+                        {
+                            description = HtmlUtils.Shorten(item.Content, MaxContentBrief, "&hellip;");
+                        }
+
+                        // We don't want to display the same text for both the Title and the Description elements.
+                        if (string.Equals(title, description, StringComparison.InvariantCultureIgnoreCase))
+                        {
+                            description = null;
+                        }
+
+                        dr["Description"] = description;
                         dr["PubDate"] = item.CreatedOnDate;
+
                         dt.Rows.Add(dr);
                     }
                 }
@@ -155,7 +198,7 @@ namespace DotNetNuke.Modules.ContentList
         #endregion
 
         #region Protected Methods
-
+        
         protected string FormatDate(DateTime pubDate)
         {
             return pubDate.ToString();

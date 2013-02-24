@@ -79,7 +79,7 @@ namespace DotNetNuke.Modules.Admin.Newsletters
             {
                 return result.Replace(url, Globals.AddHTTP(HttpContext.Current.Request.Url.Host) + url);
             }
-            return url.Contains("://") ? result : result.Replace(url, Globals.AddHTTP(HttpContext.Current.Request.Url.Host) + Globals.ApplicationPath + "/" + url);
+            return url.Contains("://") || url.Contains("mailto:") ? result : result.Replace(url, Globals.AddHTTP(HttpContext.Current.Request.Url.Host) + Globals.ApplicationPath + "/" + url);
         }
 
         #endregion

@@ -75,9 +75,11 @@
             <div class="megaborder">
               <ul>
                 <li class="category">
-                  <xsl:comment>We are gonna need to add localization support here</xsl:comment>&cr;
                   <span>
-                    <xsl:value-of select="@text"/> Features</span>
+                    <xsl:value-of select="@text"/>
+                    <xsl:text> </xsl:text>
+                    <xsl:value-of select ="ddr:GetString('MenuTitleSuffix.Text','~/admin/ControlPanel/App_LocalResources/RibbonBar.ascx.resx')"/>
+                  </span>
                   <UL>
                     <xsl:apply-templates select="node[@enabled=1]">
                       <xsl:with-param name="nodeType" >leaf</xsl:with-param>

@@ -103,8 +103,8 @@ namespace DotNetNuke.Services.Install
 				ViewState["PortalBinded"] = value;
 			}
     	}
-
-		#endregion
+        
+        #endregion
 
 		#region Protected Members
 
@@ -541,7 +541,7 @@ namespace DotNetNuke.Services.Install
         	PortalBinded = true;
         }
 
-        class TemplateDisplayComparer : IComparer<PortalController.PortalTemplateInfo>
+        private class TemplateDisplayComparer : IComparer<PortalController.PortalTemplateInfo>
         {
             public int Compare(PortalController.PortalTemplateInfo x, PortalController.PortalTemplateInfo y)
             {
@@ -560,7 +560,7 @@ namespace DotNetNuke.Services.Install
             }
         }
 
-        void BindTemplates(string templateName)
+        private void BindTemplates(string templateName)
         {
             var templates = TestablePortalController.Instance.GetAvailablePortalTemplates();
             templates = templates.OrderBy(x => x, new TemplateDisplayComparer()).ToList();
@@ -580,7 +580,7 @@ namespace DotNetNuke.Services.Install
             cboPortalTemplate.Items.Insert(0, new ListItem(Localization.Localization.GetString("None_Specified"), "-1"));
         }
 
-        void SelectADefaultTemplate(IList<PortalController.PortalTemplateInfo> templates, string templateName)
+        private void SelectADefaultTemplate(IList<PortalController.PortalTemplateInfo> templates, string templateName)
         {
             string currentCulture = Thread.CurrentThread.CurrentUICulture.Name;
 
@@ -613,7 +613,7 @@ namespace DotNetNuke.Services.Install
             }
             else
             {
-                text = string.Format("{0} - {1}", template.Name, template.CultureCode);
+                text = string.Format("{0} - {1}", template.Name, Localization.Localization.GetLocaleName(template.CultureCode, CultureDropDownTypes.NativeName));
                 value = string.Format("{0}|{1}", Path.GetFileName(template.TemplateFilePath), template.CultureCode);
             }
 
@@ -903,7 +903,7 @@ namespace DotNetNuke.Services.Install
                         }
                     }
                 }
-                //this is a nasty hack which can ignore real errors and must be fixed in 6.2.1
+
                 success = string.IsNullOrEmpty(strErrorMessage) || packageType == "Language";
             }
             catch (Exception ex)
@@ -954,6 +954,23 @@ namespace DotNetNuke.Services.Install
 
                 UserInfo adminUser = CreateUserInfo();
 
+                if (template.CultureCode != "en-US")
+                {
+                    //Check if language is installed
+                    var locale = LocaleController.Instance.GetLocale(template.CultureCode);
+
+                    //If not installed - install it
+                    if (locale == null)
+                    {
+                        string installPath = Globals.ApplicationMapPath + "\\Install\\Language";
+                        string languagePack = String.Format(installPath + "\\ResourcePack.Full.{0}.{1}.resources", Globals.FormatVersion(ApplicationVersion, "00", 3, "."), template.CultureCode);
+                        if (File.Exists(languagePack))
+                        {
+                            success = Upgrade.Upgrade.InstallPackage(languagePack, "Language", false);
+                        }
+                    }
+                }
+
                 //Create Portal
                 PortalId = TestablePortalController.Instance.CreatePortal(txtPortalTitle.Text,
                                                                             adminUser,
@@ -966,6 +983,14 @@ namespace DotNetNuke.Services.Install
                                                                             "",
                                                                             false);
                 success = (PortalId > Null.NullInteger);
+
+                if (template.CultureCode != "en-US")
+                {
+                    var locale = LocaleController.Instance.GetLocale("en-US");
+
+                    //remove en-US from portal
+                    Localization.Localization.RemoveLanguageFromPortal(PortalId, locale.LanguageId);
+                }
 
                 //Set admin user to be a superuser
                 adminUser = UserController.GetUserByName(PortalId, usrAdmin.UserName);

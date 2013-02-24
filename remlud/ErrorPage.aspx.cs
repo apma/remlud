@@ -34,25 +34,25 @@ using DotNetNuke.Services.FileSystem;
 
 namespace DotNetNuke.Services.Exceptions
 {
-	/// -----------------------------------------------------------------------------
-	/// Project	 : DotNetNuke
-	/// Class	 : ErrorPage
-	/// 
-	/// -----------------------------------------------------------------------------
-	/// <summary>
-	/// Trapped errors are redirected to this universal error page, resulting in a 
-	/// graceful display.
-	/// </summary>
-	/// <remarks>
-	/// 'get the last server error
-	/// 'process this error using the Exception Management Application Block
-	/// 'add to a placeholder and place on page
-	/// 'catch direct access - No exception was found...you shouldn't end up here unless you go to this aspx page URL directly
-	/// </remarks>
-	/// <history>
-	/// 	[sun1]	1/19/2004	Created
-	/// </history>
-	/// -----------------------------------------------------------------------------
+    /// -----------------------------------------------------------------------------
+    /// Project	 : DotNetNuke
+    /// Class	 : ErrorPage
+    /// 
+    /// -----------------------------------------------------------------------------
+    /// <summary>
+    /// Trapped errors are redirected to this universal error page, resulting in a 
+    /// graceful display.
+    /// </summary>
+    /// <remarks>
+    /// 'get the last server error
+    /// 'process this error using the Exception Management Application Block
+    /// 'add to a placeholder and place on page
+    /// 'catch direct access - No exception was found...you shouldn't end up here unless you go to this aspx page URL directly
+    /// </remarks>
+    /// <history>
+    /// 	[sun1]	1/19/2004	Created
+    /// </history>
+    /// -----------------------------------------------------------------------------
     public partial class ErrorPage : Page
     {
         private void ManageError(string status)
@@ -80,7 +80,7 @@ namespace DotNetNuke.Services.Exceptions
             )]
         public string ExtractOSVersion()
         {
-			//default name to OSVersion in case OS not recognised
+            //default name to OSVersion in case OS not recognised
             string commonName = Environment.OSVersion.ToString();
             switch (Environment.OSVersion.Version.Major)
             {
@@ -126,17 +126,16 @@ namespace DotNetNuke.Services.Exceptions
         {
             base.OnLoad(e);
 
-			PortalSettings portalSettings = PortalController.GetCurrentPortalSettings();
-			if (portalSettings != null && !String.IsNullOrEmpty(portalSettings.LogoFile))
-			{
-				IFileInfo fileInfo = FileManager.Instance.GetFile(portalSettings.PortalId, portalSettings.LogoFile);
-				headerImage.ImageUrl = FileManager.Instance.GetUrl(fileInfo);
-			}
-			else
-			{
-				headerImage.Visible = false;
-			}
-
+            PortalSettings portalSettings = PortalController.GetCurrentPortalSettings();
+            if (portalSettings != null && !String.IsNullOrEmpty(portalSettings.LogoFile))
+            {
+                IFileInfo fileInfo = FileManager.Instance.GetFile(portalSettings.PortalId, portalSettings.LogoFile);
+                if (fileInfo != null)
+                {
+                    headerImage.ImageUrl = FileManager.Instance.GetUrl(fileInfo);
+                }
+            }
+            headerImage.Visible = !string.IsNullOrEmpty(headerImage.ImageUrl);
             string strLocalizedMessage = Null.NullString;
             PortalSecurity objSecurity = new PortalSecurity();
             string status = objSecurity.InputFilter(Request.QueryString["status"],
@@ -146,7 +145,7 @@ namespace DotNetNuke.Services.Exceptions
                 ManageError(status);
             else
             {
-				//get the last server error
+                //get the last server error
                 Exception exc = Server.GetLastError();
                 try
                 {
@@ -154,8 +153,6 @@ namespace DotNetNuke.Services.Exceptions
                         ErrorPlaceHolder.Controls.Add(new LiteralControl(HttpUtility.HtmlEncode(exc.ToString())));
                     else
                     {
-
-
                         PageLoadException lex = new PageLoadException(exc.Message, exc);
                         //process this error using the Exception Management Application Block
                         Exceptions.LogException(lex);
@@ -166,15 +163,17 @@ namespace DotNetNuke.Services.Exceptions
                         ErrorPlaceHolder.Controls.Add(
                             new ErrorContainer(portalSettings, strLocalizedMessage, lex).Container);
                     }
-                } catch
+                }
+                catch
                 {
-					//No exception was found...you shouldn't end up here
+                    //No exception was found...you shouldn't end up here
                     //unless you go to this aspx page URL directly
                     strLocalizedMessage = Localization.Localization.GetString("UnhandledError.Text",
                                                                               Localization.Localization.
                                                                                   GlobalResourceFile);
                     ErrorPlaceHolder.Controls.Add(new LiteralControl(strLocalizedMessage));
                 }
+                Response.StatusCode = 500;
             }
             strLocalizedMessage = Localization.Localization.GetString("Return.Text",
                                                                       Localization.Localization.GlobalResourceFile);

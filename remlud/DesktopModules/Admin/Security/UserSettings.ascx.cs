@@ -46,6 +46,13 @@ namespace DesktopModules.Admin.Security
     /// -----------------------------------------------------------------------------
     public partial class UserSettings : ModuleSettingsBase
     {
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            manageServiceItem.Visible = usersControl.Visible = !IsHostMenu;
+        }
+
         public override void LoadSettings()
         {
             displayMode.EnumType = "DotNetNuke.Entities.Modules.DisplayMode, DotNetNuke";

@@ -12,8 +12,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ContentRotator.Community.Text">
+    <value xml:space="preserve">Community_it-IT.png</value>
+  </data>
+  <data name="ContentRotator.DNNWorld.Text">
+    <value xml:space="preserve">DNNWorld_it-IT.png</value>
+  </data>
+  <data name="ContentRotator.Social.Text">
+    <value xml:space="preserve">GetSocial_it-IT.png</value>
+  </data>
+  <data name="ContentRotator.Store.Text">
+    <value xml:space="preserve">DNNStore_it-IT.png</value>
+  </data>
   <data name="LocalizedTemplateName.Text">
     <value xml:space="preserve">Sito Web Predefinito</value>
+  </data>
+  <data name="PortalDescription.Text">
+    <value xml:space="preserve">Modello Sito Web Predefinito</value>
+  </data>
+  <data name="RoleGroup.Description.Text">
+    <value xml:space="preserve">Un gruppo di ruolo fittizio che rappresenta i ruoli globali</value>
   </data>
   <data name="Setting.DefaultLanguage.Text">
     <value xml:space="preserve">it-IT</value>
@@ -29,6 +47,9 @@
   </data>
   <data name="Tab.About.ContentPane.Module.Title.Text">
     <value xml:space="preserve">Super Biciclette</value>
+  </data>
+  <data name="Tab.About.Description.Text">
+    <value />
   </data>
   <data name="Tab.About.FooterLeftPane.Module.Content.0.Text">
     <value xml:space="preserve">Sit vel phasellus parturient auctor ac, integer mattis hac! Eu ac, in, pellentesque nisi eu, scelerisque porta dolor hac nec, penatibus dignissim ac pulvinar pulvinar magna duis porta et ultricies, in odio elementum etiam cras scelerisque, tincidunt cras dapibus platea ultricies hac, sed a, augue aliquet amet a? Adipiscing arcu elementum scelerisque diam phasellus, placerat. Odio.</value>
@@ -78,6 +99,9 @@ Fax: (555) 555-4564</value>
   <data name="Tab.About.FooterRightPane.Module.Title.Text">
     <value xml:space="preserve">Contatti</value>
   </data>
+  <data name="Tab.About.Keywords.Text">
+    <value />
+  </data>
   <data name="Tab.About.LeftPane.Module.Content.0.Text">
     <value xml:space="preserve">James Woolworth – Presidente, Direttore</value>
   </data>
@@ -107,6 +131,9 @@ Fax: (555) 555-4564</value>
   </data>
   <data name="Tab.About.Name.Text">
     <value xml:space="preserve">Chi Siamo</value>
+  </data>
+  <data name="Tab.About.PageHeadText.Text">
+    <value />
   </data>
   <data name="Tab.About.RightPane.GoalModule.Content.0.Text">
     <value xml:space="preserve">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget posuere quam. Sed at dui quis mi tincidunt venenatis et vehicula sapien. Aenean sit amet dapibus felis. Mauris lacinia nunc dictum odio sollicitudin vel vehicula sapien interdum.</value>
@@ -463,15 +490,6 @@ Fax: (555) 555-4564</value>
   <data name="Tab.Home.Title.Text">
     <value />
   </data>
-  <data name="Tab.About.Description.Text">
-    <value />
-  </data>
-  <data name="Tab.About.Keywords.Text">
-    <value />
-  </data>
-  <data name="Tab.About.PageHeadText.Text">
-    <value />
-  </data>
   <data name="Tab.Promotions.ContentPane.Module.Footer.Text">
     <value />
   </data>
@@ -776,23 +794,5 @@ Fax: (555) 555-4564</value>
   </data>
   <data name="Tab.Services.Title.Text">
     <value />
-  </data>
-  <data name="PortalDescription.Text">
-    <value xml:space="preserve">Modello Sito Web Predefinito</value>
-  </data>
-  <data name="RoleGroup.Description.Text">
-    <value xml:space="preserve">Un gruppo di ruolo fittizio che rappresenta i ruoli globali</value>
-  </data>
-  <data name="ContentRotator.DNNWorld.Text">
-    <value xml:space="preserve">DNNWorld_it-IT.png</value>
-  </data>
-  <data name="ContentRotator.Store.Text">
-    <value xml:space="preserve">DNNStore_it-IT.png</value>
-  </data>
-  <data name="ContentRotator.Community.Text">
-    <value xml:space="preserve">Community_it-IT.png</value>
-  </data>
-  <data name="ContentRotator.Social.Text">
-    <value xml:space="preserve">GetSocial_it-IT.png</value>
   </data>
 </root>

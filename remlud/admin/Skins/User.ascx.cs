@@ -22,13 +22,16 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web;
 
 using DotNetNuke.Common;
 using DotNetNuke.Common.Utilities;
 using DotNetNuke.Entities.Modules;
+using DotNetNuke.Entities.Portals;
 using DotNetNuke.Entities.Tabs;
 using DotNetNuke.Entities.Users;
+using DotNetNuke.Services.Authentication;
 using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Services.Localization;
 using DotNetNuke.Services.Social.Notifications;
@@ -129,10 +132,13 @@ namespace DotNetNuke.UI.Skins.Controls
                                             : Globals.RegisterURL(HttpUtility.UrlEncode(Globals.NavigateURL()), Null.NullString);
                         enhancedRegisterLink.NavigateUrl = registerLink.NavigateUrl;
 
-                        //if (PortalSettings.EnablePopUps && PortalSettings.RegisterTabId == Null.NullInteger)
-                        //{
-                        //    registerLink.Attributes.Add("onclick", "return " + UrlUtils.PopUpUrl(registerLink.NavigateUrl, this, PortalSettings, true, false, 600, 950));
-                        //}
+                        if (PortalSettings.EnablePopUps && PortalSettings.RegisterTabId == Null.NullInteger
+                            && !HasSocialAuthenticationEnabled())
+                        {
+                            var clickEvent = "return " + UrlUtils.PopUpUrl(registerLink.NavigateUrl, this, PortalSettings, true, false, 600, 950);
+                            registerLink.Attributes.Add("onclick", clickEvent);
+                            enhancedRegisterLink.Attributes.Add("onclick", clickEvent);
+                        }
 
                     }
                     else
@@ -156,8 +162,8 @@ namespace DotNetNuke.UI.Skins.Controls
 
                         if (ShowUnreadMessages)
                         {
-                            var unreadMessages = InternalMessagingController.Instance.CountUnreadMessages(userInfo.UserID, userInfo.PortalID);
-                            var unreadAlerts = NotificationsController.Instance.CountNotifications(userInfo.UserID, userInfo.PortalID);
+                            var unreadMessages = InternalMessagingController.Instance.CountUnreadMessages(userInfo.UserID, PortalController.GetEffectivePortalId(userInfo.PortalID));
+                            var unreadAlerts = NotificationsController.Instance.CountNotifications(userInfo.UserID, PortalController.GetEffectivePortalId(userInfo.PortalID));
 
                             messageLink.Text = unreadMessages > 0 ? string.Format(Localization.GetString("Messages", Localization.GetResourceFile(this, MyFileName)), unreadMessages) : Localization.GetString("NoMessages", Localization.GetResourceFile(this, MyFileName));
                             notificationLink.Text = unreadAlerts > 0 ? string.Format(Localization.GetString("Notifications", Localization.GetResourceFile(this, MyFileName)), unreadAlerts) : Localization.GetString("NoNotifications", Localization.GetResourceFile(this, MyFileName));
@@ -244,6 +250,19 @@ namespace DotNetNuke.UI.Skins.Controls
 
             //default to User Profile Page
             return PortalSettings.UserTabId;            
+        }
+
+        private bool HasSocialAuthenticationEnabled()
+        {
+            return (from a in AuthenticationController.GetEnabledAuthenticationServices()
+                    let enabled = (a.AuthenticationType == "Facebook"
+                                     || a.AuthenticationType == "Google"
+                                     || a.AuthenticationType == "Live"
+                                     || a.AuthenticationType == "Twitter")
+                                  ? PortalController.GetPortalSettingAsBoolean(a.AuthenticationType + "_Enabled", PortalSettings.PortalId, false)
+                                  : !string.IsNullOrEmpty(a.LoginControlSrc) && (LoadControl("~/" + a.LoginControlSrc) as AuthenticationLoginBase).Enabled
+                    where a.AuthenticationType != "DNN" && enabled
+                    select a).Any();
         }
     }
 }

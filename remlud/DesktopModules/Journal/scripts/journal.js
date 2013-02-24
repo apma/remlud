@@ -30,8 +30,14 @@ function attachPhoto(fileId, path, isImage) {
     } else {
         journalItem.JournalType = 'file';
     }
+    path = decodeURIComponent(path);
+    
     journalItem.ItemData = {};
     journalItem.ItemData.ImageUrl = path;
+    var fileName = path.substring(path.lastIndexOf('/') + 1);
+    path = path.substring(0, path.lastIndexOf('/') + 1);
+    path = path + escape(fileName);
+
     if (isImage) {
         $(".filePreviewArea").show().append($("<img src='" + path + "' />").css("width", "120px").hide().fadeIn());
         journalItem.ItemData.Url = 'fileid=' + fileId;

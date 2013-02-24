@@ -23,7 +23,7 @@
 	.dnnPortalSignup .dnnFormMessage.dnnFormWarning{max-width:100%;}		
 		.dnnTabsModule .ucLinkTypeRadioButtons input{margin-right:5px;}
 	.dnnTabsModule .urlControl{display:block;float:left;}
-	.dnnTabsModule .urlControlLinkType{min-width:280px;}
+	.dnnPageSettings .urlControlLinkType{min-width:280px;}
 	.dnnTabsModule .urlControlLinkType label, .dnnTabsModule .urlControlLinkType .dnnFormLabel, .dnnTabsModule .urlControlFileRow .dnnFormLabel, .dnnTabsModule .urlControlImagesRow .dnnFormLabel, .dnnTabsModule .urlControlFileRow label{width:auto;font-weight:normal;margin:0;}
 	.dnnTabsModule .urlControlFileRow .dnnFormItem, .dnnTabsModule .urlControlImagesRow{padding:0;width:100%;}
 	.dnnTabsModule .urlControlFileRow .dnnFormItem select{width:60%!important;}

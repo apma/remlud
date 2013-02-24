@@ -342,7 +342,7 @@
         .append(input_box);
 
         // The list to store the dropdown items in
-        var dropdown = $("<div>")
+        var dropdown = $("<div id='tokenDropdown'>")
         .addClass(settings.classes.dropdown)
         .appendTo("body")
         .hide();
@@ -626,7 +626,7 @@
         function hide_dropdown() {
             dropdown.hide().empty();
             selected_dropdown_item = null;
-        }
+       }
 
         function show_dropdown() {
             dropdown
@@ -666,7 +666,7 @@
         function populate_dropdown(query, results) {
             if (results && results.length) {
                 dropdown.empty();
-                var dropdown_ul = $("<ul>")
+                var dropdown_ul = $("<ul id='tokenResults'>")
                 .appendTo(dropdown)
                 .mouseover(function (event) {
                     select_dropdown_item($(event.target).closest("li"));

@@ -16,9 +16,6 @@
     <containersrcadmin>[G]Containers/DarkKnight/PageTitle_Red.ascx</containersrcadmin>
     <enableskinwidgets>True</enableskinwidgets>
     <timezone>Pacific Standard Time</timezone>
-    <hostspace>0</hostspace>
-    <userquota>0</userquota>
-    <pagequota>0</pagequota>
   </settings>
   <profiledefinitions>
     <profiledefinition>

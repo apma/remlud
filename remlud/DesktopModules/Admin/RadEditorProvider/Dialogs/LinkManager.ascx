@@ -69,7 +69,8 @@
 		var trackUserCheckbox = $get("TrackUser")
 
 		//secured files will already have a linkclick url, so don't bother looking them up
-		if (linkClickURL != "http:///" && linkClickURL != "http://" && linkClickURL.indexOf("LinkClick") == -1) {
+		if (linkClickURL != "http:///" && linkClickURL != "http://" 
+    		&& (linkClickURL.indexOf("LinkClick") == -1 || linkClickURL.indexOf("fileticket") == -1)) {
 			
 			$.ajax({
 				type: 'POST',
@@ -746,11 +747,11 @@
 						<hr />
 						<table>
 							<tr>
-								<td colspan="2"><asp:CheckBox ID="TrackLink" runat="server" Text="Track the number of times this link is clicked" /></td>
+								<td colspan="2"><asp:CheckBox ID="TrackLink" runat="server" />[$LocalizeString('TrackLink')]</td>
 							</tr>
 							<tr>
 								<td style="width:20px">&nbsp;</td>
-								<td><asp:CheckBox ID="TrackUser" runat="server" Text="Log the user, date and time for each click" /></td>
+								<td><asp:CheckBox ID="TrackUser" runat="server" />[$LocalizeString('TrackUser')]</td>
 							</tr>
 						</table>
 						<hr />

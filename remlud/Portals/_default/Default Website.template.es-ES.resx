@@ -12,8 +12,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ContentRotator.Community.Text">
+    <value xml:space="preserve">Community_es-ES.png</value>
+  </data>
+  <data name="ContentRotator.DNNWorld.Text">
+    <value xml:space="preserve">DNNWorld_es-ES.png</value>
+  </data>
+  <data name="ContentRotator.Social.Text">
+    <value xml:space="preserve">GetSocial_es-ES.png</value>
+  </data>
+  <data name="ContentRotator.Store.Text">
+    <value xml:space="preserve">DNNStore_es-ES.png</value>
+  </data>
   <data name="LocalizedTemplateName.Text">
     <value xml:space="preserve">Sitio web predeterminado</value>
+  </data>
+  <data name="PortalDescription.Text">
+    <value xml:space="preserve">Plantilla de sitio web por omisión</value>
+  </data>
+  <data name="RoleGroup.Description.Text">
+    <value xml:space="preserve">Grupo de roles que representa los roles globales del portal</value>
   </data>
   <data name="Setting.DefaultLanguage.Text">
     <value xml:space="preserve">es-ES</value>
@@ -29,6 +47,9 @@
   </data>
   <data name="Tab.About.ContentPane.Module.Title.Text">
     <value xml:space="preserve">Información sobre nuestra empresa</value>
+  </data>
+  <data name="Tab.About.Description.Text">
+    <value />
   </data>
   <data name="Tab.About.FooterLeftPane.Module.Content.0.Text">
     <value xml:space="preserve">Sit vel phasellus parturient auctor ac, integer mattis hac! Eu ac, in, pellentesque nisi eu, scelerisque porta dolor hac nec, penatibus dignissim ac pulvinar pulvinar magna duis porta et ultricies, in odio elementum etiam cras scelerisque, tincidunt cras dapibus platea ultricies hac, sed a, augue aliquet amet a? Adipiscing arcu elementum scelerisque diam phasellus, placerat. Odio.</value>
@@ -75,6 +96,9 @@
   <data name="Tab.About.FooterRightPane.Module.Title.Text">
     <value xml:space="preserve">Información de contacto</value>
   </data>
+  <data name="Tab.About.Keywords.Text">
+    <value />
+  </data>
   <data name="Tab.About.LeftPane.Module.Content.0.Text">
     <value xml:space="preserve">James Woolworth – Presidente y Consejero delegado</value>
   </data>
@@ -104,6 +128,9 @@
   </data>
   <data name="Tab.About.Name.Text">
     <value xml:space="preserve">About Us</value>
+  </data>
+  <data name="Tab.About.PageHeadText.Text">
+    <value />
   </data>
   <data name="Tab.About.RightPane.GoalModule.Content.0.Text">
     <value xml:space="preserve">Nos encanta poder ofrecer a nuestros clientes la bicicleta de sus sueños. Por este motivo tenemos a los mejores ingenieros y creativos de la industria en nuestro equipo, para diseñar y construir exactamente lo que usted necesite. Ut a fringilla est. Aliquam eleifend interdum urna eu cursus. </value>
@@ -223,7 +250,7 @@
     <value />
   </data>
   <data name="Tab.GettingStarted.LeftPane.Module.Content.0.Text">
-    <value xml:space="preserve">El siguiente video le ayudará a comenzar la construcción de su nuevo sitio DotNetNuke. Utilizar DotNetNuke es rápido y fácil y puede tener su nuevo sitio en marcha y funcionando con el contenido real en sólo cuestión de minutos. Aproveche para explorar los enlaces de la derecha para obtener más información sobre cómo obtener el máximo rendimiento de su sitio web basado en DotNetNuke.</value>
+    <value xml:space="preserve">El siguiente vídeo le ayudará a comenzar la construcción de su nuevo sitio DotNetNuke. Utilizar DotNetNuke es rápido y fácil y puede tener su nuevo sitio en marcha y funcionando con el contenido real en sólo cuestión de minutos. Aproveche para explorar los enlaces de la derecha para obtener más información sobre cómo obtener el máximo rendimiento de su sitio web basado en DotNetNuke.</value>
   </data>
   <data name="Tab.GettingStarted.LeftPane.Module.Footer.Text">
     <value />
@@ -454,15 +481,6 @@
     <value xml:space="preserve">Enlaces sociales</value>
   </data>
   <data name="Tab.Home.Title.Text">
-    <value />
-  </data>
-  <data name="Tab.About.Description.Text">
-    <value />
-  </data>
-  <data name="Tab.About.Keywords.Text">
-    <value />
-  </data>
-  <data name="Tab.About.PageHeadText.Text">
     <value />
   </data>
   <data name="Tab.Promotions.ContentPane.Module.Footer.Text">
@@ -764,23 +782,5 @@
   </data>
   <data name="Tab.Services.Title.Text">
     <value />
-  </data>
-  <data name="PortalDescription.Text">
-    <value xml:space="preserve">Plantilla de sitio web por omisión</value>
-  </data>
-  <data name="RoleGroup.Description.Text">
-    <value xml:space="preserve">Grupo de roles que representa los roles globales del portal</value>
-  </data>
-  <data name="ContentRotator.DNNWorld.Text">
-    <value xml:space="preserve">DNNWorld_es-ES.png</value>
-  </data>
-  <data name="ContentRotator.Store.Text">
-    <value xml:space="preserve">DNNStore_es-ES.png</value>
-  </data>
-  <data name="ContentRotator.Community.Text">
-    <value xml:space="preserve">Community_es-ES.png</value>
-  </data>
-  <data name="ContentRotator.Social.Text">
-    <value xml:space="preserve">GetSocial_es-ES.png</value>
   </data>
 </root>

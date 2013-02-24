@@ -38,6 +38,7 @@ using DotNetNuke.Entities.Users;
 using DotNetNuke.Entities.Users.Internal;
 using DotNetNuke.Security;
 using DotNetNuke.Security.Membership;
+using DotNetNuke.Security.Permissions;
 using DotNetNuke.Services.Authentication;
 using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Services.Localization;
@@ -276,7 +277,7 @@ namespace DotNetNuke.Modules.Admin.Users
             if (!String.IsNullOrEmpty(regexValidator))
             {
                 formItem.ValidationExpression = regexValidator;
-            }
+            }            
             userForm.Items.Add(formItem);
         }
 
@@ -288,14 +289,25 @@ namespace DotNetNuke.Modules.Admin.Users
             {
                 DnnFormEditControlItem formItem = new DnnFormEditControlItem
                                                         {
+                                                            ID = property.PropertyName,
                                                             ResourceKey = String.Format("ProfileProperties_{0}", property.PropertyName),
                                                             LocalResourceFile = "~/DesktopModules/Admin/Security/App_LocalResources/Profile.ascx.resx",
+                                                            ValidationMessageSuffix = ".Validation",
                                                             ControlType = EditorInfo.GetEditor(property.DataType),
                                                             DataMember = "Profile",
                                                             DataField = property.PropertyName,
                                                             Visible = property.Visible,
                                                             Required = property.Required
                                                         };
+                //To check if the property has a deafult value
+                if (!String.IsNullOrEmpty(property.DefaultValue))
+                {
+                    formItem.Value = property.DefaultValue;
+                }
+                if (!String.IsNullOrEmpty(property.ValidationExpression))
+                {
+                    formItem.ValidationExpression = property.ValidationExpression;
+                }   
                 userForm.Items.Add(formItem);
             }
 
@@ -593,6 +605,7 @@ namespace DotNetNuke.Modules.Admin.Users
                 //DisplayName
                 if (String.IsNullOrEmpty(DisplayNameFormat))
                 {
+                    //DisplayName has an additional validator
                     AddField("DisplayName", String.Empty, true, String.Empty, TextBoxMode.SingleLine);
                 }
                 else
@@ -640,6 +653,7 @@ namespace DotNetNuke.Modules.Admin.Users
                             AddField(trimmedField, "Membership", true, String.Empty, TextBoxMode.SingleLine);
                             break;
                         case "DisplayName":
+                            //DisplayName has an additional validator
                             AddField(trimmedField, String.Empty, true, ExcludeTerms, TextBoxMode.SingleLine);
                             break;
                         default:
@@ -694,6 +708,23 @@ namespace DotNetNuke.Modules.Admin.Users
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
+
+            if (Request.IsAuthenticated)
+            {
+                //if a Login Page has not been specified for the portal
+                if (Globals.IsAdminControl())
+                {
+                    //redirect to current page 
+                    Response.Redirect(Globals.NavigateURL(), true);
+                }
+                else //make module container invisible if user is not a page admin
+                {
+                    if (!TabPermissionController.CanAdminPage())
+                    {
+                        ContainerControl.Visible = false;
+                    }
+                }
+            }
 
             if (UseCaptcha)
             {

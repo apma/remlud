@@ -399,7 +399,10 @@ function getDateFromFormat(val,format) {
 	return newdate;
 	}
 
+if (typeof(Sys) != "undefined"){
+    Sys.Application.notifyScriptLoaded() ;
+}
+
 // ******************
 // End Popup Calendar
 // ******************
-

@@ -36,7 +36,7 @@
     <WizardSteps>
         <asp:WizardStep ID="wizIntroduction" runat="server" Title="Introduction" StepType="Start" AllowReturn="false">
             <dnn:propertyeditorcontrol id="Properties" runat="Server" SortMode="SortOrderAttribute" 
-                                ErrorStyle-cssclass="dnnFormError" helpstyle-cssclass="dnnFormHelpContent dnnClear">
+                                ErrorStyle-cssclass="dnnFormError" helpstyle-cssclass="dnnFormHelpContent dnnClear" EnableClientValidation="True">
 
             </dnn:propertyeditorcontrol>
         </asp:WizardStep>
@@ -50,7 +50,9 @@
                 </div>
                 <div class="dnnFormItem">
                     <dnn:Label ID="plPropertyName" runat="server" ControlName="txtPropertyName" />
-                    <asp:TextBox ID="txtPropertyName" runat="Server" />
+                    <asp:TextBox ID="txtPropertyName" runat="Server" CssClass="dnnFormRequired" />
+                    <asp:requiredfieldvalidator id="valPropertyName" runat="server" controltovalidate="txtPropertyName" display="Dynamic" 
+                    resourcekey="valPropertyName.ErrorMessage" CssClass="dnnFormMessage dnnFormError" />
                 </div>
                 <div class="dnnFormItem">				
                     <dnn:Label ID="plPropertyHelp" runat="server" ControlName="txtPropertyHelp" />
@@ -67,10 +69,6 @@
                 <div class="dnnFormItem">
                     <dnn:Label ID="plCategoryName" runat="server" ControlName="txtCategoryName" />
                     <asp:TextBox ID="txtCategoryName" runat="Server" />
-                </div>
-                <div class="dnnFormItem">
-                	<div class="dnnFormLabel"></div>
-	                <asp:LinkButton class="dnnSecondaryAction" id="cmdSaveKeys" resourcekey="cmdSaveKeys" runat="server" text="Save" />
                 </div>
             </div>	            
         </asp:WizardStep>

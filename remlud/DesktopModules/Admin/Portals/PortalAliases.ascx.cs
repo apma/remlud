@@ -26,6 +26,7 @@ using System.IO;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+using DotNetNuke.Common;
 using DotNetNuke.Common.Utilities;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Portals;
@@ -262,11 +263,6 @@ namespace DotNetNuke.Modules.Admin.Portals
                     editImage.Visible = portalAlias.PortalAliasID != PortalAlias.PortalAliasID;
                 }
             }
-            else if (item.ItemType == ListItemType.EditItem)
-            {
-                var chkChild = item.Cells[1].FindControl("chkChild") as CheckBox;
-                chkChild.Visible = AddMode;
-            }
         }
 
         /// -----------------------------------------------------------------------------
@@ -314,7 +310,13 @@ namespace DotNetNuke.Modules.Admin.Portals
             //Remove the alias from the aliases collection
             var portalAlias = (PortalAliasInfo) Aliases[index];
             controller.DeletePortalAlias(portalAlias.PortalAliasID);
-
+            //should remove the portal's folder if exist
+            var portalFolder = PortalController.GetPortalFolder(portalAlias.HTTPAlias);
+            var serverPath = Globals.GetAbsoluteServerPath(Request);
+            if(!string.IsNullOrEmpty(portalFolder) && Directory.Exists(serverPath + portalFolder))
+            {
+                PortalController.DeletePortalFolder(serverPath, portalFolder);
+            }
             //Rebind the collection
             _Aliases = null;
             BindAliases();
@@ -344,7 +346,6 @@ namespace DotNetNuke.Modules.Admin.Portals
 
             var portalAlias = (PortalAliasInfo) Aliases[index];
             var ctlAlias = (TextBox) dgPortalAlias.Items[index].Cells[1].FindControl("txtHTTPAlias");
-            var chkChild = (CheckBox) dgPortalAlias.Items[index].Cells[2].FindControl("chkChild");
 
             string strAlias = ctlAlias.Text.Trim();
             if (string.IsNullOrEmpty(strAlias))
@@ -362,7 +363,7 @@ namespace DotNetNuke.Modules.Admin.Portals
                     strAlias = strAlias.Remove(0, strAlias.IndexOf("\\\\") + 2);
                 }
 
-                isChild = (chkChild != null && chkChild.Checked);
+                isChild = !string.IsNullOrEmpty(PortalController.GetPortalFolder(strAlias));
 
                 //Validate Alias
                 if (!PortalAliasController.ValidateAlias(strAlias, false))
@@ -373,7 +374,7 @@ namespace DotNetNuke.Modules.Admin.Portals
                 //Validate Child Folder Name
                 if (isChild)
                 {
-                    childPath = strAlias.Substring(strAlias.LastIndexOf("/") + 1);
+                    childPath = PortalController.GetPortalFolder(strAlias);
                     if (!PortalAliasController.ValidateAlias(childPath, true))
                     {
                         message = Localization.GetString("InvalidAlias", LocalResourceFile);

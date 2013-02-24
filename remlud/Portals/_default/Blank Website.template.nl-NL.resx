@@ -15,14 +15,17 @@
   <data name="LocalizedTemplateName.Text">
     <value xml:space="preserve">Lege Website</value>
   </data>
+  <data name="PortalDescription.Text">
+    <value xml:space="preserve">Lege Website</value>
+  </data>
+  <data name="RoleGroup.Description.Text">
+    <value xml:space="preserve">Een dummy rolgroup die de globale rollen representeerd</value>
+  </data>
   <data name="Setting.DefaultLanguage.Text">
     <value xml:space="preserve">nl-NL</value>
   </data>
   <data name="Setting.FooterText.Text">
     <value xml:space="preserve">Copyright [year] by DotNetNuke Corporation</value>
-  </data>
-  <data name="PortalDescription.Text">
-    <value xml:space="preserve">Lege Website</value>
   </data>
   <data name="Tab.Home.Description.Text">
     <value />
@@ -38,8 +41,5 @@
   </data>
   <data name="Tab.Home.Title.Text">
     <value />
-  </data>
-  <data name="RoleGroup.Description.Text">
-    <value xml:space="preserve">Een dummy rolgroup die de globale rollen representeerd</value>
   </data>
 </root>

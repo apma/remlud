@@ -450,6 +450,9 @@ namespace DotNetNuke.Modules.Admin.Extensions
                 case "Provider":
                     installFolder = packageType;
                     break;
+                case "Library":
+                    installFolder = "Module";
+                    break;
                 default:
                     break;
             }

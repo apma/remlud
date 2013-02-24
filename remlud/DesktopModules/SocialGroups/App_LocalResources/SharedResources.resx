@@ -311,4 +311,7 @@
   <data name="JoinGroup.Text" xml:space="preserve">
     <value>Join Group</value>
   </data>
+  <data name="AutoConfigure.Text" xml:space="preserve">
+    <value>Auto Configure</value>
+  </data>
 </root>

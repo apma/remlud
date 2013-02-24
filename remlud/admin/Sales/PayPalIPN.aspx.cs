@@ -141,7 +141,7 @@ namespace DotNetNuke.Modules.Admin.Sales
                     {
                         strPayPalURL = "https://www.paypal.com/cgi-bin/webscr?";
                     }
-                    var objRequest = (HttpWebRequest) WebRequest.Create(strPayPalURL);
+                    var objRequest = Globals.GetExternalRequest(strPayPalURL);
                     objRequest.Method = "POST";
                     objRequest.ContentLength = strPost.Length;
                     objRequest.ContentType = "application/x-www-form-urlencoded";

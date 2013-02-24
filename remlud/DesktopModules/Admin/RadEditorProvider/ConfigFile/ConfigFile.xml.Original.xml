@@ -22,17 +22,13 @@
     <property name="ToolbarMode">Default</property>
     <property name="ToolsWidth"></property>
 
-    <property name="DMX Integration Settings" IsSeparator="true" />
-    <property name="DMXIntegration">False</property>
-    <property name="DMXPath"></property>
-
     <property name="Document Manager Settings" IsSeparator="true" />
     <property name="DocumentsFilters">*.*</property>
-    <property name="DocumentsPath">/Documents</property>
+    <property name="DocumentsPath">Documents/</property>
     <property name="MaxDocumentSize">1024000</property>
 
     <property name="Image Manager Settings" IsSeparator="true" />
-    <property name="ImagesPath">/Images</property>
+    <property name="ImagesPath">Images/</property>
     <property name="MaxImageSize">1024000</property>
     <property name="ImagesFilters">
         <item>*.jpg</item>
@@ -43,14 +39,14 @@
     </property>
 
     <property name="Flash Manager Settings" IsSeparator="true" />
-    <property name="FlashPath">/Flash</property>
+    <property name="FlashPath">/</property>
     <property name="MaxFlashSize">1024000</property>
     <property name="FlashFilters">
         <item>*.swf</item>
     </property>
 
     <property name="Media Manager Settings" IsSeparator="true" />
-    <property name="MediaPath">/Media</property>
+    <property name="MediaPath">/</property>
     <property name="MaxMediaSize">1024000</property>
     <property name="MediaFilters">
         <item>*.avi</item>
@@ -58,12 +54,12 @@
     </property>
 
     <property name="Silverlight Manager Settings" IsSeparator="true" />
-    <property name="SilverlightPath">/Silverlight</property>
+    <property name="SilverlightPath">/</property>
     <property name="SilverlightFilters">.*</property>   
     <property name="MaxSilverlightSize">1024000</property>
 
     <property name="Template Manager Settings" IsSeparator="true" />
-    <property name="TemplatePath">/Templates</property>
+    <property name="TemplatePath">Templates/</property>
     <property name="MaxTemplateSize">1024000</property>
     <property name="TemplateFilters">
         <item>*.html</item>

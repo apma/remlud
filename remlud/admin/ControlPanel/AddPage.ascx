@@ -4,7 +4,7 @@
 <div class="cbcpPageSettingsContent dnnFormItem">
     <div class="dnnClear">
         <asp:Label id="NameLbl" runat="server" Text="Name" AssociatedControlID="Name" ResourceKey="Name" />
-        <asp:TextBox ID="Name" runat="server" />
+        <asp:TextBox ID="Name" runat="server" MaxLength="50" />
     </div>
     <div class="dnnClear">
         <asp:Label runat="server" ResourceKey="Template" AssociatedControlID="TemplateLst" />

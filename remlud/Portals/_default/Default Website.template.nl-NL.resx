@@ -12,8 +12,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ContentRotator.Community.Text">
+    <value xml:space="preserve">Community_nl-NL.png</value>
+  </data>
+  <data name="ContentRotator.DNNWorld.Text">
+    <value xml:space="preserve">DNNWorld_nl-NL.png</value>
+  </data>
+  <data name="ContentRotator.Social.Text">
+    <value xml:space="preserve">GetSocial_nl-NL.png</value>
+  </data>
+  <data name="ContentRotator.Store.Text">
+    <value xml:space="preserve">DNNStore_nl-NL.png</value>
+  </data>
   <data name="LocalizedTemplateName.Text">
     <value xml:space="preserve">Standaard Website</value>
+  </data>
+  <data name="PortalDescription.Text">
+    <value xml:space="preserve">Sjabloon voor Standaard Website</value>
+  </data>
+  <data name="RoleGroup.Description.Text">
+    <value xml:space="preserve">Een dummy rolgroup die de globale rollen representeerd</value>
   </data>
   <data name="Setting.DefaultLanguage.Text">
     <value xml:space="preserve">nl-NL</value>
@@ -29,6 +47,9 @@
   </data>
   <data name="Tab.About.ContentPane.Module.Title.Text">
     <value xml:space="preserve">Alles over Awesome Cycles</value>
+  </data>
+  <data name="Tab.About.Description.Text">
+    <value />
   </data>
   <data name="Tab.About.FooterLeftPane.Module.Content.0.Text">
     <value xml:space="preserve">Sit vel phasellus parturient auctor ac, integer mattis hac! Eu ac, in, pellentesque nisi eu, scelerisque porta dolor hac nec, penatibus dignissim ac pulvinar pulvinar magna duis porta et ultricies, in odio elementum etiam cras scelerisque, tincidunt cras dapibus platea ultricies hac, sed a, augue aliquet amet a? Adipiscing arcu elementum scelerisque diam phasellus, placerat. Odio.</value>
@@ -78,6 +99,9 @@ Fax: (555) 555-4564</value>
   <data name="Tab.About.FooterRightPane.Module.Title.Text">
     <value xml:space="preserve">Contactinformatie</value>
   </data>
+  <data name="Tab.About.Keywords.Text">
+    <value />
+  </data>
   <data name="Tab.About.LeftPane.Module.Content.0.Text">
     <value xml:space="preserve">James Woolworth – President, CEO</value>
   </data>
@@ -107,6 +131,9 @@ Fax: (555) 555-4564</value>
   </data>
   <data name="Tab.About.Name.Text">
     <value xml:space="preserve">About Us</value>
+  </data>
+  <data name="Tab.About.PageHeadText.Text">
+    <value />
   </data>
   <data name="Tab.About.RightPane.GoalModule.Content.0.Text">
     <value xml:space="preserve">We vinden het fantastisch als we onze klanten kunnen helpen hun droomfiets te vinden. Wij hebben de beschikking over beste en meest creatieve mensen in de industrie die uw droomfiets ontwerpen en bouwen precies zoals u het wilt. Ut a fringilla est. Aliquam eleifend interdum urna eu cursus. </value>
@@ -462,15 +489,6 @@ Fax: (555) 555-4564</value>
   <data name="Tab.Home.Title.Text">
     <value />
   </data>
-  <data name="Tab.About.Description.Text">
-    <value />
-  </data>
-  <data name="Tab.About.Keywords.Text">
-    <value />
-  </data>
-  <data name="Tab.About.PageHeadText.Text">
-    <value />
-  </data>
   <data name="Tab.Promotions.ContentPane.Module.Footer.Text">
     <value />
   </data>
@@ -777,23 +795,5 @@ Proin condimentum odio ipsum, sit amet consequat lacus. Ut elementum nisl id lec
   </data>
   <data name="Tab.Services.Title.Text">
     <value />
-  </data>
-  <data name="PortalDescription.Text">
-    <value xml:space="preserve">Sjabloon voor Standaard Website</value>
-  </data>
-  <data name="RoleGroup.Description.Text">
-    <value xml:space="preserve">Een dummy rolgroup die de globale rollen representeerd</value>
-  </data>
-  <data name="ContentRotator.DNNWorld.Text">
-    <value xml:space="preserve">DNNWorld_nl-NL.png</value>
-  </data>
-  <data name="ContentRotator.Store.Text">
-    <value xml:space="preserve">DNNStore_nl-NL.png</value>
-  </data>
-  <data name="ContentRotator.Community.Text">
-    <value xml:space="preserve">Community_nl-NL.png</value>
-  </data>
-  <data name="ContentRotator.Social.Text">
-    <value xml:space="preserve">GetSocial_nl-NL.png</value>
   </data>
 </root>

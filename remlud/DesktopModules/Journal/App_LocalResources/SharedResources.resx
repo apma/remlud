@@ -283,19 +283,7 @@
     <value>Blogs</value>
   </data>
   <data name="journal_blog.Text" xml:space="preserve">
-    <value>&lt;!--&lt;div class="author"&gt;&lt;img src="[BaseUrl]/profilepic.ashx?userId=[JournalAuthor:Id]&amp;h=32&amp;w=32" /&gt;&lt;/div&gt;--&gt;
-&lt;div class="journalitem"&gt;
-	&lt;p&gt;
-		&lt;!--&lt;span class="authorname"&gt;[JournalControl:AUTHORNAMELINK]&lt;/span&gt;--&gt;&lt;a class="journalTitle" href="[journaldata:Url]"&gt;[journalitem:Title]&lt;/a&gt;
-&lt;!--&lt;div class="dnnClear"&gt;&lt;i&gt;[journalitem:Summary]&lt;/i&gt;&lt;/div&gt;--&gt;
-&lt;/p&gt;
-		&lt;p class="journalfooter"&gt;
-		&lt;abbr title="[journalItem:DateCreated]"&gt;[journalitem:TimeFrame]&lt;/abbr&gt; {CanComment}&lt;span&gt;&amp;#149;&lt;/span&gt; [JOURNALCONTROL:LIKELINK] &lt;span&gt;&amp;#149;&lt;/span&gt; &lt;a class="readmore" href="[journaldata:Url]"&gt;Read More&lt;/a&gt;{/CanComment}
-	&lt;/p&gt;
-		[JOURNALCONTROL:LIKELIST]
-	
-	&lt;/div&gt;</value>
-    <comment>&lt;div class="author"&gt;&lt;img src="[BaseUrl]/profilepic.ashx?userId=[JournalAuthor:Id]&amp;h=32&amp;w=32" /&gt;&lt;/div&gt;
+    <value>&lt;div class="author"&gt;&lt;img src="[BaseUrl]/profilepic.ashx?userId=[JournalAuthor:Id]&amp;h=32&amp;w=32" /&gt;&lt;/div&gt;
 &lt;div class="journalitem"&gt;
 	&lt;p&gt;
 		&lt;span class="authorname"&gt;[JournalControl:AUTHORNAMELINK]&lt;/span&gt;&lt;a href="[journaldata:Url]"&gt;[journalitem:Title]&lt;/a&gt;
@@ -306,7 +294,7 @@
 	&lt;/p&gt;
 		[JOURNALCONTROL:LIKELIST]
 	
-	&lt;/div&gt;</comment>
+	&lt;/div&gt;</value>
   </data>
   <data name="groupcreate.Text" xml:space="preserve">
     <value>Group Created</value>

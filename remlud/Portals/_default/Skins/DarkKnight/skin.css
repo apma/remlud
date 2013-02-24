@@ -1,4 +1,4 @@
-@font-face {
+﻿@font-face {
     font-family: 'TitilliumText22LBold';
     src: url('Fonts/TitilliumText22L005-webfont.eot');
     src: url('Fonts/TitilliumText22L005-webfont.eot?#iefix') format('embedded-opentype'),
@@ -243,7 +243,7 @@ h3{font-family:TitilliumText22LBold;font-size:18px;}
     
 	#dnn_ContentPane, #dnn_BottomPane{clear:both;}
 	
-	#DNN6.Home #dnn_LeftPane, #DNN6.TwoColRight #dnn_LeftPane{float:left;width:630px;margin:0 30px 0 0;}
+	#DNN6.Home #dnn_LeftPane, #DNN6.TwoColRight #dnn_LeftPane{float:left;width:630px;margin:0 30px 0 0;min-height:1px;}
 	#DNN6.Home #dnn_RightPane, #DNN6.TwoColRight #dnn_RightPane{float:left;width:300px;}
 	
 	#DNN6.ThreeCol #dnn_LeftPane{float:left;width:180px;margin:0 30px 0 0;}
@@ -267,7 +267,7 @@ h3{font-family:TitilliumText22LBold;font-size:18px;}
 
 /* Content */
 .Social-Links{text-align:right;padding:15px 0 0 0;}
-	.Social-Links .fb-like{top: 5px;}
+#dnn_SocialMediaPane .fb-like{margin-top: 20px; margin-left: -80px; position: absolute;}
 	.Social-Links a{margin:0 0 0 10px;}
 	.icoIN{width:32px;height:32px;background:url(images/SocialMedia.png) no-repeat -192px 0;}
 	.icoFacebook{width:32px;height:32px;background:url(images/SocialMedia.png) no-repeat 0 0;}
@@ -333,5 +333,4 @@ p.Disclaimer{clear:both;color:#666666;font-size:11px;line-height:14px;}
 
 /* Language Object */
 .language-object { display:inline-block; margin-left: 5px; }
-
 

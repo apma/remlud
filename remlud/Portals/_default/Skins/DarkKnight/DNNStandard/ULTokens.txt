@@ -1,8 +1,10 @@
+<!--SEO NOINDEX-->
 <div id="dnnMenu">
     <ul class="topLevel">
 	    [*>NODE-TOP]
     </ul>
 </div>
+<!--END SEO-->
 [>NODE-TOP]
 	<li class="item[?FIRST] first[/?][?LAST] last[/?][?SELECTED] selected[/?][?NODE] haschild[/?]">
 		[?ENABLED]

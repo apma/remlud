@@ -7,4 +7,3 @@
 	<div class="Middle"><div id="ContentPane" runat="server"></div></div>
 	<div class="BottomL"><div class="BottomR"><div class="Bottom"></div></div></div>
 </div>
-

@@ -150,4 +150,10 @@
   <data name="JournalFilters.Text" xml:space="preserve">
     <value>Journal Types</value>
   </data>
+  <data name="EnableEditor.Help" xml:space="preserve">
+    <value>Use this option to enable or disable direct journal input using the journal editor.</value>
+  </data>
+  <data name="EnableEditor.Text" xml:space="preserve">
+    <value>Enable Journal Editor</value>
+  </data>
 </root>

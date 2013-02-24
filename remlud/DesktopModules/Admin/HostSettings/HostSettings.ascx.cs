@@ -192,7 +192,7 @@ namespace DotNetNuke.Modules.Admin.Host
 
         private void BindPerformance()
         {
-            cboPageState.Items.FindByValue(Entities.Host.Host.PageStatePersister).Selected = true;
+            cboPageState.Items.FindByValue(Entities.Host.Host.PageStatePersister).Selected = true; 
             BindModuleCacheProviderList();
             BindPageCacheProviderList();
             if (cboPerformance.Items.FindByValue(((int)Entities.Host.Host.PerformanceSetting).ToString()) != null)
@@ -504,9 +504,14 @@ namespace DotNetNuke.Modules.Admin.Host
                 CheckSecurity();
 
                 //If this is the first visit to the page, populate the site data
-                if (Page.IsPostBack == false)
+                if (!Page.IsPostBack)
                 {
                     BindData();
+
+                    if(Request.QueryString["smtpwarning"] != null)
+                    {
+                        UI.Skins.Skin.AddModuleMessage(this, Localization.GetString("SmtpServerWarning", LocalResourceFile), ModuleMessage.ModuleMessageType.YellowWarning);
+                    }
                 }
             }
             catch (Exception exc)
@@ -613,7 +618,7 @@ namespace DotNetNuke.Modules.Admin.Host
             {
                 if (!String.IsNullOrEmpty(txtHostEmail.Text))
                 {
-                    txtSMTPPassword.Attributes.Add("value", Entities.Host.Host.SMTPPassword);
+                    txtSMTPPassword.Attributes.Add("value", txtSMTPPassword.Text);
 
                     string strMessage = Mail.SendMail(txtHostEmail.Text,
                                                       txtHostEmail.Text,
@@ -720,15 +725,15 @@ namespace DotNetNuke.Modules.Admin.Host
             {
                 try
                 {
+                    //show warning message when set custom smtp port and app running under medium trust, but still can
+                    //save the settings because maybe some host providers use a modified medium trusy config and allow
+                    //this permission.
                     var smtpServer = txtSMTPServer.Text;
-                    if (!string.IsNullOrEmpty(smtpServer) 
-                        && smtpServer.Contains(":") 
-                        && smtpServer.Split(':')[1] != "25"
-                        && !SecurityPolicy.HasAspNetHostingPermission())
-                    {
-                        UI.Skins.Skin.AddModuleMessage(this, Localization.GetString("SmtpServerInvalid", LocalResourceFile), ModuleMessage.ModuleMessageType.RedError);
-                        return;
-                    }
+                    var smtpWarning = !string.IsNullOrEmpty(smtpServer)
+                                        && smtpServer != DotNetNuke.Entities.Host.Host.SMTPServer
+                                        && smtpServer.Contains(":") 
+                                        && smtpServer.Split(':')[1] != "25" 
+                                        && !SecurityPolicy.HasAspNetHostingPermission();
 
                     HostController.Instance.Update("CheckUpgrade", chkUpgrade.Checked ? "Y" : "N", false);
                     HostController.Instance.Update("DisplayBetaNotice", chkBetaNotice.Checked ? "Y" : "N", false);
@@ -774,7 +779,7 @@ namespace DotNetNuke.Modules.Admin.Host
                     HostController.Instance.Update("SchedulerMode", cboSchedulerMode.SelectedItem.Value, false);
                     HostController.Instance.Update("PerformanceSetting", cboPerformance.SelectedItem.Value, false);
                     HostController.Instance.Update("AuthenticatedCacheability", cboCacheability.SelectedItem.Value, false);
-                    HostController.Instance.Update("PageStatePersister", cboPageState.SelectedItem.Value);
+                    HostController.Instance.Update("PageStatePersister", cboPageState.SelectedItem.Value); 
                     HostController.Instance.Update("ModuleCaching", cboModuleCacheProvider.SelectedItem.Value, false);
                     if (PageCacheRow.Visible)
                     {
@@ -801,7 +806,12 @@ namespace DotNetNuke.Modules.Admin.Host
 
                     UpdateSchedule();
 
-                    Response.Redirect(Request.RawUrl, true);
+                    var redirectUrl = Request.RawUrl;
+                    if (smtpWarning && redirectUrl.IndexOf("smtpwarning=true", StringComparison.InvariantCultureIgnoreCase) == -1)
+                    {
+                        redirectUrl = string.Format("{0}{1}smtpwarning=true", redirectUrl, redirectUrl.Contains("?") ? "&" : "?");
+                    }
+                    Response.Redirect(redirectUrl, true);
                 }
                 catch (Exception exc)
                 {

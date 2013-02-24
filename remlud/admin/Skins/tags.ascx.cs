@@ -167,19 +167,6 @@ namespace DotNetNuke.UI.Skins.Controls
                 tagsControl.ContentItem = ModuleControl.ModuleContext.Configuration;
             }
 
-            string resultsUrl = Null.NullString;
-            var objModules = new ModuleController();
-            int searchTabId = 0;
-            ModuleInfo SearchModule = objModules.GetModuleByDefinition(PortalSettings.PortalId, "Search Results");
-            if (SearchModule == null)
-            {
-                return;
-            }
-            else
-            {
-                searchTabId = SearchModule.TabID;
-            }
-
             tagsControl.AddImageUrl = AddImageUrl;
             tagsControl.CancelImageUrl = CancelImageUrl;
             tagsControl.SaveImageUrl = SaveImageUrl;
@@ -187,7 +174,7 @@ namespace DotNetNuke.UI.Skins.Controls
             tagsControl.CssClass = CssClass;
 
             tagsControl.AllowTagging = AllowTagging && Request.IsAuthenticated;
-            tagsControl.NavigateUrlFormatString = Globals.NavigateURL(searchTabId, "", "Tag={0}");
+            tagsControl.NavigateUrlFormatString = Globals.NavigateURL(PortalSettings.SearchTabId, "", "Tag={0}");
             tagsControl.RepeatDirection = RepeatDirection;
             tagsControl.Separator = Separator;
             tagsControl.ShowCategories = ShowCategories;

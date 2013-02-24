@@ -12,8 +12,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ContentRotator.Community.Text">
+    <value xml:space="preserve">Community_fr-FR.png</value>
+  </data>
+  <data name="ContentRotator.DNNWorld.Text">
+    <value xml:space="preserve">DNNWorld_fr-FR.png</value>
+  </data>
+  <data name="ContentRotator.Social.Text">
+    <value xml:space="preserve">GetSocial_fr-FR.png</value>
+  </data>
+  <data name="ContentRotator.Store.Text">
+    <value xml:space="preserve">DNNStore_fr-FR.png</value>
+  </data>
   <data name="LocalizedTemplateName.Text">
     <value xml:space="preserve">Site Web par défaut</value>
+  </data>
+  <data name="PortalDescription.Text">
+    <value xml:space="preserve">Modèle de site Web par défaut</value>
+  </data>
+  <data name="RoleGroup.Description.Text">
+    <value xml:space="preserve">Un groupe de rôle factice qui représente les rôles globaux</value>
   </data>
   <data name="Setting.DefaultLanguage.Text">
     <value xml:space="preserve">en-US</value>
@@ -29,6 +47,9 @@
   </data>
   <data name="Tab.About.ContentPane.Module.Title.Text">
     <value xml:space="preserve">En savoir plus Awesome Cycles</value>
+  </data>
+  <data name="Tab.About.Description.Text">
+    <value />
   </data>
   <data name="Tab.About.FooterLeftPane.Module.Content.0.Text">
     <value xml:space="preserve">Sit vel phasellus parturient auctor ac, integer mattis hac! Eu ac, in, pellentesque nisi eu, scelerisque porta dolor hac nec, penatibus dignissim ac pulvinar pulvinar magna duis porta et ultricies, in odio elementum etiam cras scelerisque, tincidunt cras dapibus platea ultricies hac, sed a, augue aliquet amet a? Adipiscing arcu elementum scelerisque diam phasellus, placerat. Odio.</value>
@@ -75,6 +96,9 @@
   <data name="Tab.About.FooterRightPane.Module.Title.Text">
     <value xml:space="preserve">Informations de contact</value>
   </data>
+  <data name="Tab.About.Keywords.Text">
+    <value />
+  </data>
   <data name="Tab.About.LeftPane.Module.Content.0.Text">
     <value xml:space="preserve">James Woolworth – Président, Directeur général</value>
   </data>
@@ -104,6 +128,9 @@
   </data>
   <data name="Tab.About.Name.Text">
     <value xml:space="preserve">Qui sommes-nous</value>
+  </data>
+  <data name="Tab.About.PageHeadText.Text">
+    <value />
   </data>
   <data name="Tab.About.RightPane.GoalModule.Content.0.Text">
     <value xml:space="preserve">Nous apprécions pouvoir fournir à nos clients le vélo de leur rêve. C'est pour cela que nos employés sont les meilleurs et les plus créatifs afin de concevoir exactement ce que vous souhaitez. Aliquam eleifend interdum urna eu cursus.</value>
@@ -456,15 +483,6 @@
   <data name="Tab.Home.Title.Text">
     <value />
   </data>
-  <data name="Tab.About.Description.Text">
-    <value />
-  </data>
-  <data name="Tab.About.Keywords.Text">
-    <value />
-  </data>
-  <data name="Tab.About.PageHeadText.Text">
-    <value />
-  </data>
   <data name="Tab.Promotions.ContentPane.Module.Footer.Text">
     <value />
   </data>
@@ -763,23 +781,5 @@
   </data>
   <data name="Tab.Services.Title.Text">
     <value />
-  </data>
-  <data name="PortalDescription.Text">
-    <value xml:space="preserve">Modèle de site Web par défaut</value>
-  </data>
-  <data name="RoleGroup.Description.Text">
-    <value xml:space="preserve">Un groupe de rôle factice qui représente les rôles globaux</value>
-  </data>
-  <data name="ContentRotator.DNNWorld.Text">
-    <value xml:space="preserve">DNNWorld_fr-FR.png</value>
-  </data>
-  <data name="ContentRotator.Store.Text">
-    <value xml:space="preserve">DNNStore_fr-FR.png</value>
-  </data>
-  <data name="ContentRotator.Community.Text">
-    <value xml:space="preserve">Community_fr-FR.png</value>
-  </data>
-  <data name="ContentRotator.Social.Text">
-    <value xml:space="preserve">GetSocial_fr-FR.png</value>
   </data>
 </root>

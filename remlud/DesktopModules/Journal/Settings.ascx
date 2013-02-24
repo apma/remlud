@@ -4,7 +4,10 @@
     <style>
         .dnnFormItem td label{white-space:nowrap;text-align:left;}
     </style>
-
+<div class="dnnFormItem">
+    <dnn:label controlname="chkEnableEditor" resourcekey="EnableEditor" Text="Enable Editor" Suffix=":" runat="server" />
+    <asp:CheckBox id="chkEnableEditor" runat="server" />
+</div>
 <div class="dnnFormItem">
     <dnn:label controlname="chkAllowFiles" resourcekey="AllowFiles" Text="Allow Files" Suffix=":" runat="server" />
     <asp:CheckBox id="chkAllowFiles" runat="server" />
@@ -14,6 +17,7 @@
     <dnn:label controlname="chkAllowPhotos" resourcekey="AllowPhotos" Text="Allow Photos" Suffix=":" runat="server" />
     <asp:CheckBox id="chkAllowPhotos" runat="server" />
 </div>
+
 <div class="dnnFormItem">
     <dnn:label controlname="drpDefaultPageSize" resourcekey="DefaultPageSize" Suffix=":" runat="server" />
     <asp:DropDownList ID="drpDefaultPageSize" runat="server">
@@ -42,3 +46,17 @@
     <dnn:label  resourcekey="JournalFilters" Suffix=":" runat="server" />
     <asp:CheckBoxList ID="chkJournalFilters" runat="server" />
 </div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#<%=chkEnableEditor.ClientID %>').click(function (event) {
+            if (this.checked) {
+                $('#<%=chkAllowFiles.ClientID %>').removeAttr("disabled");
+                $('#<%=chkAllowPhotos.ClientID %>').removeAttr("disabled");
+            } else {
+                $('#<%=chkAllowFiles.ClientID %>').attr("disabled", true);
+                $('#<%=chkAllowPhotos.ClientID %>').attr("disabled", true);
+            }
+        });
+    });
+
+</script>

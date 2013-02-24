@@ -15,7 +15,7 @@
                     <dnn:DnnFormToggleButtonItem runat="server" DataField="Column_CreatedDate"/>                    
                     <dnn:DnnFormToggleButtonItem runat="server" DataField="Column_LastLogin"/>
                     <dnn:DnnFormEnumItem ID="displayMode" runat="server" DataField="Display_Mode" />                    
-                    <dnn:DnnFormToggleButtonItem runat="server" DataField="Profile_ManageServices"/>
+                    <dnn:DnnFormToggleButtonItem id="manageServiceItem" runat="server" DataField="Profile_ManageServices"/>
                     <dnn:DnnFormNumericTextBoxItem runat="server" DataField="Records_PerPage"/>
                     <dnn:DnnFormEnumItem ID="usersControl" runat="server" DataField="Security_UsersControl"/>                    
                 </Items>

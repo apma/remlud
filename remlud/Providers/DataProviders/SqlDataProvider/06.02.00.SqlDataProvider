@@ -73,7 +73,7 @@ AS
 			TabID,
 			0 AS Level,
 			CAST('//' + {databaseOwner}{objectQualifier}RemoveStringCharacters(TabName, '&? ') AS NVARCHAR(255)) AS TabPath
-		FROM {objectQualifier}Tabs
+		FROM {databaseOwner}{objectQualifier}Tabs
 		WHERE ParentId IS Null
 	  
 		UNION ALL
@@ -82,7 +82,7 @@ AS
 			T.TabID,
 			Level + 1,
 			CAST(TabPath + '//' + {databaseOwner}{objectQualifier}RemoveStringCharacters(TabName, '&? ') AS NVARCHAR(255))
-		FROM {objectQualifier}Tabs T
+		FROM {databaseOwner}{objectQualifier}Tabs T
 		INNER JOIN RecursiveTabs R ON T.ParentId = R.TabID
 	)
 
@@ -101,13 +101,13 @@ AS
 		T.IsVisible, 
 		CASE WHEN LEFT(LOWER(T .IconFile), 7) = 'fileid=' THEN
 			(SELECT Folder + FileName
-				FROM {objectQualifier}Files
+				FROM {databaseOwner}{objectQualifier}Files
 				WHERE fileid = CAST((RIGHT(LOWER(T.IconFile), Len(T.IconFile) - 7)) AS int)
 			) ELSE T.IconFile 
 			END AS IconFile, 
 		CASE WHEN LEFT(LOWER(T .IconFileLarge), 7) = 'fileid=' THEN
 			(SELECT Folder + FileName
-				FROM  {objectQualifier}Files
+				FROM  {databaseOwner}{objectQualifier}Files
 				WHERE fileid = CAST((RIGHT(LOWER(T.IconFileLarge), Len(T.IconFileLarge) - 7)) AS int)
 			) ELSE T.IconFileLarge
 			END AS IconFileLarge, 
@@ -121,7 +121,7 @@ AS
 		T.StartDate, 
 		T.EndDate, 
 		T.Url, 
-		CASE WHEN EXISTS (SELECT 1 FROM {objectQualifier}Tabs T2 WHERE T2.ParentId = T.TabId) THEN 'true' ELSE 'false' END AS HasChildren, 
+		CASE WHEN EXISTS (SELECT 1 FROM {databaseOwner}{objectQualifier}Tabs T2 WHERE T2.ParentId = T.TabId) THEN 'true' ELSE 'false' END AS HasChildren, 
 		T.RefreshInterval, 
 		T.PageHeadText, 
 		T.IsSecure, 
@@ -139,8 +139,8 @@ AS
 		T.LastModifiedByUserID, 
 		T.LastModifiedOnDate
 	FROM  RecursiveTabs R 
-		INNER JOIN {objectQualifier}Tabs AS T ON R.TabID = T.TabID
-		LEFT OUTER JOIN {objectQualifier}ContentItems AS CI ON T.ContentItemID = CI.ContentItemID
+		INNER JOIN {databaseOwner}{objectQualifier}Tabs AS T ON R.TabID = T.TabID
+		LEFT OUTER JOIN {databaseOwner}{objectQualifier}ContentItems AS CI ON T.ContentItemID = CI.ContentItemID
 
 GO
 
@@ -183,7 +183,7 @@ CREATE PROCEDURE {databaseOwner}[{objectQualifier}AddTab]
 
 AS
 
-    INSERT INTO {objectQualifier}Tabs (
+    INSERT INTO {databaseOwner}{objectQualifier}Tabs (
         ContentItemID,
         PortalID,
         TabOrder,
@@ -266,7 +266,7 @@ GO
 CREATE PROCEDURE {databaseOwner}[{objectQualifier}GetAllTabs] 
 AS
 	SELECT *
-		FROM {objectQualifier}vw_Tabs
+		FROM {databaseOwner}{objectQualifier}vw_Tabs
 		ORDER BY Level, ParentID, TabOrder
 GO
 
@@ -285,7 +285,7 @@ AS
 		TabID, 
 		PortalID, 
 		TabPath
-	FROM {objectQualifier}vw_Tabs
+	FROM {databaseOwner}{objectQualifier}vw_Tabs
 	WHERE (PortalID = @PortalID AND (CultureCode = @CultureCode OR CultureCode Is Null))
 		OR @PortalID Is NULL
 GO
@@ -304,7 +304,7 @@ CREATE PROCEDURE {databaseOwner}[{objectQualifier}UpdateTabOrder]
 	@LastModifiedByUserID	int
 AS
 
-	UPDATE {objectQualifier}Tabs
+	UPDATE {databaseOwner}{objectQualifier}Tabs
 		SET
 			TabOrder				= @TabOrder,
 			ParentId				= @ParentId,
@@ -355,16 +355,16 @@ AS
 	BEGIN
 		DECLARE @TabId int
 		DECLARE @TabOrder INT 
-		SELECT @TabOrder = TabOrder FROM {objectQualifier}Tabs WHERE TabID = @BeforeTabID
+		SELECT @TabOrder = TabOrder FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @BeforeTabID
 		
 		-- Update TabOrders for all Tabs higher than @TabOrder
-		UPDATE {objectQualifier}Tabs
+		UPDATE {databaseOwner}{objectQualifier}Tabs
 			SET TabOrder = TabOrder + 2
 			WHERE (ParentId = @ParentId OR (ParentId IS NULL AND @ParentID IS NULL))
 				AND TabOrder >= @TabOrder
 		
 		-- Create Tab
-		EXECUTE @TabId = {objectQualifier}AddTab 
+		EXECUTE @TabId = {databaseOwner}{objectQualifier}AddTab 
 							@ContentItemID,
 							@PortalID,
 							@TabOrder,
@@ -395,7 +395,7 @@ AS
 							@CultureCode;
 		
 		-- Update Content Item
-		UPDATE {objectQualifier}ContentItems
+		UPDATE {databaseOwner}{objectQualifier}ContentItems
 			SET TabID = @TabId
 			WHERE ContentItemID = @ContentItemID
 
@@ -445,17 +445,17 @@ AS
 	BEGIN
 		DECLARE @TabId int
 		DECLARE @TabOrder INT 
-		SET @TabOrder = (SELECT TabOrder FROM {objectQualifier}Tabs WHERE TabID = @AfterTabID)
+		SET @TabOrder = (SELECT TabOrder FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @AfterTabID)
 		
 		-- Update TabOrders for all Tabs higher than @TabOrder
-		UPDATE {objectQualifier}Tabs
+		UPDATE {databaseOwner}{objectQualifier}Tabs
 			SET TabOrder = TabOrder + 2
 			WHERE (ParentId = @ParentId OR (ParentId IS NULL AND @ParentID IS NULL))
 				AND TabOrder > @TabOrder
 		
 		-- Create Tab
 		SET @TabOrder = @TabOrder + 2
-		EXECUTE @TabId = {objectQualifier}AddTab 
+		EXECUTE @TabId = {databaseOwner}{objectQualifier}AddTab 
 							@ContentItemID,
 							@PortalID,
 							@TabOrder,
@@ -486,7 +486,7 @@ AS
 							@CultureCode;
 		
 		-- Update Content Item
-		UPDATE {objectQualifier}ContentItems
+		UPDATE {databaseOwner}{objectQualifier}ContentItems
 			SET TabID = @TabId
 			WHERE ContentItemID = @ContentItemID
 
@@ -535,14 +535,14 @@ AS
 	BEGIN
 		DECLARE @TabId int
 		DECLARE @TabOrder int 
-		SET @TabOrder = (SELECT MAX(TabOrder) FROM {objectQualifier}Tabs WHERE (ParentId = @ParentId OR (ParentId IS NULL AND @ParentID IS NULL)))
+		SET @TabOrder = (SELECT MAX(TabOrder) FROM {databaseOwner}{objectQualifier}Tabs WHERE (ParentId = @ParentId OR (ParentId IS NULL AND @ParentID IS NULL)))
 		IF @TabOrder IS NULL
 			SET @TabOrder = 1
 		ELSE
 			SET @TabOrder = @TabOrder + 2
 
 		-- Create Tab
-		EXECUTE @TabId = {objectQualifier}AddTab 
+		EXECUTE @TabId = {databaseOwner}{objectQualifier}AddTab 
 							@ContentItemID,
 							@PortalID,
 							@TabOrder,
@@ -573,7 +573,7 @@ AS
 							@CultureCode;
 		
 		-- Update Content Item
-		UPDATE {objectQualifier}ContentItems
+		UPDATE {databaseOwner}{objectQualifier}ContentItems
 			SET TabID = @TabId
 			WHERE ContentItemID = @ContentItemID
 
@@ -593,26 +593,26 @@ CREATE PROCEDURE {databaseOwner}[{objectQualifier}DeleteTab]
 AS
 	BEGIN
 		DECLARE @TabOrder INT
-		SET @TabOrder = (SELECT TabOrder FROM {objectQualifier}Tabs WHERE TabID = @TabId)
+		SET @TabOrder = (SELECT TabOrder FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @TabId)
 
 		DECLARE @ParentID INT
-		SET @ParentID = (SELECT ParentID FROM {objectQualifier}Tabs WHERE TabID = @TabId)
+		SET @ParentID = (SELECT ParentID FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @TabId)
 
 		DECLARE @ContentItemID INT
-		SET @ContentItemID = (SELECT ContentItemID FROM {objectQualifier}Tabs WHERE TabID = @TabId)
+		SET @ContentItemID = (SELECT ContentItemID FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @TabId)
 
 		-- Delete Tab --
-		DELETE FROM {objectQualifier}Tabs
+		DELETE FROM {databaseOwner}{objectQualifier}Tabs
 			WHERE  TabId = @TabId
 
 		-- Update TabOrder of remaining Tabs --
-		UPDATE {objectQualifier}Tabs
+		UPDATE {databaseOwner}{objectQualifier}Tabs
 			SET TabOrder = TabOrder - 2
 			WHERE (ParentId = @ParentId OR (ParentId IS NULL AND @ParentID IS NULL))
 				AND TabOrder > @TabOrder
 			
 		-- Delete Content Item --
-		DELETE {objectQualifier}ContentItems
+		DELETE {databaseOwner}{objectQualifier}ContentItems
 			WHERE ContentItemID = @ContentItemID
 	END
 
@@ -634,32 +634,32 @@ AS
 		DECLARE @OldParentId int
 		DECLARE @NewParentId int
 		
-		SET @OldParentId = (SELECT ParentId FROM {objectQualifier}Tabs WHERE TabID = @TabId)
-		SET @NewParentId = (SELECT ParentId FROM {objectQualifier}Tabs WHERE TabID = @AfterTabId)
+		SET @OldParentId = (SELECT ParentId FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @TabId)
+		SET @NewParentId = (SELECT ParentId FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @AfterTabId)
 		
 		DECLARE @TabOrder int
-		SET @TabOrder = (SELECT TabOrder FROM {objectQualifier}Tabs WHERE TabID = @TabId)
+		SET @TabOrder = (SELECT TabOrder FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @TabId)
 		
 		IF (@OldParentId <> @NewParentId OR NOT (@OldParentId IS NULL AND @NewParentId IS NULL))
 			-- Parent has changed
 			BEGIN
 				-- update TabOrder of Tabs with same original Parent
-				UPDATE {objectQualifier}Tabs
+				UPDATE {databaseOwner}{objectQualifier}Tabs
 					SET TabOrder = TabOrder - 2
 					WHERE (ParentId = @OldParentId OR (ParentId IS NULL AND @OldParentId IS NULL)) 
 						AND TabOrder > @TabOrder
 
 				-- Get TabOrder of AfterTab
-				SET @TabOrder = (SELECT TabOrder FROM {objectQualifier}Tabs WHERE TabID = @AfterTabId)
+				SET @TabOrder = (SELECT TabOrder FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @AfterTabId)
 						
 				-- update TabOrder of Tabs with same new Parent
-				UPDATE {objectQualifier}Tabs
+				UPDATE {databaseOwner}{objectQualifier}Tabs
 					SET TabOrder = TabOrder + 2
 					WHERE (ParentId = @NewParentId OR (ParentId IS NULL AND @NewParentId IS NULL)) 
 						AND TabOrder > @TabOrder
 
 				-- Update Tab with new TabOrder
-				UPDATE {objectQualifier}Tabs
+				UPDATE {databaseOwner}{objectQualifier}Tabs
 					SET 
 						ParentId				= @NewParentId,
 						TabOrder				= @TabOrder + 2,
@@ -672,28 +672,28 @@ AS
 			-- Parent has not changed
 			BEGIN
 				-- Remove Tab from TabOrder
-				UPDATE {objectQualifier}Tabs
+				UPDATE {databaseOwner}{objectQualifier}Tabs
 					SET TabOrder = -1
 					WHERE TabID = @TabId
 					
 				-- Reorder
-				UPDATE {objectQualifier}Tabs
+				UPDATE {databaseOwner}{objectQualifier}Tabs
 					SET TabOrder = TabOrder - 2
 					WHERE (ParentId = @OldParentId OR (ParentId IS NULL AND @OldParentId IS NULL)) 
 						AND TabOrder > @TabOrder
 						AND TabId <> @TabId
 						
 				-- Get TabOrder of AfterTab
-				SET @TabOrder = (SELECT TabOrder FROM {objectQualifier}Tabs WHERE TabID = @AfterTabId)
+				SET @TabOrder = (SELECT TabOrder FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @AfterTabId)
 										
 				-- Reorder					
-				UPDATE {objectQualifier}Tabs
+				UPDATE {databaseOwner}{objectQualifier}Tabs
 					SET TabOrder = TabOrder + 2
 					WHERE (ParentId = @OldParentId OR (ParentId IS NULL AND @OldParentId IS NULL)) 
 						AND TabOrder > @TabOrder
 
 				-- Update Tab with new TabOrder
-				UPDATE {objectQualifier}Tabs
+				UPDATE {databaseOwner}{objectQualifier}Tabs
 					SET 
 						TabOrder				= @TabOrder + 2,
 						LastModifiedByUserID	= @LastModifiedByUserID,
@@ -720,32 +720,32 @@ AS
 		DECLARE @OldParentId int
 		DECLARE @NewParentId int
 		
-		SET @OldParentId = (SELECT ParentId FROM {objectQualifier}Tabs WHERE TabID = @TabId)
-		SET @NewParentId = (SELECT ParentId FROM {objectQualifier}Tabs WHERE TabID = @BeforeTabId)
+		SET @OldParentId = (SELECT ParentId FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @TabId)
+		SET @NewParentId = (SELECT ParentId FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @BeforeTabId)
 		
 		DECLARE @TabOrder int
-		SET @TabOrder = (SELECT TabOrder FROM {objectQualifier}Tabs WHERE TabID = @TabId)
+		SET @TabOrder = (SELECT TabOrder FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @TabId)
 		
 		IF (@OldParentId <> @NewParentId OR NOT (@OldParentId IS NULL AND @NewParentId IS NULL))
 			-- Parent has changed
 			BEGIN
 				-- update TabOrder of Tabs with same original Parent
-				UPDATE {objectQualifier}Tabs
+				UPDATE {databaseOwner}{objectQualifier}Tabs
 					SET TabOrder = TabOrder - 2
 					WHERE (ParentId = @OldParentId OR (ParentId IS NULL AND @OldParentId IS NULL)) 
 						AND TabOrder > @TabOrder
 
 				-- Get TabOrder of AfterTab
-				SET @TabOrder = (SELECT TabOrder FROM {objectQualifier}Tabs WHERE TabID = @BeforeTabId)
+				SET @TabOrder = (SELECT TabOrder FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @BeforeTabId)
 						
 				-- update TabOrder of Tabs with same new Parent
-				UPDATE {objectQualifier}Tabs
+				UPDATE {databaseOwner}{objectQualifier}Tabs
 					SET TabOrder = TabOrder + 2
 					WHERE (ParentId = @NewParentId OR (ParentId IS NULL AND @NewParentId IS NULL)) 
 						AND TabOrder >= @TabOrder
 
 				-- Update Tab with new TabOrder
-				UPDATE {objectQualifier}Tabs
+				UPDATE {databaseOwner}{objectQualifier}Tabs
 					SET 
 						ParentId				= @NewParentId,
 						TabOrder				= @TabOrder,
@@ -758,28 +758,28 @@ AS
 			-- Parent has not changed
 			BEGIN
 				-- Remove Tab from TabOrder
-				UPDATE {objectQualifier}Tabs
+				UPDATE {databaseOwner}{objectQualifier}Tabs
 					SET TabOrder = -1
 					WHERE TabID = @TabId
 					
 				-- Reorder
-				UPDATE {objectQualifier}Tabs
+				UPDATE {databaseOwner}{objectQualifier}Tabs
 					SET TabOrder = TabOrder - 2
 					WHERE (ParentId = @OldParentId OR (ParentId IS NULL AND @OldParentId IS NULL)) 
 						AND TabOrder > @TabOrder
 						AND TabId <> @TabId
 						
 				-- Get TabOrder of BeforeTab
-				SET @TabOrder = (SELECT TabOrder FROM {objectQualifier}Tabs WHERE TabID = @BeforeTabId)
+				SET @TabOrder = (SELECT TabOrder FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @BeforeTabId)
 										
 				-- Reorder					
-				UPDATE {objectQualifier}Tabs
+				UPDATE {databaseOwner}{objectQualifier}Tabs
 					SET TabOrder = TabOrder + 2
 					WHERE (ParentId = @OldParentId OR (ParentId IS NULL AND @OldParentId IS NULL)) 
 						AND TabOrder >= @TabOrder
 
 				-- Update Tab with new TabOrder
-				UPDATE {objectQualifier}Tabs
+				UPDATE {databaseOwner}{objectQualifier}Tabs
 					SET 
 						TabOrder				= @TabOrder,
 						LastModifiedByUserID	= @LastModifiedByUserID,
@@ -804,14 +804,14 @@ CREATE PROCEDURE {databaseOwner}[{objectQualifier}MoveTabToParent]
 AS
 	BEGIN
 		DECLARE @OldParentId int
-		SET @OldParentId = (SELECT ParentId FROM {objectQualifier}Tabs WHERE TabID = @TabId)
+		SET @OldParentId = (SELECT ParentId FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @TabId)
 		
 		DECLARE @TabOrder int
-		SET @TabOrder = (SELECT TabOrder FROM {objectQualifier}Tabs WHERE TabID = @TabId)
+		SET @TabOrder = (SELECT TabOrder FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @TabId)
 		
 		-- Get New TabOrder
 		DECLARE @NewTabOrder int
-		SET @NewTabOrder = (SELECT MAX(TabOrder) FROM {objectQualifier}Tabs WHERE (ParentId = @NewParentId OR (ParentId IS NULL AND @NewParentId IS NULL)))
+		SET @NewTabOrder = (SELECT MAX(TabOrder) FROM {databaseOwner}{objectQualifier}Tabs WHERE (ParentId = @NewParentId OR (ParentId IS NULL AND @NewParentId IS NULL)))
 		IF @NewTabOrder IS NULL 
 			SET @NewTabOrder = 1
 		ELSE
@@ -819,13 +819,13 @@ AS
 				
 		BEGIN
 			-- update TabOrder of Tabs with same original Parent
-			UPDATE {objectQualifier}Tabs
+			UPDATE {databaseOwner}{objectQualifier}Tabs
 				SET TabOrder = TabOrder - 2
 				WHERE (ParentId = @OldParentId OR (ParentId IS NULL AND @OldParentId IS NULL)) 
 					AND TabOrder > @TabOrder
 
 			-- Update Tab with new TabOrder
-			UPDATE {objectQualifier}Tabs
+			UPDATE {databaseOwner}{objectQualifier}Tabs
 				SET 
 					ParentId				= @NewParentId,
 					TabOrder				= @NewTabOrder,
@@ -876,20 +876,20 @@ CREATE PROCEDURE {databaseOwner}[{objectQualifier}UpdateTab]
 AS
 	BEGIN
 		DECLARE @OldParentId int
-		SET @OldParentId = (SELECT ParentId FROM {objectQualifier}Tabs WHERE TabID = @TabId)
+		SET @OldParentId = (SELECT ParentId FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @TabId)
 
 		DECLARE @TabOrder int
-		SET @TabOrder = (SELECT TabOrder FROM {objectQualifier}Tabs WHERE TabID = @TabId)
+		SET @TabOrder = (SELECT TabOrder FROM {databaseOwner}{objectQualifier}Tabs WHERE TabID = @TabId)
 				
 		-- Get New TabOrder
 		DECLARE @NewTabOrder int
-		SET @NewTabOrder = (SELECT MAX(TabOrder) FROM {objectQualifier}Tabs WHERE (ParentId = @ParentId OR (ParentId IS NULL AND @ParentId IS NULL)))
+		SET @NewTabOrder = (SELECT MAX(TabOrder) FROM {databaseOwner}{objectQualifier}Tabs WHERE (ParentId = @ParentId OR (ParentId IS NULL AND @ParentId IS NULL)))
 		IF @NewTabOrder IS NULL 
 			SET @NewTabOrder = 1
 		ELSE
 			SET @NewTabOrder = @NewTabOrder + 2
 		
-		UPDATE {objectQualifier}Tabs
+		UPDATE {databaseOwner}{objectQualifier}Tabs
 			SET
 				ContentItemID			= @ContentItemID,
 				PortalId				= @PortalId,
@@ -924,13 +924,13 @@ AS
 		IF (@OldParentId <> @ParentId)
 			BEGIN
 				-- update TabOrder of Tabs with same original Parent
-				UPDATE {objectQualifier}Tabs
+				UPDATE {databaseOwner}{objectQualifier}Tabs
 					SET TabOrder = TabOrder - 2
 					WHERE (ParentId = @OldParentId) 
 						AND TabOrder > @TabOrder
 
 				-- Update Tab with new TabOrder
-				UPDATE {objectQualifier}Tabs
+				UPDATE {databaseOwner}{objectQualifier}Tabs
 					SET 
 						TabOrder = @NewTabOrder
 					WHERE TabID = @TabId
@@ -951,14 +951,14 @@ CREATE PROCEDURE {databaseOwner}[{objectQualifier}LocalizeTab]
 	@LastModifiedByUserID	int
 AS
 	BEGIN
-		UPDATE {objectQualifier}Tabs
+		UPDATE {databaseOwner}{objectQualifier}Tabs
 			SET 
 				CultureCode				= @CultureCode,
 				LastModifiedByUserID	= @LastModifiedByUserID,
 				LastModifiedOnDate		= getdate()					
 			WHERE TabID = @TabId
 			
-		UPDATE {objectQualifier}TabModules
+		UPDATE {databaseOwner}{objectQualifier}TabModules
 			SET 
 				CultureCode				= @CultureCode,
 				LastModifiedByUserID	= @LastModifiedByUserID,
@@ -1566,7 +1566,7 @@ GO
 /* Add ReadOnly Column To ProfilePropertyDefinition Table */
 /**********************************************************/
 
-IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.Columns WHERE TABLE_NAME='{objectQualifier}ProfilePropertyDefinition' AND COLUMN_NAME='ReadOnly')
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.Columns WHERE TABLE_NAME='{databaseOwner}{objectQualifier}ProfilePropertyDefinition' AND COLUMN_NAME='ReadOnly')
 	BEGIN
 		-- Add new Column
 		ALTER TABLE {databaseOwner}{objectQualifier}ProfilePropertyDefinition
@@ -2030,7 +2030,7 @@ BEGIN
     ;WITH CTE_RoleIDs(RowNumber, RowValue)
     AS
     (
-	SELECT * FROM {objectQualifier}ConvertListToTable(',', @RoleIDs)
+	SELECT * FROM {databaseOwner}{objectQualifier}ConvertListToTable(',', @RoleIDs)
     ),
 	CTE_DistinctUserIDs(UserID)
     AS
@@ -2067,7 +2067,7 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwn
 	DROP PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_CreateMessageReply]
 GO
 
-CREATE PROC {databaseOwner}[{objectQualifier}CoreMessaging_CreateMessageReply]
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_CreateMessageReply]
     @ConversationID    INT,           -- parent message id
 	@PortalID			INT,			--portalID of message
     @Body               nvarchar(max), -- message body
@@ -2184,7 +2184,7 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwn
 	DROP PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageRecipient]
 GO
 
-CREATE PROC {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageRecipient]
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageRecipient]
     @RecipientID INT
 AS
 	SELECT [RecipientID], [MessageID], [UserID], [Read], [Archived], [CreatedByUserID], [CreatedOnDate], [LastModifiedByUserID], [LastModifiedOnDate]
@@ -2196,7 +2196,7 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwn
 	DROP PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageRecipientsByUser]
 GO
 
-CREATE PROC {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageRecipientsByUser]
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageRecipientsByUser]
     @UserID INT
 AS
 	SELECT [RecipientID], [MessageID], [UserID], [Read], [Archived], [CreatedByUserID], [CreatedOnDate], [LastModifiedByUserID], [LastModifiedOnDate]
@@ -2208,7 +2208,7 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwn
 	DROP PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageRecipientsByMessage]
 GO
 
-CREATE PROC {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageRecipientsByMessage]
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageRecipientsByMessage]
     @MessageID INT
 AS
 	SELECT [RecipientID], [MessageID], [UserID], [Read], [Archived], [CreatedByUserID], [CreatedOnDate], [LastModifiedByUserID], [LastModifiedOnDate]
@@ -2220,7 +2220,7 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwn
 	DROP PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageRecipientsByMessageAndUser]
 GO
 
-CREATE PROC {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageRecipientsByMessageAndUser]
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageRecipientsByMessageAndUser]
     @MessageID INT,
     @UserID INT
 AS
@@ -2234,7 +2234,7 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwn
 	DROP PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_DeleteMessageRecipient]
 GO
 
-CREATE PROC {databaseOwner}[{objectQualifier}CoreMessaging_DeleteMessageRecipient]
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_DeleteMessageRecipient]
     @RecipientID int
 AS
 	DELETE FROM {databaseOwner}{objectQualifier}CoreMessaging_MessageRecipients
@@ -2306,7 +2306,7 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwn
 	DROP PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageAttachment]
 GO
 
-CREATE PROC {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageAttachment]
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageAttachment]
     @MessageAttachmentID INT
 AS
 	SELECT [MessageID], [FileID], [CreatedByUserID], [CreatedOnDate], [LastModifiedByUserID], [LastModifiedOnDate]
@@ -2318,7 +2318,7 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwn
 	DROP PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageAttachmentsByMessage]
 GO
 
-CREATE PROC {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageAttachmentsByMessage]
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_GetMessageAttachmentsByMessage]
     @MessageID INT
 AS
 	SELECT [MessageID], [FileID], [CreatedByUserID], [CreatedOnDate], [LastModifiedByUserID], [LastModifiedOnDate]
@@ -2330,7 +2330,7 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwn
 	DROP PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_DeleteMessageAttachment]
 GO
 
-CREATE PROC {databaseOwner}[{objectQualifier}CoreMessaging_DeleteMessageAttachment]
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_DeleteMessageAttachment]
     @MessageAttachmentID int
 AS
 	DELETE FROM {databaseOwner}{objectQualifier}CoreMessaging_MessageAttachments
@@ -2341,7 +2341,7 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwn
 	DROP PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_DeleteLegacyMessage]
 GO
 
-CREATE PROC {databaseOwner}[{objectQualifier}CoreMessaging_DeleteLegacyMessage]
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_DeleteLegacyMessage]
     @MessageID int
 AS
 	DELETE FROM {databaseOwner}{objectQualifier}Messaging_Messages
@@ -2352,7 +2352,7 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwn
 	DROP PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_CountLegacyMessages]
 GO
 
-CREATE PROC {databaseOwner}[{objectQualifier}CoreMessaging_CountLegacyMessages]    
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_CountLegacyMessages]    
 AS
 	--Return total records
 	SELECT COUNT(*) AS TotalRecords
@@ -2363,7 +2363,7 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwn
 	DROP PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_ConvertLegacyMessages]
 GO
 
-CREATE PROC {databaseOwner}[{objectQualifier}CoreMessaging_ConvertLegacyMessages]    
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_ConvertLegacyMessages]    
 	@PageIndex       int,
 	@PageSize        int
 AS
@@ -4953,7 +4953,7 @@ AS
 	BEGIN
 		DECLARE @sql nvarchar(max)
 		SELECT @sql = COALESCE(@sql + ',','') + '[' + PropertyName + ']' + @TemplateSql
-		FROM {objectQualifier}ProfilePropertyDefinition 
+		FROM {databaseOwner}{objectQualifier}ProfilePropertyDefinition 
 		WHERE PortalID = @PortalID 
 			AND Deleted = 0
 		RETURN(@sql) 
@@ -5048,7 +5048,7 @@ RETURNS TABLE
 AS
 	RETURN
 		SELECT *
-			FROM {objectQualifier}vw_Profile
+			FROM {databaseOwner}{objectQualifier}vw_Profile
 			WHERE PropertyName = @PropertyName 
 				AND PropertyValue LIKE @PropertyValue
 				AND PortalID = @PortalID
@@ -5089,7 +5089,7 @@ AS
 
 	-- Get User specific columns
 	DECLARE @UserColumns TABLE(ColumnName NVARCHAR(100))
-	INSERT INTO @UserColumns SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{objectQualifier}vw_Users'
+	INSERT INTO @UserColumns SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{databaseOwner}{objectQualifier}vw_Users'
 
 	-- Lists Filters names and values into tables
 	DECLARE @PropertyNamesTable TABLE (RowNumber INT, RowValue nvarchar(MAX))
@@ -5139,12 +5139,12 @@ AS
 		FROM @UserFiltersTable AS N	INNER JOIN @PropertyValuesTable AS V ON N.RowNumber = V.RowNumber
 		
 		SELECT @userFilterCount = COUNT(*) FROM @UserFiltersTable
-		IF @userFilterCount > 0 BEGIN SET @userFilterJoin = ' INNER JOIN {objectQualifier}vw_Users u ON u.UserId = p.UserId ' END
+		IF @userFilterCount > 0 BEGIN SET @userFilterJoin = ' INNER JOIN {databaseOwner}{objectQualifier}vw_Users u ON u.UserId = p.UserId ' END
 
 
 		-- Determining the Group By Clause -- dependant on types of filters used
 		SELECT @profilePropertyCount = COUNT(*) FROM {databaseOwner}{objectQualifier}ConvertListToTable(',', @PropertyNames)
-												WHERE RowValue IN (SELECT PropertyName FROM {objectQualifier}ProfilePropertyDefinition WHERE PortalID = @PortalId)
+												WHERE RowValue IN (SELECT PropertyName FROM {databaseOwner}{objectQualifier}ProfilePropertyDefinition WHERE PortalID = @PortalId)
 												AND RowValue NOT IN (SELECT ColumnName FROM @UserColumns)
 		IF @profilePropertyCount > 0
 			BEGIN SET @groupBy = ' GROUP BY p.UserId HAVING COUNT(*) = ' + CONVERT(nvarchar(20),@profilePropertyCount ) END
@@ -5175,16 +5175,16 @@ AS
 	IF @FilterRoleId <> -1 
 		BEGIN
 			SET @roleAndRelationshipFlag = 1
-			SET @roleFilter = ' JOIN {objectQualifier}UserRoles UR ON U.UserID = UR.UserID AND UR.RoleID = ' + CONVERT(nvarchar(20), @FilterRoleId)
+			SET @roleFilter = ' JOIN {databaseOwner}{objectQualifier}UserRoles UR ON U.UserID = UR.UserID AND UR.RoleID = ' + CONVERT(nvarchar(20), @FilterRoleId)
 		END
 
 	-- Filter by Relationship
 	IF @RelationshipTypeId <> -1  
 		BEGIN
 			SET @roleAndRelationshipFlag = 1
-			SET @relationshipFilter = ' JOIN {objectQualifier}Relationships REL ON REL.PortalID = ' + CONVERT(nvarchar(20), @PortalID)
+			SET @relationshipFilter = ' JOIN {databaseOwner}{objectQualifier}Relationships REL ON REL.PortalID = ' + CONVERT(nvarchar(20), @PortalID)
 									+ ' AND RelationshipTypeID = ' + CONVERT(nvarchar(20), @RelationshipTypeId) 
-									+ ' JOIN {objectQualifier}UserRelationships UREL ON REL.RelationshipID = UREL.RelationshipID AND
+									+ ' JOIN {databaseOwner}{objectQualifier}UserRelationships UREL ON REL.RelationshipID = UREL.RelationshipID AND
 									((UREL.UserID = ' + CONVERT(nvarchar(20), @FilterUserId) + ' AND UREL.RelatedUserID = U.UserID) OR
 									(UREL.UserID = U.UserID AND UREL.RelatedUserID = ' + CONVERT(nvarchar(20), @FilterUserId) + '))'
 									+ ' WHERE UREL.Status = 2'
@@ -5192,7 +5192,7 @@ AS
 
 	IF @roleAndRelationshipFlag = 1 BEGIN SET @RoleAndRelationshipSelect = ' AND s.UserId IN (SELECT userID FROM  RoleAndRelationUsers) ' END
 
-	SET @roleAndRelationshipFilter =  ', RoleAndRelationUsers AS ( SELECT U.userId FROM {objectQualifier}vw_Users U ' + @roleFilter + @relationshipFilter + ' )' 
+	SET @roleAndRelationshipFilter =  ', RoleAndRelationUsers AS ( SELECT U.userId FROM {databaseOwner}{objectQualifier}vw_Users U ' + @roleFilter + @relationshipFilter + ' )' 
 
 
 	-- ///////////////////////////////////////////////////  
@@ -5214,7 +5214,7 @@ AS
 		SET @sortSql = {databaseOwner}{objectQualifier}GetSortSql(@SortBy,@SortAscending,'UserID')
 		SET @propertySort = {databaseOwner}{objectQualifier}GetSortSql('PropertyValue',@SortAscending,'UserID')
 		SET @filterSortSql = ' ;WITH SortedUsers AS ( SELECT ROW_NUMBER() OVER( ' + @propertySort + ' ) AS RowNumber, *  ' 
-							+ ' FROM {objectQualifier}vw_Profile WHERE PortalId = ' + CONVERT(nvarchar(20), @PortalID) + ' AND PropertyName = ''' + @SortBy + ''' )'
+							+ ' FROM {databaseOwner}{objectQualifier}vw_Profile WHERE PortalId = ' + CONVERT(nvarchar(20), @PortalID) + ' AND PropertyName = ''' + @SortBy + ''' )'
 							+ ' , MatchingSorted AS ( SELECT ROW_NUMBER() OVER(ORDER BY [RowNumber]) AS RowNumber, s.UserId FROM SortedUsers s '
 							+ @filterJoin + ' ) '
 	END
@@ -5226,7 +5226,7 @@ AS
 		-- Default: Sort By UserID
 		ELSE BEGIN SET @sortSql = {databaseOwner}{objectQualifier}GetSortSql('UserID',@SortAscending,'UserID') END		
 		SET @filterSortSql = ' ;WITH SortedUsers AS ( SELECT ROW_NUMBER() OVER( ' + @sortSql + ' ) AS RowNumber, * '
-							+ ' FROM {objectQualifier}vw_Users WHERE PortalId = ' + CONVERT(nvarchar(20), @PortalID) + ')'							
+							+ ' FROM {databaseOwner}{objectQualifier}vw_Users WHERE PortalId = ' + CONVERT(nvarchar(20), @PortalID) + ')'							
 							+ ' , MatchingSorted AS ( SELECT ROW_NUMBER() OVER(ORDER BY [RowNumber]) AS RowNumber, s.UserId FROM SortedUsers s '
 							+ @filterJoin + ' ) '
 	END
@@ -5252,9 +5252,9 @@ AS
 														WHEN U.UserID = ' + CONVERT(nvarchar(20), @UserId) + 'OR (p.Visibility = 2 AND ' + CONVERT(nvarchar(20), @IsAdmin) + ' = 1) THEN p.PropertyValue
 														ELSE NULL
 													END AS PropertyValue
-											FROM	{objectQualifier}vw_Users AS U
-												INNER JOIN {objectQualifier}UserProfile AS P ON U.UserID = P.UserID
-												INNER JOIN {objectQualifier}ProfilePropertyDefinition AS Prop ON Prop.PropertyDefinitionID = p.PropertyDefinitionID
+											FROM	{databaseOwner}{objectQualifier}vw_Users AS U
+												INNER JOIN {databaseOwner}{objectQualifier}UserProfile AS P ON U.UserID = P.UserID
+												INNER JOIN {databaseOwner}{objectQualifier}ProfilePropertyDefinition AS Prop ON Prop.PropertyDefinitionID = p.PropertyDefinitionID
 											WHERE	U.UserId IN (SELECT UserId FROM @TempUsers)
 													AND u.PortalID = ' + CONVERT(nvarchar(20), @PortalID) + '  AND u.IsDeleted = 0 
 											)
@@ -5396,7 +5396,7 @@ AS
 								U.IsLockedOut,
 								U.PasswordQuestion,
 								U.IsApproved
-								FROM {objectQualifier}vw_Users AS U
+								FROM {databaseOwner}{objectQualifier}vw_Users AS U
 							WHERE U.PortalID = ' + CONVERT(nvarchar(20), @PortalID) + '
 								AND (U.' + @PropertyName + ' LIKE ''' + @PropertyValue + '%'')
 									OR ((U.' + @PropertyName + ' LIKE ''% ' + @PropertyValue + '%''))
@@ -5429,7 +5429,7 @@ AS
 							P.PropertyName,
 							P.PropertyValue
 						FROM TempUsers U
-							INNER JOIN {objectQualifier}vw_Profile P ON P.UserID = U.UserID
+							INNER JOIN {databaseOwner}{objectQualifier}vw_Profile P ON P.UserID = U.UserID
 								AND P.PortalId = U.PortalId	
 					)
 										
@@ -5910,7 +5910,7 @@ BEGIN
 	WITH CTE AS
 	(
 		SELECT TOP (@BatchSize) *
-		FROM {objectQualifier}CoreMessaging_MessageRecipients
+		FROM {databaseOwner}{objectQualifier}CoreMessaging_MessageRecipients
 		WHERE EmailSent = 0 AND (EmailSchedulerInstance IS NULL OR EmailSchedulerInstance = '00000000-0000-0000-0000-000000000000')
 		ORDER BY CreatedOnDate DESC
 	)
@@ -5918,7 +5918,7 @@ BEGIN
 	SET EmailSchedulerInstance = @SchedulerInstance
 	
 	SELECT TOP (@BatchSize) *
-	FROM {objectQualifier}CoreMessaging_MessageRecipients
+	FROM {databaseOwner}{objectQualifier}CoreMessaging_MessageRecipients
 	WHERE EmailSent = 0 AND EmailSchedulerInstance = @SchedulerInstance
 	ORDER BY CreatedOnDate DESC
 END
@@ -5936,7 +5936,7 @@ CREATE PROCEDURE {databaseOwner}[{objectQualifier}CoreMessaging_MarkMessageAsDis
 	@RecipientId int
 AS
 BEGIN
-	Update {objectQualifier}CoreMessaging_MessageRecipients set EmailSent = 1, EmailSentDate =GETDATE()   where MessageID =@MessageId AND RecipientId=@RecipientId
+	Update {databaseOwner}{objectQualifier}CoreMessaging_MessageRecipients set EmailSent = 1, EmailSentDate =GETDATE()   where MessageID =@MessageId AND RecipientId=@RecipientId
 END
 
 GO
@@ -6033,14 +6033,14 @@ GO
 /* Add new Columns To UserRoles Table */
 /**************************************/
 
-IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.Columns WHERE TABLE_NAME='{objectQualifier}UserRoles' AND COLUMN_NAME='Status')
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.Columns WHERE TABLE_NAME='{databaseOwner}{objectQualifier}UserRoles' AND COLUMN_NAME='Status')
 	BEGIN
 		ALTER TABLE {databaseOwner}{objectQualifier}UserRoles
 			ADD [Status] int NOT NULL CONSTRAINT DF_{objectQualifier}UserRoles_Status DEFAULT 1
 	END
 GO
 
-IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.Columns WHERE TABLE_NAME='{objectQualifier}UserRoles' AND COLUMN_NAME='IsOwner')
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.Columns WHERE TABLE_NAME='{databaseOwner}{objectQualifier}UserRoles' AND COLUMN_NAME='IsOwner')
 	BEGIN
 		ALTER TABLE {databaseOwner}{objectQualifier}UserRoles
 			ADD IsOwner bit NOT NULL CONSTRAINT DF_{objectQualifier}UserRoles_IsOwner DEFAULT 0

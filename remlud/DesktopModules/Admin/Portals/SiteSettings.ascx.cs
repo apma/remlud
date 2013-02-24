@@ -508,9 +508,6 @@ namespace DotNetNuke.Modules.Admin.Portals
             if (!Page.IsPostBack)
             {
                 var settings = UserController.GetUserSettings(portalId);
-                var providerConfig = new MembershipProviderConfig();
-                standardProviderSettings.DataSource = providerConfig;
-                standardProviderSettings.DataBind();
 
                 basicRegistrationSettings.DataSource = settings;
                 basicRegistrationSettings.DataBind();
@@ -526,24 +523,7 @@ namespace DotNetNuke.Modules.Admin.Portals
 
                 var customRegistrationFields = PortalController.GetPortalSetting("Registration_RegistrationFields", portalId, String.Empty);
 
-                if (!String.IsNullOrEmpty(customRegistrationFields))
-                {
-                    var sb = new StringBuilder();
-                    sb.Append("[ ");
-                    int i = 0;
-                    foreach (var field in customRegistrationFields.Split(','))
-                    {
-                        if (i != 0) sb.Append(",");
-                        sb.Append("{ id: \"" + field + "\", name: \"" + field + "\"}");
-                        i++;
-                    }
-                    sb.Append(" ]");
-                    CustomRegistrationFields = sb.ToString();
-                }
-                else
-                {
-                    CustomRegistrationFields = "null";
-                }
+                CustomRegistrationFields = BuildCustomRegistrationFields(customRegistrationFields);
 
                 passwordRegistrationSettings.DataSource = settings;
                 passwordRegistrationSettings.DataBind();
@@ -551,8 +531,16 @@ namespace DotNetNuke.Modules.Admin.Portals
                 otherRegistrationSettings.DataSource = settings;
                 otherRegistrationSettings.DataBind();
 
-                passwordProviderSettings.DataSource = providerConfig;
-                passwordProviderSettings.DataBind();
+                RequiresUniqueEmailLabel.Text = MembershipProviderConfig.RequiresUniqueEmail.ToString(CultureInfo.InvariantCulture);
+                PasswordFormatLabel.Text = MembershipProviderConfig.PasswordFormat.ToString();
+                PasswordRetrievalEnabledLabel.Text = MembershipProviderConfig.PasswordRetrievalEnabled.ToString(CultureInfo.InvariantCulture);
+                PasswordResetEnabledLabel.Text = MembershipProviderConfig.PasswordResetEnabled.ToString(CultureInfo.InvariantCulture);
+                MinPasswordLengthLabel.Text = MembershipProviderConfig.MinPasswordLength.ToString(CultureInfo.InvariantCulture);
+                MinNonAlphanumericCharactersLabel.Text = MembershipProviderConfig.MinNonAlphanumericCharacters.ToString(CultureInfo.InvariantCulture);
+                RequiresQuestionAndAnswerLabel.Text = MembershipProviderConfig.RequiresQuestionAndAnswer.ToString(CultureInfo.InvariantCulture);
+                PasswordStrengthRegularExpressionLabel.Text = MembershipProviderConfig.PasswordStrengthRegularExpression;
+                MaxInvalidPasswordAttemptsLabel.Text = MembershipProviderConfig.MaxInvalidPasswordAttempts.ToString(CultureInfo.InvariantCulture);
+                PasswordAttemptWindowLabel.Text = MembershipProviderConfig.PasswordAttemptWindow.ToString(CultureInfo.InvariantCulture);
 
                 loginSettings.DataSource = settings;
                 loginSettings.DataBind();
@@ -561,10 +549,34 @@ namespace DotNetNuke.Modules.Admin.Portals
                 profileSettings.DataSource = settings;
                 profileSettings.DataBind();
             }
+            else
+            {
+                CustomRegistrationFields = BuildCustomRegistrationFields(registrationFields.Text);
+            }
             passwordSettings.EditMode = UserInfo.IsSuperUser ? PropertyEditorMode.Edit : PropertyEditorMode.View;
             passwordSettings.LocalResourceFile = LocalResourceFile;
             passwordSettings.DataSource = new PasswordConfig();
             passwordSettings.DataBind();
+        }
+
+        private string BuildCustomRegistrationFields(string customRegistrationFields)
+        {
+            if (!String.IsNullOrEmpty(customRegistrationFields))
+            {
+                var sb = new StringBuilder();
+                sb.Append("[ ");
+                int i = 0;
+                foreach (var field in customRegistrationFields.Split(','))
+                {
+                    if (i != 0) sb.Append(",");
+                    sb.Append("{ id: \"" + field + "\", name: \"" + field + "\"}");
+                    i++;
+                }
+                sb.Append(" ]");
+                return sb.ToString();
+            }
+
+            return "null";
         }
 
         /// -----------------------------------------------------------------------------
@@ -1228,7 +1240,7 @@ namespace DotNetNuke.Modules.Admin.Portals
                             var regex = new Regex(item.Value.ToString());
                             PortalController.UpdatePortalSetting(_portalId, item.DataField, item.Value.ToString());
                         }
-                        catch (Exception exc)
+                        catch
                         {
 
                             string message = String.Format(Localization.GetString("InvalidRegularExpression", LocalResourceFile),

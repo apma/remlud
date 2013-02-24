@@ -25,13 +25,13 @@
 .journalTools ul.jacmenu{display:none; position: absolute;z-index: 4; list-style-type:none;border:solid 1px #dcdcdc;background-color:#f5f5f5;}
 .journalTools ul.jacmenu li{padding:2px;list-style-type:none;border-bottom:1px solid #dcdcdc;background-color:#f3f3f3;}
 
-#journalEditor #journalContent{overflow:auto;}
+#journalEditor #journalContent{overflow:auto;outline:none;}
 #journalEditor #journalContent span{padding:0 2px 0 2px;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
 #journalEditor #journalContent .juser, .journalrow .juser{color:#000;border:1px solid #ccd5e4; background-color:#eff2f7;}
 #journalEditor #journalContent .jtag, .journalrow .jtag{border:1px solid #ccc; background-color:#f5f5f5}
 
 #journalEditor #journalClose, #linkClose, .miniclose, .minidel{float:right;display:none;width:14px; height:14px; cursor:pointer; background-image:url('images/mini_del.gif'); background-repeat:no-repeat;}
-
+#journalEditor .minidel{position:absolute;right:0px;}
 #journalEditor #journalClose{position:absolute; right:6px; top:6px;}
 
 #journalEditor #journalClose{position:absolute;right:2px;}
@@ -47,6 +47,7 @@
 		right:6px; bottom: 5px;
 		height:16px;width:78px; 
 		margin:6px 16px 4px;
+		min-width:80px;
 }
 #journalEditor #tbar span{display:block;height:16px;width:24px;float:right;background-image:url('images/journal-tools.png'); border:1px solid transparent}
 #journalEditor #tbar span:hover{}
@@ -132,7 +133,7 @@ border-bottom-left-radius: 3px;
 .journalrow div.journalitem .jlink img{float:left; margin-right:12px;max-width:150px;}
 .journalrow div.journalitem .jlink div{max-width:450px;}
 .journalrow div.journalitem .likes{padding:2px;}                                              
-.jcmt .cmteditor{max-width:445px;display:none;resize:none;}
+.jcmt .cmteditor{max-width:445px;display:none;resize:none;outline:none;}
 .jcmt .cmteditarea{margin: 2px 4px 4px 2px;}
 .jcmt .cmteditarea .editorPlaceholder{height:18px;font-size:11px;line-height:18px;}
 

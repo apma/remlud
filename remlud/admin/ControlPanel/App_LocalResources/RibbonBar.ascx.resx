@@ -435,4 +435,7 @@
   <data name="lblUILanguage.Text" xml:space="preserve">
     <value>Interface:</value>
   </data>
+  <data name="MenuTitleSuffix.Text" xml:space="preserve">
+    <value>Features</value>
+  </data>
 </root>

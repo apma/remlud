@@ -263,7 +263,7 @@ The web servers firewall or another firewall is blocking access to the host or t
     <value>Software</value>
   </data>
   <data name="UpgradePoint1.Text" xml:space="preserve">
-    <value>Automatically redirect users to optimized web pages, enabling you to create separate sites for tables, feature phones and smartphones.</value>
+    <value>Automatically redirect users to optimized web pages, enabling you to create separate sites for tablets, feature phones and smartphones.</value>
   </data>
   <data name="UpgradePoint2.Text" xml:space="preserve">
     <value>Enhance the isMobile and Screen Size properties in Lite data with over 50 device properties including isTablet, screen size in millimeters, vendor, model, platform details, input methods and levels of JavaScript support.</value>

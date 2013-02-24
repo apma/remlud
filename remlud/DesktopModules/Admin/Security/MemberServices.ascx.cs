@@ -358,7 +358,7 @@ namespace DotNetNuke.Modules.Admin.Security
             var objRoles = new RoleController();
             bool showTrial = Null.NullBoolean;
             RoleInfo objRole = TestableRoleController.Instance.GetRole(PortalSettings.PortalId, r => r.RoleID == roleID); ;
-            if (objRole.TrialFrequency == "N" || (objRole.IsPublic && objRole.ServiceFee == 0.0))
+            if (string.IsNullOrEmpty(objRole.TrialFrequency) || objRole.TrialFrequency == "N" || (objRole.IsPublic && objRole.ServiceFee == 0.0))
             {
                 showTrial = Null.NullBoolean;
             }

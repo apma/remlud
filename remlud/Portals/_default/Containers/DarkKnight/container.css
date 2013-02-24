@@ -1,5 +1,7 @@
 .c_DNN6 .dnnModuleActions {display:inline-block;width:19px;height:19px;float:left;}
-
+.c_DNN6 .dnnIcon{display: inline-block;vertical-align: middle; margin-right: 4px;}
+.c_DNN6 .dnnActionButtons{float: right;}
+.c_DNN6 .dnnActionButtons .CommandButton{margin: 4px;}
 .c_DNN6_Header .Head{color:#333;font-size:22px;line-height:24px;padding:0 10px 0 0;text-transform:uppercase;text-shadow: 1px 1px 1px #FAFAFA;}
 #Footer .c_DNN6_Header .Head{color:#e5e5e5;}
 .c_DNN6_Header .Title{margin:0 0 .5em 0; overflow:hidden;}
@@ -40,4 +42,3 @@
 .RotatorNav li a {padding:0 10px;display:block;color:#b8b8b8;line-height:40px;text-decoration:none;}
 .RotatorNav li a:hover{text-decoration:underline;}
 .RotatorNav li.activeSlide a{color:#fff;}
-

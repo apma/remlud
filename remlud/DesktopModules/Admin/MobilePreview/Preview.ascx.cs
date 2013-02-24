@@ -142,7 +142,7 @@ namespace DotNetNuke.Modules.Admin.MobilePreview
 					requestUrl = string.Format("{0}{1}dnnprintmode=true", url, url.IndexOf("?") == -1 ? "?" : "&");
 				}
 
-				var wreq = (HttpWebRequest)WebRequest.Create(requestUrl);
+				var wreq = Globals.GetExternalRequest(requestUrl);
 				wreq.UserAgent = userAgent;
 				wreq.Referer = Request.Url.ToString();
 				wreq.Method = "GET";

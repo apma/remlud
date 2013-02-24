@@ -259,6 +259,11 @@ namespace DotNetNuke.UI.ControlPanels
 								{
 									hypMessage.Visible = false;
 								}
+
+                                if (!TabPermissionController.CanAddContentToPage())
+                                {
+                                    CommonTasksPanel.Visible = false;
+                                }
 							}
 							if (PortalSettings.AllowUserUICulture)
 							{

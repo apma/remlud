@@ -92,10 +92,18 @@ namespace DotNetNuke.Modules.Admin.Users
 
 			try
 			{
-                var template = (ModuleContext.Settings["ProfileTemplate"] != null) 
-                            ? Convert.ToString(ModuleContext.Settings["ProfileTemplate"]) 
-                            : Localization.GetString("DefaultTemplate", LocalResourceFile);
-                var editUrl = Globals.NavigateURL(ModuleContext.PortalSettings.ActiveTab.TabID, "Profile", "userId=" + ProfileUserId, "pageno=1");
+                if(Null.IsNull(ProfileUserId))
+                {
+                    Visible = false;
+                    return;
+                }
+
+                var template = Convert.ToString(ModuleContext.Settings["ProfileTemplate"]);
+                if(string.IsNullOrEmpty(template))
+                {
+                    template = Localization.GetString("DefaultTemplate", LocalResourceFile);
+                }
+			    var editUrl = Globals.NavigateURL(ModuleContext.PortalSettings.ActiveTab.TabID, "Profile", "userId=" + ProfileUserId, "pageno=1");
                 var profileUrl = Globals.NavigateURL(ModuleContext.PortalSettings.ActiveTab.TabID, "Profile", "userId=" + ProfileUserId, "pageno=3");
 
                 if (template.Contains("[BUTTON:EDITPROFILE]"))
@@ -165,15 +173,18 @@ namespace DotNetNuke.Modules.Admin.Users
                                         ? property.PropertyName
                                         : propertyName.Trim(':');
 
-                    sb.Append("self." + property.PropertyName + " = ko.observable('");
+                    var clientName = Localization.GetSafeJSString(property.PropertyName);
+                    sb.Append("self['" + clientName + "'] = ko.observable(");
+                    sb.Append("\"");
+                    value = Localization.GetSafeJSString(value);
                     if(property.PropertyName == "Biography")
                     {
-                        value = value.Replace("\n", "");
+                        value = value.Replace("\r", string.Empty).Replace("\n", string.Empty);
                     }
-                    sb.Append(value + "');");
+                    sb.Append(value + "\"" + ");");
                     sb.Append('\n');
-                    sb.Append("self." + property.PropertyName + "Text = '");
-                    sb.Append(propertyName + "';");
+                    sb.Append("self['" + clientName + "Text'] = '");
+                    sb.Append(clientName + "';");
                     sb.Append('\n');
                 }
 

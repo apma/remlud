@@ -1,0 +1,16 @@
+2013-02-20 18:30:05,528 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-20 18:30:05,580 [MaDesignAlpha][Thread:6][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-20 21:37:30,153 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.BabelFish.Business.BabelFishController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)
+2013-02-20 21:37:30,204 [MaDesignAlpha][Thread:5][ERROR] DotNetNuke.Framework.Reflection - Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+System.Web.HttpException: Could not load type 'helferlein.DNN.Modules.Form.Business.FormSubmissionController'.
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at DotNetNuke.Framework.Reflection.CreateType(String TypeName, String CacheKey, Boolean UseCache, Boolean IgnoreErrors)

@@ -218,7 +218,7 @@
                                         composeMessageDialog.dialog("close");
                                     }, opts.msgSentAutoCloseTimeout);
                                 } else {
-                                    displayMessage(composeMessageDialog, opts.createMessageErrorText);
+                                    displayMessage(composeMessageDialog, data.Message);
                                 }
                             }).fail(function (xhr, status) {
                                 displayMessage(composeMessageDialog, opts.createMessageErrorWithDescriptionText + status);

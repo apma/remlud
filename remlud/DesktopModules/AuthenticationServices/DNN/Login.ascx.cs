@@ -21,6 +21,7 @@
 #region Usings
 
 using System;
+using System.Linq;
 using System.Net;
 using System.Web;
 
@@ -122,6 +123,11 @@ namespace DotNetNuke.Modules.Admin.Authentication
 
                 url = Globals.RegisterURL(returnUrl, Null.NullString);
                 registerLink.NavigateUrl = url;
+                if (PortalSettings.EnablePopUps && PortalSettings.RegisterTabId == Null.NullInteger
+                    && !HasSocialAuthenticationEnabled())
+                {
+                    registerLink.Attributes.Add("onclick", "return " + UrlUtils.PopUpUrl(url, this, PortalSettings, true, false, 600, 950));
+                }
             }
             else
             {
@@ -151,9 +157,10 @@ namespace DotNetNuke.Modules.Admin.Authentication
 
                     var verificationCode = Request.QueryString["verificationcode"];
 
+
                     try
                     {
-                        UserController.VerifyUser(verificationCode);
+                        UserController.VerifyUser(verificationCode.Replace(".", "+").Replace("-", "/").Replace("_", "="));
                         UI.Skins.Skin.AddModuleMessage(this, Localization.GetString("VerificationSuccess", LocalResourceFile), ModuleMessage.ModuleMessageType.GreenSuccess);
                     }
                     catch (UserAlreadyVerifiedException)
@@ -248,6 +255,19 @@ namespace DotNetNuke.Modules.Admin.Authentication
 				OnUserAuthenticated(eventArgs);
 			}
 		}
+
+        private bool HasSocialAuthenticationEnabled()
+        {
+            return (from a in AuthenticationController.GetEnabledAuthenticationServices()
+                    let enabled = (a.AuthenticationType == "Facebook"
+                                     || a.AuthenticationType == "Google"
+                                     || a.AuthenticationType == "Live"
+                                     || a.AuthenticationType == "Twitter")
+                                  ? PortalController.GetPortalSettingAsBoolean(a.AuthenticationType + "_Enabled", PortalSettings.PortalId, false)
+                                  : !string.IsNullOrEmpty(a.LoginControlSrc) && (LoadControl("~/" + a.LoginControlSrc) as AuthenticationLoginBase).Enabled
+                    where a.AuthenticationType != "DNN" && enabled
+                    select a).Any();
+        }
 		
 		#endregion
 

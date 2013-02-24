@@ -21,11 +21,13 @@
 #region Usings
 
 using System;
+using System.Web;
 
 using DotNetNuke.Common;
 using DotNetNuke.Common.Utilities;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Portals;
+using DotNetNuke.Security;
 using DotNetNuke.Security.Permissions;
 using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Services.Localization;
@@ -86,9 +88,10 @@ namespace DotNetNuke.UI.Containers
             }
             if (moduleTitle == Null.NullString)
             {
-                moduleTitle = "&nbsp;";
+                moduleTitle = " ";
             }
-            titleLabel.Text = moduleTitle;
+            var ps = new PortalSecurity();
+            titleLabel.Text = ps.InputFilter(moduleTitle, PortalSecurity.FilterFlag.NoScripting);
             titleLabel.EditEnabled = false;
             titleToolbar.Visible = false;
 
@@ -99,6 +102,7 @@ namespace DotNetNuke.UI.Containers
             }
 
         }
+
 
         private void UpdateTitle(object source, DNNLabelEditEventArgs e)
         {

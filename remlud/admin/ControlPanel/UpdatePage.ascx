@@ -3,7 +3,7 @@
 <div class="dnnFormItem">
     <div class="dnnClear">
         <asp:Label runat="server" ResourceKey="Name" AssociatedControlID="Name" />
-        <asp:TextBox ID="Name" runat="server" />
+        <asp:TextBox ID="Name" runat="server" MaxLength="50" />
     </div>
     <div class="dnnClear">
         <asp:Label runat="server" ResourceKey="Location" AssociatedControlID="LocationLst" />

@@ -2,6 +2,6 @@
 <div class="dnnForm">
 <h1><%=LocalizeString("SetupHeader") %></h1>
 <p><%=LocalizeString("SetupIntro") %></p>
-<asp:LinkButton ID="btnGo" runat="server" Text="Auto Configure" CssClass="dnnPrimaryAction" />
+<asp:LinkButton ID="btnGo" runat="server" resourceKey="AutoConfigure" CssClass="dnnPrimaryAction" />
 
 </div>

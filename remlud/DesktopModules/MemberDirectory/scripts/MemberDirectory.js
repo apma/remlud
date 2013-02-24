@@ -78,6 +78,8 @@
         self.Country = ko.observable(item.Country);
         self.Phone = ko.observable(item.Phone);
         self.Website = ko.observable(item.Website);
+        self.PhotoURL = ko.observable(item.PhotoURL);
+        self.ProfileProperties = ko.observable(item.ProfileProperties);
 
         self.Location = ko.computed(function () {
             var city = self.City();
@@ -98,7 +100,7 @@
         }, this);
 
         self.getProfilePicture = function (w, h) {
-            return profilePicHandler.replace("{0}", self.UserId().toString()).replace("{1}", h).replace("{2}", w);
+            return profilePicHandler.replace("{0}", self.UserId()).replace("{1}", h).replace("{2}", w);
         };
 
         //Actions
@@ -205,9 +207,7 @@
         self.CanLoadMore = ko.observable(initialMembers.length == pageSize);
         self.SearchTerm = ko.observable('');
 
-        self.ResetEnabled = ko.computed(function () {
-            return self.SearchTerm().length > 0;
-        }, this);
+        self.ResetEnabled = ko.observable(false);
 
         self.HasMembers = ko.computed(function () {
             return self.Members().length > 0;
@@ -229,6 +229,7 @@
 
             self.xhrAdvancedSearch();
             self.LastSearch('Advanced');
+            self.ResetEnabled(true);
         };
 
         self.basicSearch = function () {
@@ -241,6 +242,7 @@
             self.xhrBasicSearch();
 
             self.LastSearch('Basic');
+            self.ResetEnabled(true);
         };
 
         self.getMember = function (item) {
@@ -251,7 +253,7 @@
                 url: baseServicepath + "GetMember",
                 beforeSend: serviceFramework.setModuleHeaders,
                 data: {
-                    userName: item.userName
+                    userId: item.userId
                 }
             }).done(function (members) {
                 if (typeof members !== "undefined" && members != null) {
@@ -308,7 +310,7 @@
 
         self.loadMore = function () {
             pageIndex++;
-            if (self.LastSearch === 'Advanced') {
+            if (self.LastSearch() === 'Advanced') {
                 self.xhrAdvancedSearch();
             }
             else {
@@ -325,6 +327,7 @@
 
             self.xhrAdvancedSearch();
             self.LastSearch('Advanced');
+            self.ResetEnabled(false);
         };
 
         self.xhrAdvancedSearch = function () {
@@ -437,14 +440,32 @@
                     $(this).addClass("active");
                     $(".mdSearch").addClass("active");
                 });
+                var timer;
+                var cursorIsOnAdvancedSearchForm;
+                $('a#mdAdvancedSearch').mouseleave(function () {
+                    timer = setTimeout(function () {
+                        if ($('div#mdAdvancedSearchForm').is(':visible') && !cursorIsOnAdvancedSearchForm) {
+                            $('div#mdAdvancedSearchForm').hide();
+                            $(this).removeClass("active");
+                            $(".mdSearch").removeClass("active");
+                        }
+                    }, 150);
+
+                });
+                $('div#mdAdvancedSearchForm').mouseenter(function () {
+                    cursorIsOnAdvancedSearchForm = true;
+                });
                 $('div#mdAdvancedSearchForm').mouseleave(function () {
+                    clearTimeout(timer);
+                    cursorIsOnAdvancedSearchForm = false;
                     $(this).hide();
                     $('a#mdAdvancedSearch').removeClass("active");
-                    $(".mdSearch").addClass("active");
+                    $(".mdSearch").removeClass("active");
                 });
 
                 //Compose Message
                 $.fn.dnnComposeMessage({
+                    openTriggerSelector: containerElement + " .ComposeMessage",
                     onPrePopulate: function (target) {
                         var context = ko.contextFor(target);
                         var prePopulatedRecipients = [{ id: "user-" + context.$data.UserId(), name: context.$data.DisplayName()}];

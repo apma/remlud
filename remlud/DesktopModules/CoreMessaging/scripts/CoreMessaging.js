@@ -1,4 +1,5 @@
-﻿function CoreMessaging($, ko, localization, composeMessageOptions) {
+﻿function CoreMessaging($, ko, settings, composeMessageOptions) {
+    var profilePicHandler = settings.profilePicHandler;
     var serviceFramework = composeMessageOptions.servicesFramework;
     var baseServicepath = serviceFramework.getServiceRoot('CoreMessaging') + 'MessagingService.ashx/';
     var inboxpath = baseServicepath + "Inbox";
@@ -107,7 +108,7 @@
         self.NewThreadCount = ko.observable(data.NewThreadCount);
         self.ThreadCount = ko.observable(data.ThreadCount);
         self.MessageIDName = "messageSelect" + self.ConversationId;
-        self.SenderAvatar = dnn.getVar("sf_siteRoot", "/") + "ProfilePic.ashx?UserId=" + self.SenderUserID + "&w=32&h=32";
+        self.SenderAvatar = profilePicHandler.replace("{0}", self.SenderUserID).replace("{1}", 32).replace("{2}", 32);
         self.SenderProfileUrl = data.SenderProfileUrl;
         self.MessageAbstract = (self.Body.length < 50) ? self.Body : self.Body.substr(0, 50) + "...";
         self.messageSelected = ko.observable(false);
@@ -138,7 +139,7 @@
         self.NewThreadCount = ko.observable(data.Conversation.NewThreadCount);
         self.Attachments = data.Attachments;
         self.MessageIDName = "messageSelect" + self.ConversationId;
-        self.SenderAvatar = dnn.getVar("sf_siteRoot", "/") + "ProfilePic.ashx?UserId=" + self.SenderUserID + "&w=32&h=32";
+        self.SenderAvatar = profilePicHandler.replace("{0}", self.SenderUserID).replace("{1}", 32).replace("{2}", 32);
         self.SenderProfileUrl = data.Conversation.SenderProfileUrl;
         self.CreatedOnDate = data.Conversation.DisplayDate;
 
@@ -317,10 +318,10 @@
                         self.TotalArchivedThreads(messagethreadsView.TotalArchivedThreads);
                     }
                 } else {
-                    displayMessage("#dnnCoreMessaging", localization.serverErrorText, "dnnFormWarning");
+                    displayMessage("#dnnCoreMessaging", settings.serverErrorText, "dnnFormWarning");
                 }
             }).fail(function (xhr, status) {
-                displayMessage("#dnnCoreMessaging", localization.serverErrorWithDescriptionText + status, "dnnFormWarning");
+                displayMessage("#dnnCoreMessaging", settings.serverErrorWithDescriptionText + status, "dnnFormWarning");
             });
         };
 
@@ -374,10 +375,10 @@
                         self.updateThreadCount(messageconversationView);
                     }
                 } else {
-                    displayMessage("#dnnCoreMessaging", localization.serverErrorText, "dnnFormWarning");
+                    displayMessage("#dnnCoreMessaging", settings.serverErrorText, "dnnFormWarning");
                 }
             }).fail(function (xhr, status) {
-                displayMessage("#dnnCoreMessaging", localization.serverErrorWithDescriptionText + status, "dnnFormWarning");
+                displayMessage("#dnnCoreMessaging", settings.serverErrorWithDescriptionText + status, "dnnFormWarning");
             });
         };
 
@@ -404,15 +405,15 @@
             self.conversationRead(!self.conversationRead());
 
             if (self.conversationRead() === true) {
-                $('.successMsg').text(localization.conversationSetAsReadText);
+                $('.successMsg').text(settings.conversationSetAsReadText);
             } else {
-                $('.successMsg').text(localization.conversationSetAsUnreadText);
+                $('.successMsg').text(settings.conversationSetAsUnreadText);
             }
             $('.successMsg').show().fadeOut(3000, 'easeInExpo');
         };
 
         self.loadMore = function (data, event) {
-            $(event.target).html('<img src="images/dnnanim.gif" style="vertical-align:middle" /> ' + localization.loadingText);
+            $(event.target).html('<img src="images/dnnanim.gif" style="vertical-align:middle" /> ' + settings.loadingText);
 
             var afterMessageId = self.messages().length == 0 ? -1 : self.messages()[self.messages().length - 1].MessageID;
             var url = inboxpath;
@@ -441,12 +442,12 @@
                         self.TotalNewThreads(messageboxView.TotalNewThreads);
                     }
                 } else {
-                    displayMessage("#dnnCoreMessaging", localization.serverErrorText, "dnnFormWarning");
+                    displayMessage("#dnnCoreMessaging", settings.serverErrorText, "dnnFormWarning");
                 }
             }).fail(function (xhr, status) {
-                displayMessage("#dnnCoreMessaging", localization.serverErrorWithDescriptionText + status, "dnnFormWarning");
+                displayMessage("#dnnCoreMessaging", settings.serverErrorWithDescriptionText + status, "dnnFormWarning");
             }).always(function () {
-                $(event.target).html(localization.loadMoreText);
+                $(event.target).html(settings.loadMoreText);
             });
         };
 
@@ -465,10 +466,10 @@
                     self.messages.remove(message);
                     self.TotalConversations(self.TotalConversations() - 1);
                 } else {
-                    displayMessage("#dnnCoreMessaging", localization.serverErrorText, "dnnFormWarning");
+                    displayMessage("#dnnCoreMessaging", settings.serverErrorText, "dnnFormWarning");
                 }
             }).fail(function (xhr, status) {
-                displayMessage("#dnnCoreMessaging", localization.serverErrorWithDescriptionText + status, "dnnFormWarning");
+                displayMessage("#dnnCoreMessaging", settings.serverErrorWithDescriptionText + status, "dnnFormWarning");
             });
         };
 
@@ -496,10 +497,10 @@
 
             if (self.TotalArchivedThreads() === 0) {
                 url = baseServicepath + 'MarkArchived';
-                $('.successMsg').text(localization.conversationArchivedText);
+                $('.successMsg').text(settings.conversationArchivedText);
             } else {
                 url = baseServicepath + 'MarkUnArchived';
-                $('.successMsg').text(localization.conversationUnarchivedText);
+                $('.successMsg').text(settings.conversationUnarchivedText);
             }
 
             $.ajax({
@@ -517,10 +518,10 @@
                         self.TotalArchivedThreads(0);
                     }
                 } else {
-                    displayMessage("#dnnCoreMessaging", localization.serverErrorText, "dnnFormWarning");
+                    displayMessage("#dnnCoreMessaging", settings.serverErrorText, "dnnFormWarning");
                 }
             }).fail(function (xhr, status) {
-                displayMessage("#dnnCoreMessaging", localization.serverErrorWithDescriptionText + status, "dnnFormWarning");
+                displayMessage("#dnnCoreMessaging", settings.serverErrorWithDescriptionText + status, "dnnFormWarning");
             });
         };
 
@@ -570,10 +571,10 @@
                         self.TotalNotifications(notificationsViewModel.TotalNotifications);
                     }
                 } else {
-                    displayMessage("#dnnCoreNotification", localization.serverErrorText, "dnnFormWarning");
+                    displayMessage("#dnnCoreNotification", settings.serverErrorText, "dnnFormWarning");
                 }
             }).fail(function (xhr, status) {
-                displayMessage("#dnnCoreNotification", localization.serverErrorWithDescriptionText + status, "dnnFormWarning");
+                displayMessage("#dnnCoreNotification", settings.serverErrorWithDescriptionText + status, "dnnFormWarning");
             }).always(function () {
                 self.loadingData(false);
             });
@@ -601,10 +602,10 @@
                         self.TotalNotifications(notificationsViewModel.TotalNotifications);
                     }
                 } else {
-                    displayMessage("#dnnCoreNotification", localization.serverErrorText, "dnnFormWarning");
+                    displayMessage("#dnnCoreNotification", settings.serverErrorText, "dnnFormWarning");
                 }
             }).fail(function () {
-                displayMessage("#dnnCoreNotification", localization.serverErrorWithDescriptionText, "dnnFormWarning");
+                displayMessage("#dnnCoreNotification", settings.serverErrorWithDescriptionText, "dnnFormWarning");
             });
         };
 
@@ -626,21 +627,21 @@
                     autoOpen: false,
                     resizable: false,
                     modal: true,
-                    title: localization.notificationConfirmTitleText,
+                    title: settings.notificationConfirmTitleText,
                     dialogClass: 'dnnFormPopup dnnClear',
                     open: function () {
-                        $('.ui-dialog-buttonpane').find('button:contains("' + localization.notificationConfirmNoText + '")').addClass('dnnConfirmCancel');
+                        $('.ui-dialog-buttonpane').find('button:contains("' + settings.notificationConfirmNoText + '")').addClass('dnnConfirmCancel');
                     },
                     buttons: [
                         {
-                            text: localization.notificationConfirmYesText,
+                            text: settings.notificationConfirmYesText,
                             click: function () {
                                 $(this).dialog("close");
                                 self.apiCallRequest(action);
                             }
                         },
                         {
-                            text: localization.notificationConfirmNoText,
+                            text: settings.notificationConfirmNoText,
                             click: function () { $(this).dialog("close"); }
                         }
                     ]
@@ -670,17 +671,17 @@
                     });
                     self.notifications.remove(notificationToRemove);
                     self.TotalNotifications(self.TotalNotifications() - 1);
-                    displayMessage("#dnnCoreNotification", localization.actionPerformedText, "dnnFormSuccess");
+                    displayMessage("#dnnCoreNotification", settings.actionPerformedText, "dnnFormSuccess");
                 }
                 else {
                     if (typeof data.Message !== "undefined" && data.Message != null && data.Message !== '') {
                         displayMessage("#dnnCoreNotification", data.Message, "dnnFormWarning");
                     } else {
-                        displayMessage("#dnnCoreNotification", localization.actionNotPerformedText, "dnnFormWarning");
+                        displayMessage("#dnnCoreNotification", settings.actionNotPerformedText, "dnnFormWarning");
                     }
                 }
             }).fail(function () {
-                displayMessage("#dnnCoreNotification", localization.actionNotPerformedText, "dnnFormWarning");
+                displayMessage("#dnnCoreNotification", settings.actionNotPerformedText, "dnnFormWarning");
             });
         };
 
@@ -713,10 +714,10 @@
                         self.TotalNewThreads(messageboxView.TotalNewThreads);
                     }
                 } else {
-                    displayMessage("#dnnCoreMessaging", localization.serverErrorText, "dnnFormWarning");
+                    displayMessage("#dnnCoreMessaging", settings.serverErrorText, "dnnFormWarning");
                 }
             }).fail(function (xhr, status) {
-                displayMessage("#dnnCoreMessaging", localization.serverErrorWithDescription + status, "dnnFormWarning");
+                displayMessage("#dnnCoreMessaging", settings.serverErrorWithDescription + status, "dnnFormWarning");
             }).always(function () {
                 self.loadingData(false);
             });
@@ -779,10 +780,10 @@
                         self.TotalArchivedThreads(data.TotalArchivedThreads);
                     }
                 } else {
-                    displayMessage("#dnnCoreMessaging", localization.serverErrorText, "dnnFormWarning");
+                    displayMessage("#dnnCoreMessaging", data.Message, "dnnFormWarning");
                 }
             }).fail(function (xhr, status) {
-                displayMessage("#dnnCoreMessaging", localization.serverErrorWithDescription + status, "dnnFormWarning");
+                displayMessage("#dnnCoreMessaging", settings.serverErrorWithDescription + status, "dnnFormWarning");
             });
         };
 

@@ -46,7 +46,7 @@
                         <dnn:LOGIN ID="dnnLogin" CssClass="LoginLink" runat="server" LegacyMode="false" />
 					    <dnn:LANGUAGE runat="server" id="dnnLANGUAGE"  showMenu="False" showLinks="True" />
                     </div>
-			        <div id="SocialMediaPane" runat="server"></div>
+					<div id="SocialMediaPane" runat="server"></div>
                 </div>
 		    </div>
             <div id="ContentPane" runat="server"></div>

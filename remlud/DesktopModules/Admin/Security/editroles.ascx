@@ -71,7 +71,7 @@
                 <div class="dnnFormItem" id="divTrialPeriod" runat="server">
                     <dnn:Label ID="plTrialPeriod" runat="server" ResourceKey="TrialPeriod" Suffix=":" ControlName="txtTrialPeriod" />
                     <asp:TextBox ID="txtTrialPeriod" runat="server" MaxLength="50" Columns="30" />
-                    <asp:DropDownList ID="cboTrialFrequency" runat="server" Width="100px" DataValueField="value" DataTextField="text" AutoPostBack="true" />
+                    <asp:DropDownList ID="cboTrialFrequency" runat="server" DataValueField="value" DataTextField="text" AutoPostBack="true" />
                     <asp:CompareValidator ID="valTrialPeriod1" CssClass="dnnFormMessage dnnFormError" runat="server" resourcekey="valTrialPeriod1" ControlToValidate="txtTrialPeriod" Display="Dynamic" Type="Integer" Operator="DataTypeCheck" />
                     <asp:CompareValidator ID="valTrialPeriod2" CssClass="dnnFormMessage dnnFormError" runat="server" resourcekey="valTrialPeriod2" ControlToValidate="txtTrialPeriod" Display="Dynamic" Operator="GreaterThan" ValueToCompare="0" />
                 </div>
@@ -112,6 +112,29 @@
             noText: noText,
             title: titleText
         });
+        
+         var updateView = function(e) {
+            if ($("#<%=txtServiceFee.ClientID %>").val() == "") {
+                $("#<%=txtBillingPeriod.ClientID %>")   .attr("disabled", "disabled").val("");
+                $("#<%=cboBillingFrequency.ClientID %>").attr("disabled", "disabled").val("");
+            } else {
+                $("#<%=txtBillingPeriod.ClientID %>").removeAttr("disabled");
+                $("#<%=cboBillingFrequency.ClientID %>").removeAttr("disabled");
+            }
+
+            if ($("#<%=txtTrialFee.ClientID %>").val() == "") {
+                $("#<%=txtTrialPeriod.ClientID %>").attr("disabled", "disabled").val("");
+                $("#<%=cboTrialFrequency.ClientID %>").attr("disabled", "disabled").val("");
+            } else {
+                $("#<%=txtTrialPeriod.ClientID %>").removeAttr("disabled");
+                $("#<%=cboTrialFrequency.ClientID %>").removeAttr("disabled");
+            }
+        };
+
+        $("#<%=txtServiceFee.ClientID %>").keyup(updateView);
+        $("#<%=txtTrialFee.ClientID %>").keyup(updateView);
+        
+        updateView();
     }
     $(document).ready(function () {
         setUpDnnEditRoles();

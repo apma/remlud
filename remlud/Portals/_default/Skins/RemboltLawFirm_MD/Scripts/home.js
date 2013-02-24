@@ -24,7 +24,6 @@
         //HACK
         //Fix DNN 6.2 Journal bug ignoring item limit
         var count = 0;
-        console.log("Begin");
         $('#journalItems .journalrow').each(function () {
             count++;
             if (count > 4) {

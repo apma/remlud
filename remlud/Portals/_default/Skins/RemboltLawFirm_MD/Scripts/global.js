@@ -1,13 +1,16 @@
-﻿//jQuery("#searchPlacer .NormalTextBox").appendTo(".inputholder").addClass("tooltip_search_field");
+﻿/// <reference path="global.js" />
+//jQuery("#searchPlacer .NormalTextBox").appendTo(".inputholder").addClass("tooltip_search_field");
 //jQuery("#searchPlacer a").appendTo(".buttonholder");
 
 (function ($) {
     $(document).ready(function () {
-
+        //Change Text on Search
+        $('a.buttonholder').text('GO');
+        
+        //Set Video
         $('.vidref').click(function () {
             var video = $('.vidref').attr('link');
             $('#videoclick').attr('href', video);
-            console.log(video);
             $('#dnn_ContentPane').fadeOut('slow', function () {
                 $('#videoclick').fadeIn('slow', function () {
                     $('#vidback').fadeIn();
